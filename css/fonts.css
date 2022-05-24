@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/SegoeUI/SegoeUI.eot');
+    src: url('../fonts/SegoeUI/SegoeUI.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SegoeUI/SegoeUI.woff') format('woff'),
+    url('../fonts/SegoeUI/SegoeUI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe UI Semibold';
+    src: url('../fonts/SegoeUI/SegoeUI-SemiBold.eot');
+    src: url('../fonts/SegoeUI/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SegoeUI/SegoeUI-SemiBold.woff') format('woff'),
+    url('../fonts/SegoeUI/SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Metro';
+    src: url('../fonts/Metro/metro.eot');
+    src: url('../fonts/Metro/metro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Metro/metro.woff') format('woff'),
+    url('../fonts/Metro/metro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -2,23 +2,765 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome!</title>
+	<title>Бункер</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/fancybox.min.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 	<header>
-		
+		<div class="container">
+			<div class="head">
+				<div class="head-left">
+					<div class="logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<p class="logo-txt">Действующий подземный бункер в Москве</p>
+				</div>
+				<nav class="menu">
+					<ul class="list">
+						<li class="list-item"><a href="#">Игры</a></li>
+						<li class="list-item"><a href="#">Цены</a></li>
+						<li class="list-item"><a href="#">Что вам понравится</a></li>
+						<li class="list-item"><a href="#">Где находимся</a></li>
+					</ul>
+				</nav>
+				<div class="head-right">
+					<div class="head_soc">
+						<p class="head_soc-desc">сейчас на связи</p>
+						<div class="soc-icons">
+							<a href="#" class="soc-ic">
+								<img src="img/icons/ic-tg.svg" alt="">
+								<p class="soc-desc"><i class="soc-desc_ic"></i>Написать в телеграм</p>
+							</a>
+							<a href="#" class="soc-ic">
+								<img src="img/icons/ic-wa.svg" alt="">
+								<p class="soc-desc"><i class="soc-desc_ic"></i>Написать в ватсап</p>
+							</a>
+							<a href="#" class="soc-ic">
+								<img src="img/icons/ic-mail.svg" alt="">
+								<p class="soc-desc"><i class="soc-desc_ic"></i>Написать на email</p>
+							</a>
+						</div>
+					</div>
+					<div class="head_phone">
+						<a href="tel:+79ХХХХХХХХХ" class="phone-call">+7 9ХХ ХХХ ХХ ХХ</a>
+						<a href="#" class="phone-modal">заказать звонок</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
+	<!-- main -->
+	<section class="section main">
+		<div class="container">
+			<div class="main-in">
+				<h1 class="title">ПОЧУВСТВУЙТЕ <span class="title-desc red">атмосферу плотного боя </span>в динамичной игре</h1>
+				<div class="main-items">
+					<div class="main-item"><span class="main-item_desc">лазертаг <br>в краске</span><img src="img/main/1.png" alt=""></div>
+					<div class="main-item"><span class="main-item_desc">Зона <br> отдыха</span><img src="img/main/2.png" alt=""></div>
+					<div class="main-item"><span class="main-item_desc">ПЕЙНТБОЛ</span><img src="img/main/3.png" alt=""></div>
+				</div>
+				<div class="main-menu-wrap">
+					<ul class="main-menu">
+						<li class="main-ic">
+							<a href="#">
+								<span class="main-ic_desc">Обратный звонок</span>
+								<img src="img/icons/ic-min-phone.svg" alt=""></a>
+						</li>
+						<li class="main-ic">
+							<a href="#">
+								<span class="main-ic_desc">Написать в ватсап</span>
+								<img src="img/icons/ic-min-wa.svg" alt=""></a>
+						</li>
+						<li class="main-ic">
+							<a href="#">
+								<span class="main-ic_desc">Написать в телеграм</span>
+								<img src="img/icons/ic-min-tg.svg" alt=""></a>
+						</li>
+						<li class="main-ic">
+							<a href="#">
+								<span class="main-ic_desc">Получить мой подарок</span>
+								<img src="img/icons/ic-min-present.svg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-wrap">
+					<a href="#" class="btn">Забронировать игру и отдых</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section map">
+		<div class="container">
+			<h3 class="section-title"><span class="red">1000 м2 </span> для игр, отдыха и развлечений</h3>
+			<div class="map-in">
+				<div class="map-left">
+					<div class="goal">
+						<span class="goal_num">- 16 %</span>
+						<p class="goal_txt">Скидка при аренде зала в будние дни с 10.00 до 14.00 </p>
+					</div>
+				</div>
+				<a href="img/map/map.png" class="map-right" data-fancybox>
+					<img src="img/map/map.png" alt="">
+				</a>
+			</div> 
+			<div class="btn-wrap">
+				<a href="img/map/map.png" class="btn btn-map" data-fancybox>Увеличить карту</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section variants">
+		<div class="container">
+			<h3 class="section-title">Весело проведете время с друзьями и коллегами <br><span class="red">от 4 до 2500 человек</span></h3>
+			<div class="variants-tabs">
+				
+			</div>
+			<div class="variants-body">
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="sertificate">
+		<div class="container">
+			<div class="sertificate-in">
+				<div class="sertificate-left">
+					<span class="sertificate-title">Избавьтесь от мук выбора <br> подходящего подарка –</span>
+					<p class="sertificate-desc">дарите яркие <br> игровые эмоции</p>
+					<div class="sertificate-btn">
+						<a href="#" class="btn">Оформить подарочный сертификат</a>
+					</div>
+				</div>
+				<div class="sertificate-right">
+					<img src="img/sertificate/1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section like">
+		<div class="container">
+			<h3 class="section-title">3 основные причины, почему <span class="red">вам понравится</span> у нас</h3>
+			<div class="like-in tabs-wrap yellow">
+				<div class="tab-head-wrap like-head-wrap">
+					<div class="tab-head tab-head__active like-tab game-tab"><i class="like-tab-ic"></i>Новый формат игры<i class="like-tab-shadow"></i></div>
+					<div class="tab-head like-tab game-tab"><i class="like-tab-ic"></i>Адаптированные под вас сценарии игр<i class="like-tab-shadow"></i></div>
+					<div class="tab-head like-tab game-tab"><i class="like-tab-ic"></i>Увлеченные инструкторы<i class="like-tab-shadow"></i></div>
+				</div>
+				<div class="tab-body-wrap game-body-wrap">
+					<div class="tab-body tab-body__active like-body">
+						<div class="like-list-wrap">
+							<ul class="like-list">
+								<li class="like-item like-item__left like-item__title">То, что  мы приветсвуем</li>
+								<li class="like-item like-item__left">5-10 минутный раунд активного боя;</li>
+								<li class="like-item like-item__left">Тактический бой на скорость перемещения, реакцию, точность стрельбы, слаженность действий команды;</li>
+								<li class="like-item like-item__left">Выбили первым? не проблема, через 5 минут снова в бой!</li>
+								<li class="like-item like-item__left">Жара, холод, осадки никак на игру не повлияют. Идеальная температура для игры!</li>
+								<li class="like-item like-item__left">Поиграть можно в любое время суток!</li>
+								<li class="like-item like-item__left">В перерывах можно с комфортом попить, перекусить!</li>
+								<li class="like-item like-item__left">Брутальная атмосфера Бункера, которую невозможно передать фотографиями, или видео, покажется Вам очень уместной, комфортной и приятной, стоит только однажды побывать в нашем клубе.</li>
+							</ul>
+							<ul class="like-list">
+								<li class="like-item like-item__right like-item__title">У нас такого нет</li>
+								<li class="like-item like-item__right">40 минутного раунда, из которых активного боя 5-10 минут;</li>
+								<li class="like-item like-item__right">Долгих расстановок по площадке;</li>
+								<li class="like-item like-item__right">Долгих сближений на расстояние выстрела;</li>
+								<li class="like-item like-item__right">30 минутного ожидания в "мертвяке";</li>
+								<li class="like-item like-item__right">Позиционной игры по принципу " кто до кого первый дострелит и попадет";</li>
+								<li class="like-item like-item__right">Ограничения световым временем дня;</li>
+								<li class="like-item like-item__right">Поправки на погоду.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-body like-body">
+						<img src="img/game/2.jpg" alt="">
+					</div>
+					<div class="tab-body like-body">
+						<img src="img/game/3.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section game">
+		<div class="container">
+			<h3 class="section-title">Предоставляем <span class="red">снаряжение</span> <br>для классной игры и удобства для комфортного отдыха</h3>
+			<div class="game-in tabs-wrap">
+				<div class="tab-head-wrap like-head-wrap">
+					<div class="tab-head tab-head__active like-tab"><i class="like-tab-ic"></i>Лазертаг<i class="like-tab-shadow"></i></div>
+					<div class="tab-head like-tab"><i class="like-tab-ic"></i>Пейнтбол<i class="like-tab-shadow"></i></div>
+					<div class="tab-head like-tab"><i class="like-tab-ic"></i>Помещения<i class="like-tab-shadow"></i></div>
+				</div>
+				<div class="tab-body-wrap game-body-wrap">
+					<div class="tab-body tab-body__active game-body">
+						<img src="img/game/1.jpg" alt="">
+					</div>
+					<div class="tab-body game-body">
+						<img src="img/game/2.jpg" alt="">
+					</div>
+					<div class="tab-body game-body">
+						<img src="img/game/3.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="big-block">
+		<div class="container">
+			<div class="price">
+				<h3 class="section-title"><span class="red">Сколько стоит</span> весело поиграть и провести время <br> за 2-метровыми стенами и 500-килограмовыми бункерными дверьми</h3>
+				<div class="price-in tabs-wrap yellow">
+					<div class="tab-head-wrap like-head-wrap price-head-wrap">
+						<div class="tab-head tab-head__active like-tab"><i class="like-tab-ic"></i>Лазертаг<i class="like-tab-shadow"></i></div>
+						<div class="tab-head like-tab"><i class="like-tab-ic"></i>Пейнтбол<i class="like-tab-shadow"></i></div>
+						<div class="tab-head like-tab"><i class="like-tab-ic"></i>зона отдыха<i class="like-tab-shadow"></i></div>
+						<div class="tab-head like-tab"><i class="like-tab-ic"></i>обучение<i class="like-tab-shadow"></i></div>
+					</div>
+					<div class="tab-body-wrap price-body-wrap">
+						<div class="tab-body tab-body__active price-body">
+							<div class="price-tems">
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">Отделение</span>
+										<span class="price-top_desc">3000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
+											<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
+											<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
+											<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">взвод</span>
+										<span class="price-top_desc">2500 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
+											<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
+											<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
+											<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">Рота</span>
+										<span class="price-top_desc">2000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
+											<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
+											<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
+											<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">батальон</span>
+										<span class="price-top_desc">1500 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
+											<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
+											<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
+											<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-body price-body">
+							<div class="price-tems">
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">боец</span>
+										<span class="price-top_desc">1300 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 10 человек</span></li>
+											<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
+											<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
+											<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">400 шаров</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">рекрут</span>
+										<span class="price-top_desc">1600 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 8  человек</span></li>
+											<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
+											<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
+											<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
+											<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">500 шаров</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">рекрут расширенный</span>
+										<span class="price-top_desc">2000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 6  человек</span></li>
+											<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
+											<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
+											<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
+											<li class="price-svg"><i class="price-ic"></i><span class="price-mid-txt">4 удлиненных ствола «Снайпер» на игру</span></li>
+											<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">500 шаров + 200 шаров или граната на выбор</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">ветеран</span>
+										<span class="price-top_desc">2700 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">От 4-х человек</span></li>
+											<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
+											<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
+											<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
+											<li class="price-svg"><i class="price-ic"></i><span class="price-mid-txt">4 удлиненных ствола «Снайпер» на игру</span></li>
+											<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">Безлимит по шарам и гранатам</span></li>
+											<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+											<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-body price-body">
+							<div class="price-tems">
+								<div class="price-item">
+									<div class="goal">
+										<span class="goal_num">- 15 %</span>
+										<p class="goal_txt">Скидка при аренде зала в будние дни с 10.00 до 14.00 </p>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">банкетный зал мини</span>
+										<span class="price-top_desc">2500 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>1 час аренды</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">Вместимость 25 человек</span></li>
+											<li class="price-square"><i class="price-ic"></i><span class="price-mid-txt">Площадь помещения   50 м.2</span></li>
+											<li class="price-table"><i class="price-ic"></i><span class="price-mid-txt">Мебель: один стол, скамейки</span></li>
+											<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, колонка (работает по bluetooth), микроволновая печь</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">банкетный зал макси</span>
+										<span class="price-top_desc">30 00 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>1 час аренды</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">Вместимость 75 человек</span></li>
+											<li class="price-square"><i class="price-ic"></i><span class="price-mid-txt">Площадь помещения   100 м.2</span></li>
+											<li class="price-table"><i class="price-ic"></i><span class="price-mid-txt">Мебель: один стол, скамейки</span></li>
+											<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, колонка (работает по bluetooth), микроволновая печь</span></li>
+										</ul>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<ul class="price-list">
+										<li>Для не играющих вход  в зону отдыха 300 руб.</li>
+										<li>Если играют дети, двое не играющих взрослых сопровождают их бесплатно</li>
+										<li>Продление зоны отдыха осуществляется при наличии свободных сеансов</li>
+										<li>Закрытие клуба на 2 часа стоимость 20000 руб</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="tab-body price-body">
+							<div class="price-tems">
+								<div class="price-item">
+									<div class="star-block">
+										<p class="star-txt">Обучает <br> <span class="star-color">профессиональный инструктор</span> участник <br> боевых действий</p>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">боец+</span>
+										<span class="price-top_desc">10000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>3 часа обучения</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num-2"><i class="price-ic"></i><span class="price-mid-txt">Индивидуальное обучение</span></li>
+											<li class="price-list"><i class="price-ic"></i><span class="price-mid-txt">Отработка навыков:</span></li>
+										</ul>
+										<p>Тактического перемещения по игровой зоне <br>Готовности к мгновенному поражению цели <br>Эффективного ухода от огня</p>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">команда+</span>
+										<span class="price-top_desc">5000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>3 часа обучения</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num-3"><i class="price-ic"></i><span class="price-mid-txt">Обучение в группе</span></li>
+											<li class="price-list"><i class="price-ic"></i><span class="price-mid-txt">Отработка навыков:</span></li>
+										</ul>
+										<p>Тактического перемещения по игровой зоне <br>Готовности к мгновенному поражению цели <br>Эффективного ухода от огня</p>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+								<div class="price-item">
+									<div class="price-item_top">
+										<span class="price-top_title">рекрут+</span>
+										<span class="price-top_desc">5000 рублей с человека</span>
+										<span class="price-top_desc"><i class="ic-clock"></i>3 часа обучения</span>
+									</div>
+									<div class="price-item_mid">
+										<ul class="price-mid">
+											<li class="price-num-2"><i class="price-ic"></i><span class="price-mid-txt">Индивидуальное обучение</span></li>
+											<li class="price-list"><i class="price-ic"></i><span class="price-mid-txt">Отработка навыков:</span></li>
+										</ul>
+										<p>Маневрирования и работы в группе <br>Совместного ориентирования в боевых ситуациях <br>Тактического планирования командного боя</p>
+										<div class="btn-wrap price-item_btn">
+											<a href="" class="btn">Забронировать</a>
+										</div>
+									</div>
+									<div class="price-item_bot">
+										<div class="price-stars">
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+											<i class="price-star"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reveiw">
+				<h3 class="section-title">за 7 лет у нас <br>классно провели время <span class="red">5000 человек</span></h3>
+				<div class="like-in tabs-wrap yellow">
+					<div class="tab-head-wrap like-head-wrap">
+						<div class="tab-head tab-head__active like-tab reveiw-tab"><i class="like-tab-ic"></i>скриншоты переписок<i class="like-tab-shadow"></i></div>
+						<div class="tab-head like-tab reveiw-tab"><i class="like-tab-ic"></i>рекомендательные письма корпоративных клиентов<i class="like-tab-shadow"></i></div>
+					</div>
+					<div class="tab-body-wrap reveiw-body-wrap">
+						<div class="tab-body tab-body__active reveiw-body">
+							<div class="slider">
+								<div class="slide">
+									<img src="img/review/screen-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/screen-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/screen-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/screen-1.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="tab-body reveiw-body">
+							<div class="slider">
+								<div class="slide">
+									<img src="img/review/letter-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/letter-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/letter-1.png" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/review/letter-1.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<a href="img/review/letter-1.png" class="btn btn-map" data-fancybox>Увеличить </a>
+				</div>
+			</div>
+			<div class="gallery">
+				<h3 class="section-title">Посмотрите фото с игр</h3>
+				<div class="gallery-wrap">
+					<div class="gallery-in">
+						<div class="gallery-left">
+							<a href="img/gallery/1.png" class="gallery-block" data-fancybox>
+								<img src="img/gallery/1.png" alt="">
+							</a>
+						</div>
+						<div class="galler-right">
+							<div class="gallery-db">
+								<div class="gallery-half">
+									<a href="img/gallery/2.png" class="gallery-block" data-fancybox>
+										<img src="img/gallery/2.png" alt="">
+									</a>
+								</div>
+								<div class="gallery-half">
+									<a href="img/gallery/3.png" class="gallery-block" data-fancybox>
+										<img src="img/gallery/3.png" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="gallery-bot">
+								<a href="img/gallery/4.png" class="gallery-block" data-fancybox>
+									<img src="img/gallery/4.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="order">
+		<div class="container">
+			<div class="order-wrap">
+				<h3 class="section-title">всего <span class="red">3 шага</span> для бронирования игры или мероприятия</h3>
+				<div class="order-in tabs-wrap">
+					<div class="tab-head-wrap like-head-wrap">
+						<div class="tab-head tab-head__active like-tab order-tab"><i class="like-tab-ic"></i>частные лица<i class="like-tab-shadow"></i></div>
+						<div class="tab-head like-tab order-tab"><i class="like-tab-ic"></i>Юридические лица<i class="like-tab-shadow"></i></div>
+					</div>
+					<div class="tab-body-wrap order-body-wrap">
+						<div class="tab-body tab-body__active order-body">
+							<div class="order-items">
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/1.png" alt="">
+									</div>
+									<p class="order-txt">
+										<a href="#" class="tu">Оставьте заявку здесь</a> или позвоните / напишите в <a href="#" class="tu">WhatsApp (+7 960 148 88 88)</a>
+									</p>
+								</div>
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/2.png" alt="">
+									</div>
+									<p class="order-txt">Вносите предоплату за бронь 3000 рублей удобным для Вас способом</p>
+								</div>
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/3.png" alt="">
+									</div>
+									<p class="order-txt">Приезжаете за 15 минут: играете, развлекаетесь, классно проводите время</p>
+								</div>
+							</div>
+							<div class="btn-wrap">
+								<a href="#" class="btn">Оформить заявку на игру и отдых</a>
+							</div>
+						</div>
+						<div class="tab-body order-body">
+							<div class="order-items">
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/1.png" alt="">
+									</div>
+									<p class="order-txt">Оформляете заявку:</p>
+								</div>
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/2.png" alt="">
+									</div>
+									<p class="order-txt">Мы согласовываем с Вами заявку по телефону, подготовим счет и необходимые документы</p>
+								</div>
+								<div class="order-item">
+									<div class="order-img">
+										<img src="img/order/3.png" alt="">
+									</div>
+									<p class="order-txt"> Приезжаете за 15 минут до начала игры. Мы проводим игру. Получаете закрывающие документы</p>
+								</div>
+							</div>
+							<div class="btn-wrap">
+								<a href="#" class="btn">Заявка на игру для юридических лиц</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="memo">
+		<div class="container">
+			<div class="memo-wrap">
+				<h3 class="section-title">Не забудьте <span class="red">скачать памятку</span><br>по подготовке к игре в лазертаг и пейнтбол</h3>
+			</div>
+		</div>
+	</section>
 
 	<footer>
-		
+		<div class="container">
+			 
+		</div>
 	</footer>
+
 	<script src="libs/jquery-3.4.1.min.js"></script>
+	<script src="libs/slick.min.js"></script>
 	<script type="text/javascript" src="libs/fancybox.min.js"></script>
 	<script src="js/core.js"></script>
 
