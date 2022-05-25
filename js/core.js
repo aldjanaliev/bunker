@@ -39,3 +39,32 @@ tabsWrap.forEach(item =>{
 		}
 	})
 })
+
+// form btns
+let formBtn = document.querySelectorAll('.memo-form_btn')
+formBtn.forEach(item =>{
+	item.onclick = function(){
+		if(!this.classList.contains('memo-form_btn__active')){
+			let formBtnActive = document.querySelector('.memo-form_btn__active')
+			formBtnActive.classList.remove('memo-form_btn__active')
+			this.classList.add('memo-form_btn__active')
+		}
+	}
+})
+
+// game tabs
+let gameTab = [...document.querySelectorAll('.game-right_item')]
+let gameBody = [...document.querySelectorAll('.game-mid_item')]
+gameTab.forEach((item, index) =>{
+	item.onclick = function(){
+		if(!this.classList.contains('game-right_item__active')){
+			let gameTabActive = document.querySelector('.game-right_item__active')
+			gameTabActive.classList.remove('game-right_item__active')
+			this.classList.add('game-right_item__active')
+			let gameBodyActive = document.querySelector('.game-mid_item__active')
+			gameBodyActive.classList.remove('game-mid_item__active')
+			gameBody[index].classList.add('game-mid_item__active')
+		}
+	}
+})
+
