@@ -1723,6 +1723,7 @@ header{
 	margin-top: 25px;
 	min-height: 650px;
 	padding-bottom: 25px;
+	padding-top: 200px;
 }
 .gallery .section-title{
 	color: #fff;
@@ -2175,4 +2176,14 @@ footer{
 }
 .footer-bot a:hover{
 	border-color: transparent;
+}
+
+/* slider 3d */
+
+.reveiw .slick-slide{
+	transition: 0.5s;
+	transform: scale(0.8);
+}
+.reveiw .slick-center{
+	transform: scale(1.1) translateX(-80px);
 }

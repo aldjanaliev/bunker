@@ -5,6 +5,7 @@ $(document).ready(function() {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: true, 
     responsive: [
     {
       breakpoint: 781,
@@ -14,6 +15,28 @@ $(document).ready(function() {
       }
     }]
   });
+
+	$('.letter-slider').slick({
+  	dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    responsive: [
+    {
+      breakpoint: 781,
+      settings: {
+        arrows: false,
+        dots: true,
+      }
+    }]
+  });
+
+  $('.reveiw-tab-slider').click(function() {
+    $('.letter-slider').slick('refresh');
+  });
+
   $('.sertificate-slider').slick({
   	dots: false,
     infinite: true,
@@ -57,13 +80,18 @@ $(document).ready(function() {
   	dots: false,
   	arrows: true,
     speed: 300,
-    autoplay: 5000,
+    // autoplay: 5000,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
  		cssEase: 'linear'
   });
+  // перезагружает слайдер из таба
+  $('.game-tab-slider').click(function() {
+    $('.coach-slider').slick('refresh');
+  });
+
 
 	$('a[href^="#"').on('click', function() {
     let href = $(this).attr('href');
