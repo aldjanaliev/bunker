@@ -5,8 +5,10 @@
 	<title>Бункер</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
@@ -22,10 +24,10 @@
 				</div>
 				<nav class="menu">
 					<ul class="list">
-						<li class="list-item"><a href="#">Игры</a></li>
-						<li class="list-item"><a href="#">Цены</a></li>
-						<li class="list-item"><a href="#">Что вам понравится</a></li>
-						<li class="list-item"><a href="#">Где находимся</a></li>
+						<li class="list-item"><a href="#game">Игры</a></li>
+						<li class="list-item"><a href="#toprice">Цены</a></li>
+						<li class="list-item"><a href="#like">Что вам понравится</a></li>
+						<li class="list-item"><a href="#contacts">Где находимся</a></li>
 					</ul>
 				</nav>
 				<div class="head-right">
@@ -48,7 +50,7 @@
 					</div>
 					<div class="head_phone">
 						<a href="tel:+79ХХХХХХХХХ" class="phone-call">+7 9ХХ ХХХ ХХ ХХ</a>
-						<a href="#" class="phone-modal">заказать звонок</a>
+						<a href="#" data-src="#modal-callback" class="phone-modal" data-fancybox>заказать звонок</a>
 					</div>
 				</div>
 			</div>
@@ -134,7 +136,7 @@
 	<section class="section variants">
 		<div class="yellow-bg yellow-bg__top yellow-bg__bot">
 			<div class="variants-in">
-				<div class="container">
+				<div class="container" id="game">
 					<h3 class="section-title">Весело проведете время с друзьями и коллегами <br><span class="red">от 4 до 2500 человек</span></h3>
 				</div>
 				<div class="variants-tabs">
@@ -325,7 +327,7 @@
 					<span class="sertificate-title">Избавьтесь от мук выбора <br> подходящего подарка –</span>
 					<p class="sertificate-desc">дарите яркие <br> игровые эмоции</p>
 					<div class="sertificate-btn">
-						<a href="#" class="btn">Оформить подарочный сертификат</a>
+						<a href="#" data-src="#modal-sertificate" class="btn" data-fancybox>Оформить подарочный сертификат</a>
 					</div>
 				</div>
 				<div class="sertificate-right">
@@ -345,7 +347,7 @@
 	</section>
 
 	<section class="section like">
-		<div class="container">
+		<div class="container" id="like">
 			<h3 class="section-title">3 основные причины, почему <span class="red">вам понравится</span> у нас</h3>
 			<div class="like-in tabs-wrap yellow">
 				<div class="tab-head-wrap like-head-wrap like-head-wrap__plus">
@@ -1073,7 +1075,7 @@
 					</div>
 				</div>
 				<div class="btn-wrap">
-					<a href="img/review/letter-1.png" class="btn btn-map" data-fancybox>Увеличить </a>
+					<!-- <a href="img/review/letter-1.png" class="btn btn-map" data-fancybox>Увеличить </a> -->
 				</div>
 			</div>
 		</section>
@@ -1213,7 +1215,7 @@
 									</div>
 								</div>
 								<div class="btn-wrap">
-									<a href="#" class="btn">Оформить заявку на игру и отдых</a>
+									<a data-src="#modal-physical" href="#" class="btn" data-fancybox>Оформить заявку на игру и отдых</a>
 								</div>
 							</div>
 							<div class="tab-body order-body">
@@ -1238,7 +1240,7 @@
 									</div>
 								</div>
 								<div class="btn-wrap">
-									<a href="#" class="btn">Заявка на игру для юридических лиц</a>
+									<a data-src="#modal-legal" href="#" class="btn" data-fancybox>Заявка на игру для юридических лиц</a>
 								</div>
 							</div>
 						</div>
@@ -1262,21 +1264,21 @@
 					</div>
 					<p class="memo-txt">куда вам отправить ссылку на файл:</p>
 					<div class="memo-form">
-						<form action="#">
+						<form action="#" novalidate="novalidate" class="form">
 							<div class="memo-form_btns">
 								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__sms"></i><span>в СМС</span></div>
 								<div class="memo-form_btn memo-form_btn__active"><i class="memo-form_ic memo-form_ic__wa"></i><span>WhatsApp</span></div>
 								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__tg"></i><span>Telegram</span></div>
 							</div>
 							<div class="memo-input">
-							 	<input type="tel" class="form-input" placeholder="Введите номер телефона">
+							 	<input type="tel" class="form-input tel" placeholder="Введите номер телефона" data-validate-field="tel">
 							</div>
 							<label class="memo-form_access">
 								<input type="checkbox" checked>
-								<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с Политикой конфеденциальности</span>
+								<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
 							</label>
 							<div class="memo_btn-wrap btn-wrap">
-								<a href="#" class="btn">Получить памятку</a>
+								<button type="submit" class="btn" data-src="#thanks-pdf" data-fancybox>Получить памятку</button>
 							</div>
 						</form>
 						<p class="memo-desc">+ подробное описание... бла-бла-бла</p>
@@ -1288,7 +1290,7 @@
 
 	<footer>
 		<div class="footer-map">
-			<div class="container">
+			<div class="container" id="contacts">
 				<h3 class="section-title"><span class="red">Шаговая доступность</span> от станции МЦК “Фрезер” и “Нижегородская”, <br> в 500 м. от станции метро “Электрозаводская”</h3>
 				<p class="footer-txt">Узнайте, как и сколько вам до нас добираться: <br>для этого укажите точку отправления или разрешите доступ сайта к вашей геолокации</p>
 				<div class="footer-img">
@@ -1312,20 +1314,1055 @@
 				<div class="footer-info-wrap">
 					<div class="footer-bot">
 						<p class="footer-date">© 2004, Бункер СССР. Все права защищены</p>
-						<a href="#policy" data-fancybox>Политика конфеденциальности</a>
+						<a href="policy.html" target="_blank">Политика конфеденциальности</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	<div id="policy" class="modal">
-		<p>Политика конфеденциальности</p>
+	<!-- main - modals -->
+
+	<div class="modal callback" id="modal-callback">
+		<div class="modal-in">
+			<form action="#" class="form" id="form-callback">
+				<span class="modal_title">Заказать обратный звонок</span>
+				<div class="modal_input-wrap">
+					<input type="text" class="modal_input" placeholder="Введите имя">
+				</div>
+				<div class="modal_input-wrap">
+					<input type="tel" class="modal_input" placeholder="Введите номер телефона">
+				</div>
+				<div class="modal_choose-time">
+					<div class="modal_choose-btn modal_choose-now">Сейчас</div>
+					<div class="modal_choose-btn modal_choose-leter modal_choose-time__active">По времени</div>
+				</div>
+				<div class="modal_input-wrap">
+					<input type="text" class="modal_input modal_choose-input" placeholder="Например, завтра до 12.00">
+				</div>
+				<label class="memo-form_access">
+					<input type="checkbox" checked>
+					<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
+				</label>
+				<div class="form-btn">
+					<button class="btn to-thanks" data-src="#thanks-order" data-fancybox>Заказать обратный звонок</button>
+				</div>
+			</form>
+		</div>
 	</div>
+
+	<div class="modal modal-big" id="modal-legal">
+		<div class="modal-big-in">
+			<form action="#" class="form" id="form-callback">
+				<span class="modal_title"><span class="red">Заявка</span> на игру от юридического лица</span>
+				<div class="form_flex-wrap">
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Дата и время игры</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="calendare">
+										<input type="text" name="date" class="calendare-in" value="Выбрать дату" readonly>
+									</div>
+								</div>
+							</div>
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать время</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab">Пока неизвестно</span>
+										<span class="form_select-tab">04.00</span>
+										<span class="form_select-tab">06.00</span>
+										<span class="form_select-tab">08.00</span>
+										<span class="form_select-tab">10.00</span>
+										<span class="form_select-tab">12.00</span>
+										<span class="form_select-tab">14.00</span>
+										<span class="form_select-tab">16.00</span>
+										<span class="form_select-tab">18.00</span>
+										<span class="form_select-tab">20.00</span>
+										<span class="form_select-tab">22.00</span>
+										<span class="form_select-tab">24.00</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Услуги</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать вид</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab select-choose select-kind" data-choose="lazer">Лазертаг</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="paint">Пейнтбол</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="rest">Аренда зоны отдыха</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="teach">Обучение</span>
+									</div>
+								</div>
+							</div>
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num form_select__passive">
+									<div class="form_select-btn select-tarif-txt">
+										<span class="form_select-btn-txt form_select-btn-txt__btn">Выбрать тариф</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-item select-tarif" data-item="lazer">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Отделение</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рота</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Взвод</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Батальон</span>
+														<span class="select-flex_bot">(10 и более человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="paint">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец</span>
+														<span class="select-flex_bot">(от 10 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1300 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1600 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут расширенный</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Ветеран</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2700 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="rest">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_bot">(от 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_bot">(до 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="teach">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Команда+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>5000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Количество игроков</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать количество</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-num">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">1</span>
+											<span class="form_select-tab">2</span>
+											<span class="form_select-tab">3</span>
+											<span class="form_select-tab">4</span>
+											<span class="form_select-tab">5</span>
+											<span class="form_select-tab">6</span>
+											<span class="form_select-tab">7</span>
+											<span class="form_select-tab">8</span>
+											<span class="form_select-tab">9</span>
+											<span class="form_select-tab">10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Карточка предприятия</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Загрузить  карточку</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab">С компьютера</span>
+										<span class="form_select-tab form_select-tab__input-wrap">
+											<input class="form_select-tab__input" type="text" placeholder="Указать ссылку">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Ответственное лицо</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите имя">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="tel" class="modal_input" placeholder="Введите номер телефона">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="form-check">
+					<label class="memo-form_access">
+						<input type="checkbox" checked>
+						<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
+					</label>
+				</div>
+				<div class="form-btn">
+					<button class="btn to-thanks" data-src="#thanks-callback" data-fancybox>Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal-big" id="modal-physical">
+		<div class="modal-big-in">
+			<form action="#" class="form" id="form-callback">
+				<span class="modal_title"><span class="red">Заявка</span> на игру</span>
+				<div class="form_flex-wrap">
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Дата и время игры</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="calendare">
+										<input type="text" name="date" class="calendare-in" value="Выбрать дату" readonly>
+									</div>
+								</div>
+							</div>
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать время</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab">Пока неизвестно</span>
+										<span class="form_select-tab">04.00</span>
+										<span class="form_select-tab">06.00</span>
+										<span class="form_select-tab">08.00</span>
+										<span class="form_select-tab">10.00</span>
+										<span class="form_select-tab">12.00</span>
+										<span class="form_select-tab">14.00</span>
+										<span class="form_select-tab">16.00</span>
+										<span class="form_select-tab">18.00</span>
+										<span class="form_select-tab">20.00</span>
+										<span class="form_select-tab">22.00</span>
+										<span class="form_select-tab">24.00</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Услуги</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать вид</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab select-choose select-kind" data-choose="lazer">Лазертаг</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="paint">Пейнтбол</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="rest">Аренда зоны отдыха</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="teach">Обучение</span>
+									</div>
+								</div>
+							</div>
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num form_select__passive">
+									<div class="form_select-btn select-tarif-txt">
+										<span class="form_select-btn-txt form_select-btn-txt__btn">Выбрать тариф</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-item select-tarif" data-item="lazer">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Отделение</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рота</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Взвод</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Батальон</span>
+														<span class="select-flex_bot">(10 и более человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="paint">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец</span>
+														<span class="select-flex_bot">(от 10 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1300 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1600 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут расширенный</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Ветеран</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2700 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="rest">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_bot">(от 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_bot">(до 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="teach">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Команда+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>5000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Количество игроков</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать количество</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-num">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">1</span>
+											<span class="form_select-tab">2</span>
+											<span class="form_select-tab">3</span>
+											<span class="form_select-tab">4</span>
+											<span class="form_select-tab">5</span>
+											<span class="form_select-tab">6</span>
+											<span class="form_select-tab">7</span>
+											<span class="form_select-tab">8</span>
+											<span class="form_select-tab">9</span>
+											<span class="form_select-tab">10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Заказчик</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите имя">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="tel" class="modal_input" placeholder="Введите номер телефона">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="form-check">
+					<label class="memo-form_access">
+						<input type="checkbox" checked>
+						<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
+					</label>
+				</div>
+				<div class="form-btn">
+					<button class="btn to-thanks" data-src="#thanks-order" data-fancybox>Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal-big" id="modal-sertificate">
+		<div class="modal-big-in">
+			<form action="#" class="form" id="form-callback">
+				<span class="modal_title">Заказать <span class="red">сертификат</span></span>
+				<div class="form_flex-wrap">
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Вид и тариф игры</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать игру</span>
+									</div>
+									<div class="form_select-body">
+										<span class="form_select-tab select-choose select-kind" data-choose="lazer">Лазертаг</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="paint">Пейнтбол</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="rest">Аренда зоны отдыха</span>
+										<span class="form_select-tab select-choose select-kind" data-choose="teach">Обучение</span>
+									</div>
+								</div>
+							</div>
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num form_select__passive">
+									<div class="form_select-btn select-tarif-txt">
+										<span class="form_select-btn-txt form_select-btn-txt__btn">Выбрать тариф</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-item select-tarif" data-item="lazer">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Отделение</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рота</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Взвод</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Батальон</span>
+														<span class="select-flex_bot">(10 и более человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="paint">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец</span>
+														<span class="select-flex_bot">(от 10 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1300 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут</span>
+														<span class="select-flex_bot">(от 8 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>1600 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут расширенный</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Ветеран</span>
+														<span class="select-flex_bot">(от 4х человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2700 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="rest">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_bot">(от 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>3000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_bot">(до 25 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+										<div class="select-item select-tarif" data-item="teach">
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Боец+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Команда+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>5000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут+</span>
+													</span>
+													<span class="select-flex_right">
+														<span>10000 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Количество игроков</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<div class="form_select form_select__num">
+									<div class="form_select-btn">
+										<span class="form_select-btn-txt">Выбрать количество</span>
+									</div>
+									<div class="form_select-body">
+										<div class="select-num">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">1</span>
+											<span class="form_select-tab">2</span>
+											<span class="form_select-tab">3</span>
+											<span class="form_select-tab">4</span>
+											<span class="form_select-tab">5</span>
+											<span class="form_select-tab">6</span>
+											<span class="form_select-tab">7</span>
+											<span class="form_select-tab">8</span>
+											<span class="form_select-tab">9</span>
+											<span class="form_select-tab">10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex form_flex__bg">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Стоимость сертификата</span></div>
+						</div>
+						<div class="form_right">
+							<p class="form-right_txt">количество человек × стоимость тарифа</p>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc modal_input-desc__big"><span>Что написать на сертификате</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_textarea-wrap">
+								<textarea class="modal_textarea" resize="noresize" placeholder="Введите текст"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form_flex">
+						<div class="form_left">
+							<div class="modal_input-desc"><span>Заказчик</span></div>
+						</div>
+						<div class="form_right">
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите имя">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="tel" class="modal_input" placeholder="Введите номер телефона">
+							</div>
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты">
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="form-check">
+					<label class="memo-form_access">
+						<input type="checkbox" checked>
+						<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
+					</label>
+				</div>
+				<div class="form-btn">
+					<button class="btn to-thanks" data-src="#thanks-order" data-fancybox>Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- /main - modals -->
+
+	<!-- thanks - modals -->
+	<div class="modal thanks-modal" id="thanks-callback">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваша заявка принята</span>
+			<p class="thanks-modal_desc">Скоро мы свяжемся с вами!</p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
+		</div>
+	</div>
+	<div class="modal thanks-modal" id="thanks-order">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваша заявка принята</span>
+			<p class="thanks-modal_desc">Мы свяжемся с вами для согласования деталей</p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
+		</div>
+	</div>
+	<div class="modal thanks-modal" id="thanks-pdf">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваша заявка принята</span>
+			<p class="thanks-modal_desc">На указанный вами телефон будет отправлена ссылка на скачивание памятки</p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
+		</div>
+	</div>
+	<div class="modal thanks-modal" id="thanks-bonus">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваша заявка принята</span>
+			<p class="thanks-modal_desc">На указанный вами телефон будет отправлен промокод</p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
+		</div>
+	</div>
+	<!-- /thanks - modals -->
+
+<a href="#" data-src="#modal-bonus" class="modal-bonus_btn" data-fancybox></a>
+<div class="modal modal-big" id="modal-bonus">
+	<div class="modal-big-in">
+		<form action="#" class="form" id="form-callback">
+			<span class="modal_title"><span class="red">Бонус</span> за оформление заявки на игру в течение 10 минут — ваше эффектное фото для соцсетей со скидкой 99% </span>
+			<div class="bonus">
+				<div class="bonus-left">
+					<div class="bonus-in">
+						<div class="bonus_title">
+							<span class="bonus_title-top">Стоимость с промокодом</span>
+							<p class="bonus_title-bot"><span>1000 рублей</span> 1 рубль</p>
+						</div>
+						<p class="bonus-desc">Предложение действительно в течение:</p>
+						<div class="timer">
+							<div class="wrap">  
+							  <div class="countdown">
+							    <div class="bloc-time hours" data-init-value="0">
+							      <span class="count-title">Hours</span>
+							      <div class="figure hours hours-1">
+							        <span class="top">2</span>
+							        <span class="top-back">
+							          <span>2</span>
+							        </span>
+							        <span class="bottom">2</span>
+							        <span class="bottom-back">
+							          <span>2</span>
+							        </span>
+							      </div>
+							      <div class="figure hours hours-2">
+							        <span class="top">4</span>
+							        <span class="top-back">
+							          <span>4</span>
+							        </span>
+							        <span class="bottom">4</span>
+							        <span class="bottom-back">
+							          <span>4</span>
+							        </span>
+							      </div>
+							    </div>
+							    <div class="bloc-time min" data-init-value="4">
+							      <div class="figure min min-1">
+							        <span class="top">0</span>
+							        <span class="top-back">
+							          <span>0</span>
+							        </span>
+							        <span class="bottom">0</span>
+							        <span class="bottom-back">
+							          <span>0</span>
+							        </span>        
+							      </div>
+							      <div class="figure min min-2">
+							       <span class="top">4</span>
+							        <span class="top-back">
+							          <span>4</span>
+							        </span>
+							        <span class="bottom">4</span>
+							        <span class="bottom-back">
+							          <span>4</span>
+							        </span>
+							      </div>
+							      <span class="count-title">минут</span>
+							    </div>
+							    <div class="bloc-time sec" data-init-value="0">
+						        <div class="figure sec sec-1">
+							        <span class="top">
+							        	<span>0</span>
+							        </span>
+							        <span class="top-back">
+							          <span>0</span>
+							        </span>
+							        <span class="bottom">
+							        	<span>0</span>
+							        </span>
+							        <span class="bottom-back">
+							          <span>0</span>
+							        </span>          
+							      </div>
+							      <div class="figure sec sec-2">
+							        <span class="top">
+							        	<span>0</span>
+							        </span>
+							        <span class="top-back">
+							          <span>0</span>
+							        </span>
+							        <span class="bottom">
+							        	<span>0</span>
+							        </span>
+							        <span class="bottom-back">
+							          <span>0</span>
+							        </span>
+							      </div>
+							      <span class="count-title">секунд</span>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="bonus-img">
+							<img src="img/bonus-img.jpg" alt="">
+						</div>
+						<p class="bonus-bot">Примеры фото</p>
+					</div>
+				</div>
+				<div class="bonus-right">
+					<div class="memo-top">
+						<span class="memo-title">Заполните форму</span>
+						<p class="memo-desc">и в течение минуты получите индивидуальный <br> промокод на скидку 99%</p>
+					</div>
+					<p class="memo-txt">куда вам отправить промокод:</p>
+					<div class="memo-form">
+						<form action="#" novalidate="novalidate" class="form">
+							<div class="memo-form_btns">
+								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__sms"></i><span>в СМС</span></div>
+								<div class="memo-form_btn memo-form_btn__active"><i class="memo-form_ic memo-form_ic__wa"></i><span>WhatsApp</span></div>
+								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__tg"></i><span>Telegram</span></div>
+							</div>
+							<div class="memo-input">
+							 	<input type="tel" class="form-input tel" placeholder="Введите номер телефона" data-validate-field="tel" inputmode="text">
+							</div>
+							<label class="memo-form_access">
+								<input type="checkbox" checked="">
+								<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфеденциальности</a></span>
+							</label>
+							<div class="memo_btn-wrap btn-wrap">
+								<button type="submit" class="btn to-thanks" data-src="#thanks-bonus" data-fancybox="">Получить промокод на скидку 99%</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- timer -->
+
+	
 
 	<script src="libs/jquery-3.4.1.min.js"></script>
 	<script src="libs/slick.min.js"></script>
 	<script type="text/javascript" src="libs/fancybox.min.js"></script>
+	<script type="text/javascript" src="libs/inputmask.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="libs/datepicker.min.js"></script>
+	<script src="libs/i18n/datepicker.en.js"></script>
 	<script src="js/core.js"></script>
 
 </body>

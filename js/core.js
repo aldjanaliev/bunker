@@ -87,6 +87,25 @@ $(document).ready(function() {
     fade: true,
  		cssEase: 'linear'
   });
+
+  // modal_choose-time
+	let modalChooseNow = document.querySelector('.modal_choose-now')
+	let modalChooseLeter = document.querySelector('.modal_choose-leter')
+	let modalChooseInput = document.querySelector('.modal_choose-input')
+	modalChooseNow.onclick = function(){
+		modalChooseLeter.classList.remove('modal_choose-time__active')
+		this.classList.add('modal_choose-time__active')
+		modalChooseInput.disabled = true
+		modalChooseInput.style.opacity = '0.4'
+	}
+	modalChooseLeter.onclick = function(){
+		modalChooseNow.classList.remove('modal_choose-time__active')
+		this.classList.add('modal_choose-time__active')
+		modalChooseInput.style.opacity = '1'
+		modalChooseInput.disabled = false
+		modalChooseInput.focus()
+	}
+
   // перезагружает слайдер из таба
   $('.game-tab-slider').click(function() {
     $('.coach-slider').slick('refresh');
@@ -102,23 +121,233 @@ $(document).ready(function() {
 	});
 
 	// gallery pagination
-	let galleryParrent = document.querySelector('.gallery')
-	let galleryPagination = document.querySelector('.pagination-current')
-	let galleryArrow = [...document.querySelectorAll('.slick-arrow')]
-	galleryArrow.forEach(item => {
-		item.onclick = function(){
-			if(this.classList.contains('slick-next')){
-				let galleryCounter = +galleryPagination.innerHTML
-				galleryPagination.innerHTML = ++galleryCounter
-			} else{
-				let galleryCounter = +galleryPagination.innerHTML
-				galleryPagination.innerHTML = --galleryCounter
+	if(galleryParrent = document.querySelector('.gallery')){
+		let galleryParrent = document.querySelector('.gallery')
+		let galleryPagination = document.querySelector('.pagination-current')
+		let galleryArrow = [...document.querySelectorAll('.slick-arrow')]
+		galleryArrow.forEach(item => {
+			item.onclick = function(){
+				if(this.classList.contains('slick-next')){
+					let galleryCounter = +galleryPagination.innerHTML
+					galleryPagination.innerHTML = ++galleryCounter
+				} else{
+					let galleryCounter = +galleryPagination.innerHTML
+					galleryPagination.innerHTML = --galleryCounter
+				}
 			}
+		})
+	}
+
+	// validation
+	let selector = document.querySelectorAll('input[type="tel"]');
+	let im = new Inputmask('+7 (999) 999-99-99');
+	im.mask(selector);
+
+	// forms-select
+	$('.form_select-btn').on('click', function() {
+		if($(this).hasClass('form_select-btn__active')){
+			$(this).removeClass('form_select-btn__active')
+			$(this).next().slideUp(500)
+		} else{
+			$('.form_select-btn__active').next().slideUp(100)
+			$('.form_select-btn__active').removeClass('form_select-btn__active')
+			$(this).addClass('form_select-btn__active')
+			$(this).next().slideDown(500)
 		}
 	})
+	$('.form_select-tab').on('click', function() {
+
+			let thisParrent = $(this).closest('.form_select')
+			thisParrent.find('.form_select-tab__active').removeClass('form_select-tab__active')
+			$(this).addClass('form_select-tab__active')
+			let thisTetxt = $(this).html()
+			thisParrent.find('.form_select-btn-txt').html(thisTetxt)
+			thisParrent.find('.form_select-btn').css({'color':'#000'})
+			thisParrent.find('.form_select-body').slideUp(500)
+			thisParrent.find('.form_select-btn').removeClass('form_select-btn__active')
+
+			// select by attr
+			if($(this).hasClass('select-choose')){
+				let selectAttr = $(this).attr('data-choose')
+				if($(this).hasClass('select-kind')){
+					$('.form_select-btn-txt__btn').html('Выбрать тариф')
+					$('.select-tarif').css({'display':'none'})
+					console.log(123)
+				}
+				$('[data-item = "' + selectAttr + '"]').css({'display':'block'})
+				$('.form_select__passive').removeClass('form_select__passive')
+			}
+
+			if($(this).hasClass('form_select-tab__input-wrap')){
+				$('.form_select-tab__input')[0].focus()
+			}
+
+	})
+
+	// timer
+	// modal-bonus
+		setTimeout(function(){ 
+			let modalBonusBtn = document.querySelector('.modal-bonus_btn')
+			modalBonusBtn.click()
+			var Countdown = {
+			  
+			  // Backbone-like structure
+			  $el: $('.countdown'),
+			  
+			  // Params
+			  countdown_interval: null,
+			  total_seconds     : 0,
+			  
+			  // Initialize the countdown  
+			  init: function() {
+			    
+			    // DOM
+					this.$ = {
+			    	hours  : this.$el.find('.bloc-time.hours .figure'),
+			    	minutes: this.$el.find('.bloc-time.min .figure'),
+			    	seconds: this.$el.find('.bloc-time.sec .figure')
+			   	};
+
+			    // Init countdown values
+			    this.values = {
+				      hours  : this.$.hours.parent().attr('data-init-value'),
+			        minutes: this.$.minutes.parent().attr('data-init-value'),
+			        seconds: this.$.seconds.parent().attr('data-init-value'),
+			    };
+			    
+			    // Initialize total seconds
+			    this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
+
+			    // Animate countdown to the end 
+			    this.count();    
+			  },
+			  
+			  count: function() {
+			    
+			    var that    = this,
+			        $hour_1 = this.$.hours.eq(0),
+			        $hour_2 = this.$.hours.eq(1),
+			        $min_1  = this.$.minutes.eq(0),
+			        $min_2  = this.$.minutes.eq(1),
+			        $sec_1  = this.$.seconds.eq(0),
+			        $sec_2  = this.$.seconds.eq(1);
+			    
+			        this.countdown_interval = setInterval(function() {
+
+			        if(that.total_seconds > 0) {
+
+			            --that.values.seconds;              
+
+			            if(that.values.minutes >= 0 && that.values.seconds < 0) {
+
+			                that.values.seconds = 59;
+			                --that.values.minutes;
+			            }
+
+			            if(that.values.hours >= 0 && that.values.minutes < 0) {
+
+			                that.values.minutes = 59;
+			                --that.values.hours;
+			            }
+
+			            // Update DOM values
+			            // Hours
+			            that.checkHour(that.values.hours, $hour_1, $hour_2);
+
+			            // Minutes
+			            that.checkHour(that.values.minutes, $min_1, $min_2);
+
+			            // Seconds
+			            that.checkHour(that.values.seconds, $sec_1, $sec_2);
+
+			            --that.total_seconds;
+			        }
+			        else {
+			            clearInterval(that.countdown_interval);
+			        }
+			    }, 1000);    
+			  },
+			  
+			  animateFigure: function($el, value) {
+			    
+			     var that         = this,
+					     $top         = $el.find('.top'),
+			         $bottom      = $el.find('.bottom'),
+			         $back_top    = $el.find('.top-back'),
+			         $back_bottom = $el.find('.bottom-back');
+
+			    // Before we begin, change the back value
+			    $back_top.find('span').html(value);
+
+			    // Also change the back bottom value
+			    $back_bottom.find('span').html(value);
+
+			    // Then animate
+			    TweenMax.to($top, 0.8, {
+			        rotationX           : '-180deg',
+			        transformPerspective: 300,
+				      ease                : Quart.easeOut,
+			        onComplete          : function() {
+
+			            $top.html(value);
+
+			            $bottom.html(value);
+
+			            TweenMax.set($top, { rotationX: 0 });
+			        }
+			    });
+
+			    TweenMax.to($back_top, 0.8, { 
+			        rotationX           : 0,
+			        transformPerspective: 300,
+				      ease                : Quart.easeOut, 
+			        clearProps          : 'all' 
+			    });    
+			  },
+			  
+			  checkHour: function(value, $el_1, $el_2) {
+			    
+			    var val_1       = value.toString().charAt(0),
+			        val_2       = value.toString().charAt(1),
+			        fig_1_value = $el_1.find('.top').html(),
+			        fig_2_value = $el_2.find('.top').html();
+
+			    if(value >= 10) {
+
+			        // Animate only if the figure has changed
+			        if(fig_1_value !== val_1) this.animateFigure($el_1, val_1);
+			        if(fig_2_value !== val_2) this.animateFigure($el_2, val_2);
+			    }
+			    else {
+
+			        // If we are under 10, replace first figure with 0
+			        if(fig_1_value !== '0') this.animateFigure($el_1, 0);
+			        if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
+			    }    
+			  }
+			};
+			// Let's go !
+			Countdown.init();
+		}, 5000)
+
+	// calendare
+	var dateToday = new Date(); 
+
+		$(function(){
+			$('.calendare-in').datepicker({
+				minDate: dateToday,
+				inline: true,
+				onSelect: date => {
+		      $('.calendare').addClass('calendare__active')
+		    }
+			})
+	})
+	$('.calendare').on('click', function() {
+		$(this).children('.datepicker-inline').slideToggle(300)
+		$(this).toggleClass('calendare__active')
+	})
+
 })
-
-
 
 // tabs
 let tabsWrap = document.querySelectorAll('.tabs-wrap')
@@ -221,3 +450,15 @@ variantHead.forEach(item =>{
 	}
 })
 
+// close thanks modal
+let toThanksBtns = [...document.querySelectorAll('.to-thanks')]
+toThanksBtns.forEach(item =>{
+	item.onclick = function(){
+		let toThanksParrent = this.closest('.modal')
+		let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
+		toThanksClose.click()
+	}
+})
+
+
+let toThanksClose = [...document.querySelectorAll('.thanks-modal')]
