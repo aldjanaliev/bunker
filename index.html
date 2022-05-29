@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/datepicker.min.css">
+	<link rel="stylesheet" href="css/map.bundle.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
@@ -1288,6 +1289,13 @@
 		</div>
 	</section>
 
+	<section class="map" id="map">
+            <div class="container">
+                <h2 class="section-title map__title">КАК ДО НАС ДОБРАТЬСЯ</h2>
+                <div class="map__container" id="mapContainer"></div>
+            </div>
+        </section>
+
 	<footer>
 		<div class="footer-map">
 			<div class="container" id="contacts">
@@ -2363,7 +2371,29 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="libs/datepicker.min.js"></script>
 	<script src="libs/i18n/datepicker.en.js"></script>
+	<!-- <script src="libs/map.bundle.js"></script> -->
 	<script src="js/core.js"></script>
+	<script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NLGD8GW');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLGD8GW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 </body>
 </html>

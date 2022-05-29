@@ -349,6 +349,46 @@ $(document).ready(function() {
 
 })
 
+// map plugin
+document.addEventListener('DOMContentLoaded', function () {
+	initApis();
+})
+
+var initApis = function initApis() {
+  var loadApi = function loadApi() {
+    if (this.id === 'map') {
+      console.log('loading');
+      var ym = document.createElement('script');
+      ym.setAttribute('async', true);
+      ym.src = 'libs/map.bundle.js';
+      ym.addEventListener('load', function () {
+        document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="css/map.bundle.css">');
+        yaMapRoute.build('#mapContainer', {
+          share: {
+            telegram: 'tg://resolve?domain=okyolo',
+            viber: 'viber://chat?number=+79966066077',
+            whatsapp: 'https://api.whatsapp.com/send?phone=79966066077&text=getlocation'
+          }
+        });
+      });
+      document.body.appendChild(ym);
+    }
+  };
+
+  var observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      loadApi.call(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, {
+    rootMargin: "".concat(window.innerHeight * 2, "px 0px")
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#map'), function (container) {
+    return observer.observe(container);
+  });
+};
+
 // tabs
 let tabsWrap = document.querySelectorAll('.tabs-wrap')
 tabsWrap.forEach(item =>{
