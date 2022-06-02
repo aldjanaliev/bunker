@@ -10,8 +10,9 @@ $(document).ready(function() {
     {
       breakpoint: 781,
       settings: {
-        arrows: false,
-        dots: true,
+    		slidesToShow: 1,
+        arrows: true,
+        dots: false,
       }
     }]
   });
@@ -27,8 +28,9 @@ $(document).ready(function() {
     {
       breakpoint: 781,
       settings: {
-        arrows: false,
-        dots: true,
+    		slidesToShow: 1,
+        arrows: true,
+        dots: false,
       }
     }]
   });
@@ -77,6 +79,22 @@ $(document).ready(function() {
     }]
   });
 
+  $('.game-right-slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    mobileFirst: true,
+    centerMode: true,
+    variableWidth: true,
+    responsive: [
+    {
+    	breakpoint: 780,
+    	settings: "unslick"
+    }]
+  });
+
   $('.gallery-slider').slick({
     infinite: false,
     speed: 300,
@@ -119,6 +137,13 @@ $(document).ready(function() {
       settings: {
     		slidesToShow: 2,
         arrows: false,
+        dots: false,
+      }
+    },{
+      breakpoint: 780,
+      settings: {
+    		slidesToShow: 1,
+        arrows: true,
         dots: false,
       }
     }]

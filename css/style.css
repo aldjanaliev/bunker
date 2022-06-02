@@ -2996,7 +2996,9 @@ footer{
 .order-txt br,
 .memo-left img:last-child,
 .slick-slide .variants-img__sm,
-.game-body .img__sm{
+.game-body .img__sm,
+.coach-review__sm,
+.order .order-sm{
 	display: none;
 }
 .reveiw .tab-head__active.like-tab:first-child .like-tab-ic{
