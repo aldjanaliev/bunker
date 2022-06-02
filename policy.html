@@ -57,7 +57,7 @@
 
 	<div class="policy">
 		<div class="container">
-		<p class="policy-title"><span class="policy-color">Политика</span> конфеденциальности</p>
+		<p class="policy-title"><span class="policy-color">Политика</span> конфиденциальности</p>
 		<p class="policy-desc">г. Город                                   «день» месяц год г.</p>
 		<p class="policy-desc">Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Интернет-магазин «Название», расположенный на доменном имени адрес магазина, может получить о Пользователе во время использования сайта Интернет-магазина, программ и продуктов Интернет-магазина.</p>
 		<ul>
@@ -141,28 +141,37 @@
 	<div class="modal callback" id="modal-callback">
 		<div class="modal-in">
 			<form action="#" class="form" id="form-callback">
+				<input type='hidden' name='Тема' value='Обратный звонок'>
 				<span class="modal_title">Заказать обратный звонок</span>
 				<div class="modal_input-wrap">
-					<input type="text" class="modal_input" placeholder="Введите имя">
+					<input type="text" class="modal_input" placeholder="Введите имя" name="Имя">
 				</div>
 				<div class="modal_input-wrap">
-					<input type="tel" class="modal_input" placeholder="Введите номер телефона">
+					<input type="tel" class="modal_input" placeholder="Введите номер телефона" name="Телефон">
 				</div>
 				<div class="modal_choose-time">
 					<div class="modal_choose-btn modal_choose-now">Сейчас</div>
 					<div class="modal_choose-btn modal_choose-leter modal_choose-time__active">По времени</div>
 				</div>
 				<div class="modal_input-wrap">
-					<input type="text" class="modal_input modal_choose-input" placeholder="Например, завтра до 12.00">
+					<input type="text" class="modal_input modal_choose-input" placeholder="Например, завтра до 12.00" name="Время">
 				</div>
 				<label class="memo-form_access">
 					<input type="checkbox" checked>
-					<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с Политикой конфеденциальности</span>
+					<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с Политикой конфиденциальности</span>
 				</label>
 				<div class="form-btn">
-					<button class="btn">Заказать обратный звонок</button>
+					<button class="btn to-thanks" data-src="#thanks-order" data-fancybox>Заказать обратный звонок</button>
 				</div>
 			</form>
+		</div>
+	</div>
+
+	<div class="modal thanks-modal" id="thanks-order">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваша заявка принята</span>
+			<p class="thanks-modal_desc">Мы свяжемся с вами для согласования деталей</p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
 		</div>
 	</div>
 

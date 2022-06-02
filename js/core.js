@@ -63,7 +63,18 @@ $(document).ready(function() {
     slidesToShow: 6,
     slidesToScroll: 1,
     focusOnSelect: true,
-	  asNavFor: '.variants-body-slider'
+	  asNavFor: '.variants-body-slider',
+	  responsive: [
+    {
+      breakpoint: 780,
+      settings: {
+    		infinite: true,
+    		slidesToShow: 3,
+        arrows: true,
+        dots: false,
+        centerMode: true,
+      }
+    }]
   });
 
   $('.gallery-slider').slick({
@@ -88,6 +99,32 @@ $(document).ready(function() {
  		cssEase: 'linear'
   });
 
+  $('.price-slider').slick({
+  	dots: false,
+    arrows: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+    		slidesToShow: 3,
+        arrows: false,
+        dots: false,
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+    		slidesToShow: 2,
+        arrows: false,
+        dots: false,
+      }
+    }]
+  });
+  
+
   // modal_choose-time
 	let modalChooseNow = document.querySelector('.modal_choose-now')
 	let modalChooseLeter = document.querySelector('.modal_choose-leter')
@@ -96,12 +133,12 @@ $(document).ready(function() {
 		modalChooseLeter.classList.remove('modal_choose-time__active')
 		this.classList.add('modal_choose-time__active')
 		modalChooseInput.disabled = true
-		modalChooseInput.style.opacity = '0.4'
+		modalChooseInput.style.display = 'none'
 	}
 	modalChooseLeter.onclick = function(){
 		modalChooseNow.classList.remove('modal_choose-time__active')
 		this.classList.add('modal_choose-time__active')
-		modalChooseInput.style.opacity = '1'
+		modalChooseInput.style.display = 'block'
 		modalChooseInput.disabled = false
 		modalChooseInput.focus()
 	}
@@ -115,7 +152,7 @@ $(document).ready(function() {
 	$('a[href^="#"').on('click', function() {
     let href = $(this).attr('href');
     $('html, body').animate({
-        scrollTop: $(href).offset().top - 100
+        scrollTop: $(href).offset().top
     });
     return false;
 	});
@@ -142,6 +179,129 @@ $(document).ready(function() {
 	let selector = document.querySelectorAll('input[type="tel"]');
 	let im = new Inputmask('+7 (999) 999-99-99');
 	im.mask(selector);
+
+	// ==========validate and send form==========
+	// document.addEventListener('DOMContentLoaded', function(){
+	// 	const form = [...document.querySelectorAll('form')]
+	// 	form.forEach(item =>{
+	// 		item.addEventListener('submit', formSend)
+	// 		async function formSend(e){
+	// 			e.preventDefault()
+	// 			let error = formValidate(this)
+	// 			let formData = new FormData(this)
+	// 			if(document.querySelector('.file-upload')){
+	// 				formData.append('file', formImage.files[0])
+	// 			}
+	// 			if(error === 0){
+	// 				this.classList.add('_sending')
+	// 				let sendBtn = document.querySelector('#btn_thanks')
+	// 				sendBtn.click()
+
+	// 				let response = await fetch('send.php',{
+	// 					method: 'POST',
+	// 					body: formData
+	// 				})
+	// 				if(response.ok){
+	// 					// let result = await response.json()
+	// 					console.log('sending message')
+	// 					// console.log(result.message)
+	// 					// fileInputText.innerHTML = ''
+	// 					// form.reset()
+	// 				} else{
+	// 					console.log('error message')
+	// 				}
+	// 			} else{
+	// 				console.log('not valid ' + error)
+	// 			}
+	// 		}
+	// 	})
+
+	// 	function formValidate(form) {
+	// 		let error = 0
+	// 		let formReq = form.querySelectorAll('._req')
+
+	// 		for(let index = 0; index < formReq.length; index++){
+	// 			const input = formReq[index]
+	// 			formRemoveError(input)
+	// 			if(input.classList.contains('_mail')){
+	// 				if(emailTest(input)){
+	// 					formAddError(input)
+	// 					error++
+	// 				}
+	// 			} else if(input.getAttribute("type") == "checkbox" && input.checked == false){
+	// 				formAddError(input)
+	// 				error++
+	// 			} else{
+	// 				if(input.value === ''){
+	// 					formAddError(input)
+	// 					error++
+	// 				}
+	// 			}
+	// 		}
+	// 		return error
+	// 	}
+
+	// 	// checked input
+	// 	let errorInputs = [...document.querySelectorAll('._req')]
+	// 	errorInputs.forEach(item =>{
+	// 		item.oninput = function(){
+	// 			if(this.classList.contains('_error')){
+	// 				if(this.classList.contains('_mail')){
+	// 					if(!emailTest(this)){
+	// 						this.classList.remove('_error')
+	// 					}
+	// 				} else if(this.classList.contains('detail_input__tel')){
+	// 					if(!this.value.includes('_')){
+	// 						this.classList.remove('_error')
+	// 					}
+						
+	// 				} else{
+	// 					if(!this.value == ''){
+	// 						this.classList.remove('_error')
+	// 					}
+	// 				}
+	// 			} else if(this.classList.contains('detail_input__tel')){
+	// 				if(this.value.includes('_')){
+	// 					this.classList.add('_error')
+	// 				}
+	// 			}
+	// 		}
+	// 	})
+
+	// 	function formAddError(input){
+	// 		if(input.classList.contains('ch-box')){
+	// 			input.parentElement.classList.add('_error')
+	// 		} else{
+	// 			input.classList.add('_error')
+	// 		}
+	// 	}
+	// 	function formRemoveError(input){
+	// 		if(input.classList.contains('ch-box')){
+	// 			input.parentElement.classList.remove('_error')
+	// 		} else{
+	// 			input.classList.remove('_error')
+	// 		}
+	// 	}
+	// 	// check mail
+	// 	function emailTest(input){
+	// 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+	// 	}
+	// 	// upload files
+	// 	let formImage = [...document.querySelectorAll('.form_file-input')]
+	// 	formImage.forEach(item =>{
+	// 		let fileInputParent = item.parentElement
+	// 		let fileInputText = fileInputParent.querySelector('.file-txt')
+	// 		item.addEventListener('change', () =>{
+	// 			let formImageFiles = item.files[0]
+	// 			fileInputText.innerText = formImageFiles.name
+	// 			this.classList.add('file-upload')
+	// 			console.log(formImageFiles.name)
+	// 		})
+	// 	})
+		
+
+	// })
+	// ============validate and send form==========
 
 	// forms-select
 	$('.form_select-btn').on('click', function() {
@@ -184,12 +344,41 @@ $(document).ready(function() {
 
 	})
 
+	// close thanks modal
+	let toThanksBtns = [...document.querySelectorAll('.to-thanks')]
+	toThanksBtns.forEach(item =>{
+		item.onclick = function(){
+			if(this.classList.contains('bonus-btn')){
+				let toThanksParrent = this.closest('.modal')
+				let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
+				toThanksClose.click()
+				let modalBonusIc = document.querySelector('.main-ic__bonus')
+				modalBonusIc.remove()
+				let modalBonus = document.querySelector('#modal-bonus')
+				modalBonus.remove()
+			}
+			let toThanksParrent = this.closest('.modal')
+			let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
+			toThanksClose.click()
+		}
+	})
+
+	let menuBtn = document.querySelector('.mobile-btn')
+	let menu = document.querySelector('.mobile-menu-body')
+	menuBtn.onclick = function(){
+		if(this.classList.contains('mobile-btn__active')){
+			this.classList.remove('mobile-btn__active')
+			menu.classList.remove('mobile-menu__active')
+		} else{
+			this.classList.add('mobile-btn__active')
+			menu.classList.add('mobile-menu__active')
+		}
+	}
+
 	// timer
 	// modal-bonus
-		setTimeout(function(){ 
-			let modalBonusBtn = document.querySelector('.modal-bonus_btn')
-			modalBonusBtn.click()
-			var Countdown = {
+	let modalBonusBtn = document.querySelector('.modal-bonus_btn')
+	var Countdown = {
 			  
 			  // Backbone-like structure
 			  $el: $('.countdown'),
@@ -325,10 +514,10 @@ $(document).ready(function() {
 			        if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
 			    }    
 			  }
-			};
-			// Let's go !
-			Countdown.init();
-		}, 5000)
+	};
+
+	// Let's go !
+	Countdown.init();
 
 	// calendare
 	var dateToday = new Date(); 
@@ -342,6 +531,7 @@ $(document).ready(function() {
 		    }
 			})
 	})
+
 	$('.calendare').on('click', function() {
 		$(this).children('.datepicker-inline').slideToggle(300)
 		$(this).toggleClass('calendare__active')
@@ -407,6 +597,11 @@ tabsWrap.forEach(item =>{
 				tabBodyActive.classList.remove('tab-body__active')
 				tabBody[index].classList.add('tab-body__active')
 			}
+
+			// add slick refresh to price block
+			if(this.classList.contains('like_tab')){
+	  		$('.price-slider').slick('refresh');
+			}
 		}
 	})
 })
@@ -415,11 +610,15 @@ tabsWrap.forEach(item =>{
 let formBtn = document.querySelectorAll('.memo-form_btn')
 formBtn.forEach(item =>{
 	item.onclick = function(){
+		let formBtnParent = this.parentElement
 		if(!this.classList.contains('memo-form_btn__active')){
-			let formBtnActive = document.querySelector('.memo-form_btn__active')
+			let formBtnActive = formBtnParent.querySelector('.memo-form_btn__active')
 			formBtnActive.classList.remove('memo-form_btn__active')
 			this.classList.add('memo-form_btn__active')
 		}
+		let massangerText = this.querySelector('span').innerText
+		let massangerType = formBtnParent.querySelector('.massanger_type')
+		massangerType.value = massangerText
 	}
 })
 
@@ -458,6 +657,7 @@ let toPrice = function(a){
 	priceBodyActive.classList.remove('tab-body__active')
 	priceTab[a].classList.add('tab-head__active')
 	priceBody[a].classList.add('tab-body__active')
+	$('.price-slider').slick('refresh');
 }
 linkToPriceLazer.onclick = function(){
 	toPrice(0)
@@ -470,14 +670,14 @@ linkToPriceRest.onclick = function(){
 }
 
 // maps dots
-let mapDots = [...document.querySelectorAll('.map-dots')]
-mapDots.forEach(item => {
-	item.onclick = function(){
-		let mapDotsDesc = this.querySelector('.map-dots_txt')
-		mapDotsDesc.classList.add('map-dots_txt__active')
-		setTimeout(function(){ mapDotsDesc.classList.remove('map-dots_txt__active')}, 2000);
-	}
-})
+// let mapDots = [...document.querySelectorAll('.map-dots')]
+// mapDots.forEach(item => {
+// 	item.onclick = function(){
+// 		let mapDotsDesc = this.querySelector('.map-dots_txt')
+// 		mapDotsDesc.classList.add('map-dots_txt__active')
+// 		setTimeout(function(){ mapDotsDesc.classList.remove('map-dots_txt__active')}, 2000);
+// 	}
+// })
 
 // variant tabs
 let variantHead = [...document.querySelectorAll('.variant-head')]
@@ -490,15 +690,3 @@ variantHead.forEach(item =>{
 	}
 })
 
-// close thanks modal
-let toThanksBtns = [...document.querySelectorAll('.to-thanks')]
-toThanksBtns.forEach(item =>{
-	item.onclick = function(){
-		let toThanksParrent = this.closest('.modal')
-		let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
-		toThanksClose.click()
-	}
-})
-
-
-let toThanksClose = [...document.querySelectorAll('.thanks-modal')]
