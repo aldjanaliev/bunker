@@ -2400,6 +2400,9 @@ footer{
 .form_select-tab:last-child{
 	border-bottom-color: transparent;
 }
+.select-num .form_select-tab:last-child{
+	border-bottom-color: #CECECE;
+}
 .form_select-tab__active,
 .form_select-tab:hover{
 	color: #FF1600;
@@ -2447,12 +2450,20 @@ footer{
 .form_select-btn__active::before{
 	transform: rotate(180deg);
 }
+.form_select-col__passive{
+	cursor: default;
+  pointer-events: none;
+  opacity: 0.4;
+}
 .form_select-body{
 	position: absolute;
 	top: 60px;
 	left: 0;
 	right: 0;
 	z-index: 10;
+}
+.form_file-input{
+	display: none;
 }
 .select-flex{
 	display: flex;
@@ -2485,6 +2496,19 @@ footer{
 }
 .form_select-tab__input{
 	font-size: 18px;
+}
+.select-num{
+	height: 210px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+  scrollbar-color: #FF1600 #cfd2d1;
+}
+.select-num::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(3, 32, 25, 0.1);
+}
+.select-num::-webkit-scrollbar-thumb {
+  background-color: #FF1600;
 }
 .form-right_txt{
 	font-family: 'Metro', arial;

@@ -350,12 +350,25 @@ $(document).ready(function() {
 		}
 	})
 	$('.form_select-tab').on('click', function() {
-
+			let thisParrentModal = $(this).closest('.modal')
 			let thisParrent = $(this).closest('.form_select')
 			thisParrent.find('.form_select-tab__active').removeClass('form_select-tab__active')
 			$(this).addClass('form_select-tab__active')
 			let thisTetxt = $(this).html()
-			thisParrent.find('.form_select-btn-txt').html(thisTetxt)
+
+			let selectForChange = thisParrent.find('.form_select-btn-txt')
+			let inputForChange = selectForChange.next('input')
+			selectForChange.html(thisTetxt)
+			let txtForChange = selectForChange.text()
+			// txtForChange = txtForChange.replace(/\s{2,}/g, ' ')
+			if(thisTetxt.length > 30){
+				let txtForChange = $(this).find('.select-flex_top').text()
+				inputForChange.val(txtForChange)
+			} else{
+				inputForChange.val(txtForChange)
+			}
+			console.log(inputForChange.attr('name') + ' ---- ' + inputForChange.val())
+
 			thisParrent.find('.form_select-btn').css({'color':'#000'})
 			thisParrent.find('.form_select-body').slideUp(500)
 			thisParrent.find('.form_select-btn').removeClass('form_select-btn__active')
@@ -366,7 +379,6 @@ $(document).ready(function() {
 				if($(this).hasClass('select-kind')){
 					$('.form_select-btn-txt__btn').html('Выбрать тариф')
 					$('.select-tarif').css({'display':'none'})
-					console.log(123)
 				}
 				$('[data-item = "' + selectAttr + '"]').css({'display':'block'})
 				$('.form_select__passive').removeClass('form_select__passive')
@@ -374,6 +386,40 @@ $(document).ready(function() {
 
 			if($(this).hasClass('form_select-tab__input-wrap')){
 				$('.form_select-tab__input')[0].focus()
+			}
+
+			// ====== регулируем количество вводимых игроков =========
+			if($(this).attr('data-col')){
+				thisParrentModal.find('.form_select-col__passive').removeClass('form_select-col__passive')
+				thisParrentModal.find('.hide-10').css({'display':'block'})
+				thisParrentModal.find('.hide-8').css({'display':'block'})
+				thisParrentModal.find('.hide-6').css({'display':'block'})
+				thisParrentModal.find('.form_select-btn-col').html('Выбрать количество')
+				$('.select-num').find('.form_select-tab__active').removeClass('form_select-tab__active')
+				if($(this).attr('data-col') == '10'){
+					thisParrentModal.find('.hide-10').css({'display':'none'})
+				} else if($(this).attr('data-col') == '8'){
+					thisParrentModal.find('.hide-8').css({'display':'none'})
+				} else if($(this).attr('data-col') == '6'){
+					thisParrentModal.find('.hide-6').css({'display':'none'})
+				}
+			} else if($(this).attr('data-time')){
+				thisParrentModal.find('.form_select-btn__add').addClass('form_select-col__passive')
+				var multiplyPrice = $('.form_select-tab__active[data-time]').attr('data-time')
+				thisParrentModal.find('.form-right_txt').html(multiplyPrice + ' руб./час')
+			} else if($(this).attr('data-rent')){
+				thisParrentModal.find('.form_select-btn__add').addClass('form_select-col__passive')
+			}
+
+			// ========= выводим стоимость сертификата =========
+			if($(this).hasClass('multiply')){
+				var multiplyPrice = $('.form_select-tab__active[data-price]').attr('data-price')
+				multiplyPrice = multiplyPrice * +$(this).text()
+				thisParrentModal.find('.form-right_txt').html(multiplyPrice + ' руб.')
+			}
+
+			if($(this).attr('data-price')){
+				thisParrentModal.find('.form-right_txt').html('количество человек × стоимость тарифа')
 			}
 
 	})
@@ -461,7 +507,8 @@ $(document).ready(function() {
 
 			            --that.values.seconds;              
 
-			            if(that.values.minutes >= 0 && that.values.seconds < 0) {
+			            // if(that.values.minutes >= 0 && that.values.seconds < 0) {
+			            if(that.values.minutes > 0 && that.values.seconds < 0) {
 
 			                that.values.seconds = 59;
 			                --that.values.minutes;
@@ -573,9 +620,22 @@ $(document).ready(function() {
 
 })
 
+// =========== add numbers to form_select__num ==========
+let addNum = function(){
+	let addAfter = [...document.querySelectorAll('.form_select-tab__add')]
+	addAfter.forEach(item => {
+		let addTxt = ''
+		for(let i = 11; i < 76; i++){
+			addTxt = addTxt + `<span class="form_select-tab multiply">${i}</span>`
+		}
+		item.insertAdjacentHTML('afterend', addTxt)
+	})
+}
+
 // map plugin
 document.addEventListener('DOMContentLoaded', function () {
 	initApis();
+	addNum();
 })
 
 var initApis = function initApis() {
