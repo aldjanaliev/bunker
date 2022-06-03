@@ -88,7 +88,7 @@ body {
 	letter-spacing: 0.05em;
 	font-size: 24px;
 	line-height: 44px;
-	padding-bottom: 75px;
+	padding-bottom: 25px;
 }
 .section-title .red{
 	font-size: 40px;
@@ -522,6 +522,7 @@ header{
 	pointer-events: none;
 	cursor: default;
 	box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+	z-index: 10;
 }
 .map-dots_txt__active{
 	opacity: 1;
@@ -587,11 +588,17 @@ header{
 	position: relative;
 	padding-top: 200px;
 }
+.variant-head_ic{
+	margin: 0;
+}
+.variants .section-title{
+	padding-bottom: 0;
+}
 .variants-body-wrap{
 	background: url(../img/variants/info-bg.png) top center no-repeat;
 	background-size: 100% 100%;
 	padding: 40px 0 0;
-	margin-top: -80px;
+	margin-top: -130px;
 	min-height: 675px;
 }
 .variants-body{
@@ -602,7 +609,7 @@ header{
 }
 .variants-info{
 	background: #fff;
-	padding: 50px;
+	padding: 30px 50px;
 	color: #000;
 	box-shadow: 0px 3px 10px rgba(71, 70, 70, 0.9);
 	border-radius: 5px;
@@ -633,13 +640,14 @@ header{
 	font-size: 18px;
 	line-height: 24px;
 	align-self: center;
+	width: calc(100% - 85px);
 }
 .variants-info_desc{
-	color: #E9E9E9;
+	color: rgba(0,0,0,0.4);
 	display: block;
 }
 .variants-heads{
-	height: 410px;
+	height: 350px;
 	z-index: 22;
 }
 .variant-head{
@@ -657,8 +665,9 @@ header{
 	transition: 0.3s;
 	background-size: 100% auto;
 	background: url(../img/variants/variants-items.png) center top no-repeat;
-	height: 330px;
-	padding: 70px 0 70px;
+	height: 280px;
+	background-size: 100% 100%;
+	padding: 50px 0 40px;
 	position: relative;
 }
 .variant-head_title{
@@ -915,7 +924,6 @@ header{
 .coach-name{
 	height: 285px;
 	padding-top: 120px;
-	margin-top: 30px;
 	margin: 30px auto 0;
 	width: 285px;
 	background: url(../img/like/coach-star.png) center no-repeat;
@@ -969,7 +977,7 @@ header{
 .game-gallery{
 	background: url(../img/game/game-gallery-bg.jpg) center no-repeat;
 	background-size: 100% 100%;
-	padding: 42px;
+	padding: 25px 42px;
 }
 .game-gallery img{
 	display: block;
@@ -1189,11 +1197,9 @@ header{
 .like .tab-head__active.like-tab:last-child .like-tab-ic{
 	background: url(../img/like/33.svg) center no-repeat;
 }
-.game-body-wrap{
-	margin-top: 30px;
-}
 .game-body{
 	overflow: hidden;
+	position: relative;
 	border-radius: 5px;
 	box-shadow: 0px 15px 20px 20px rgba(0, 0, 0, 0.25);
 }
@@ -2898,7 +2904,7 @@ footer{
 }
 .mobile-btn{
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	right: 0;
 	z-index: 200;
 	width: 35px;
@@ -2998,7 +3004,9 @@ footer{
 .slick-slide .variants-img__sm,
 .game-body .img__sm,
 .coach-review__sm,
-.order .order-sm{
+.order .order-sm,
+.btn-map__mid,
+.btn-map__sm{
 	display: none;
 }
 .reveiw .tab-head__active.like-tab:first-child .like-tab-ic{
@@ -3018,4 +3026,7 @@ footer{
 	fill: #FF1600;
 	left: -26px;
 	top: 3px;
+}
+.game .tab-head-wrap{
+	padding-bottom: 0;
 }

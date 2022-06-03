@@ -55,7 +55,14 @@ $(document).ready(function() {
 	  fade: true,
     speed: 300,
     draggable: false,
-	  asNavFor: '.variants-heads'
+	  asNavFor: '.variants-heads',
+	   responsive: [
+    {
+      breakpoint: 780,
+      settings: {
+    		infinite: true,
+      }
+    }]
 	});
   $('.variants-heads').slick({
   	dots: false,
@@ -76,7 +83,8 @@ $(document).ready(function() {
         dots: false,
         centerMode: true,
       }
-    }]
+    },
+    ]
   });
 
   $('.game-right-slider').slick({
@@ -102,6 +110,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
 	  fade: true,
     draggable: false,
+    swipe: false
   });
 
 
