@@ -2494,6 +2494,9 @@ footer{
 	align-self: center;
 	padding-bottom: 16px;
 }
+.form-right_txt br{
+	display: none;
+}
 .form_flex__bg{
 	position: relative;
 }
@@ -2570,6 +2573,7 @@ footer{
 	padding-top: 10px;
 }
 .countdown .figure {
+	overflow: hidden;
   position: relative;
   float: left;
   height: 112px;
