@@ -529,6 +529,32 @@
 	.btn-map__big{
 		display: none;
 	}
+	.modal-coach-in{
+		height: 700px;
+	}
+	.modal-coach_right{
+		font-size: 16px;
+		line-height: 20px;
+		padding: 30px 50px 30px 0;
+		width: calc(100% - 500px)
+	}
+	.modal-coach_item{
+		padding-bottom: 20px;
+	}
+	.modal-coach_txt{
+		padding: 15px 0;
+	}
+	.modal-coach_img{
+    left: -20%;
+	}
+	.variants-img__big{
+		position: relative;
+		z-index: 2;
+	}
+	.btn-order{
+		position: relative;
+		z-index: 10;
+	}
 }
 @media screen and (max-width: 1200px) {
 	.bonus-right{
@@ -932,6 +958,18 @@
 	}
 	.modal-big-in{
 		padding: 50px;
+	}
+	.modal-coach_right{
+		width: calc(100% - 400px);
+	}
+	.modal-coach_img{
+		width: 610px;
+	}
+	.shoot__4{
+		right: 15%;
+	}
+	.modal-coach_left{
+		width: 430px;
 	}
 }
 @media screen and (max-width: 990px) {
@@ -1357,6 +1395,50 @@
 	.memo-right {
     width: calc(100% - 350px);
 	}
+	.modal-coach-in{
+		height: auto;
+	}
+	.modal-coach-img-sm{
+		display: block;
+		margin: 0 auto;
+	}
+	.modal-coach-img{
+		display: none;
+	}
+	.modal-coach_left{
+		align-self: center;
+		width: auto;
+	}
+	.modal-coach_title{
+		width: 240px;
+		left: 50%;
+		margin-left: -120px;
+		text-align: center;
+		font-size: 15px;
+		line-height: 20px;
+	}
+	.modal-coach_name{
+		font-size: 22px;
+		line-height: 32px;
+		padding-top: 5px;
+	}
+	.modal-coach-in{
+		flex-direction: column;
+	}
+	.modal-coach_img{
+		position: static;
+		height: auto;
+		width: auto;
+		margin-top: -50px;
+	}
+	.modal-coach_right{
+		padding: 0 40px 40px;
+		margin-top: -60px;
+		width: 100%;
+	}
+	.modal-coach_btn .btn{
+		margin: 0 auto;
+	}
 }
 @media screen and (max-width: 780px) {
 	.modal_title{
@@ -1772,6 +1854,17 @@
 	.variants-body-wrap{
 		margin-top: -90px;
 	}
+	.modal-coach_item{
+		padding-bottom: 80px;
+	}
+	.modal-coach_links{
+		position: absolute;
+		right: 0;
+		bottom: 40px;
+	}
+	.modal-coach-ic{
+		margin-left: 20px;
+	}
 }
 @media screen and (max-width: 560px) {
 	.modal-big-in{
@@ -2052,6 +2145,9 @@
 	}
 }
 @media screen and (max-width: 420px) {
+	.modal-in{
+		padding: 30px;
+	}
 	.container{
 		max-width: 340px;
 		padding: 0 10px;

@@ -526,7 +526,7 @@
 									<div class="coach-right">
 										<div class="coach-review">
 											<div class="coach-review_info">
-												<a href="#modal-coach" class="btn-order" data-coach="gora" data-fancybox>Читать отзывы</a>
+												<a href="#modal-coach" class="btn-order coach-review__sm" data-coach="gora" data-fancybox>Читать отзывы</a>
 												<div class="coach-review_img">
 													<img src="img/like/coach-review-2.jpg" alt="">
 												</div>
@@ -1329,7 +1329,7 @@
 					</div>
 					<p class="memo-txt">куда вам отправить ссылку на файл:</p>
 					<div class="memo-form">
-						<form class="form form-static">
+						<form class="form form-static" data-thanks="to-pdf">
 							<input type='hidden' name='Тема' value='Скачать памятку'>
 							<div class="memo-form_btns">
 								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__sms"></i><span>в СМС</span></div>
@@ -1398,7 +1398,7 @@
 
 	<div class="modal callback" id="modal-callback">
 		<div class="modal-in">
-			<form class="form" id="form-callback">
+			<form class="form" id="form-callback" data-thanks="to-callback">
 				<input type='hidden' name='Тема' value='Заказать обратный звонок'>	
 				<span class="modal_title">Заказать обратный звонок</span>
 				<div class="modal_input-wrap">
@@ -1427,7 +1427,7 @@
 
 	<div class="modal modal-big" id="modal-legal">
 		<div class="modal-big-in">
-			<form class="form" id="form-legal">
+			<form class="form" id="form-legal" data-thanks="to-order">
 				<input type='hidden' name='Тема' value='Заявка на игру от юридического лица'>
 				<span class="modal_title"><span class="red">Заявка</span> на игру от юридического лица</span>
 				<div class="form_flex-wrap">
@@ -1734,7 +1734,7 @@
 
 	<div class="modal modal-big" id="modal-physical">
 		<div class="modal-big-in">
-			<form class="form" id="form-physical">
+			<form class="form" id="form-physical" data-thanks="to-order">
 				<input type='hidden' name='Тема' value='Заявка на игру'>
 				<span class="modal_title"><span class="red">Заявка</span> на игру</span>
 				<div class="form_flex-wrap">
@@ -2018,7 +2018,7 @@
 
 	<div class="modal modal-big" id="modal-sertificate">
 		<div class="modal-big-in">
-			<form class="form" id="form-sertificate">
+			<form class="form" id="form-sertificate" data-thanks="to-order">
 				<input type='hidden' name='Тема' value='Заказать сертификат'>
 				<span class="modal_title">Заказать <span class="red">сертификат</span></span>
 				<div class="form_flex-wrap">
@@ -2285,7 +2285,7 @@
 
 	<div class="modal modal-big" id="modal-meet">
 		<div class="modal-big-in">
-			<form class="form" id="form-meet">
+			<form class="form" id="form-meet" data-thanks="to-order">
 				<input type='hidden' name='Хочу провести' value='' class="input-meet">
 				<span class="modal_title"><span class="red">Заявка</span> на <span class="tilte-meet"></span></span>
 				<div class="form_flex-wrap">
@@ -2569,7 +2569,7 @@
 
 	<div class="modal modal-big" id="modal-order">
 		<div class="modal-big-in">
-			<form class="form" id="form-order">
+			<form class="form" id="form-order" data-thanks="to-order">
 				<input type='hidden' name='Бронь' value='' class="input-order">
 				<span class="modal_title"><span class="red">Заявка</span> на бронь <span class="input-order_title"></span></span>
 				<div class="form_flex-wrap">
@@ -2672,10 +2672,237 @@
 		</div>
 	</div>
 
-	<!-- /main - modals -->
+	<div class="modal modal-big" id="modal-bonus">
+		<div class="modal-big-in">
+			<div class="form form-bonus" id="form-bonus">
+				<input type='hidden' name='Тема' value='Боунус'>
+				<span class="modal_title"><span class="red">Бонус</span> за оформление заявки на игру в течение 10 минут — ваше эффектное фото для соцсетей со скидкой 99% </span>
+				<div class="bonus">
+					<div class="bonus-left">
+						<div class="bonus-in">
+							<div class="bonus_title">
+								<span class="bonus_title-top">Стоимость с промокодом</span>
+								<p class="bonus_title-bot"><span>1000 рублей</span> 1 рубль</p>
+							</div>
+							<p class="bonus-desc">Предложение действительно в течение:</p>
+							<div class="timer">
+								<div class="wrap">  
+								  <div class="countdown">
+								    <div class="bloc-time hours" data-init-value="0">
+								      <span class="count-title">Hours</span>
+								      <div class="figure hours hours-1">
+								        <span class="top">2</span>
+								        <span class="top-back">
+								          <span>2</span>
+								        </span>
+								        <span class="bottom">2</span>
+								        <span class="bottom-back">
+								          <span>2</span>
+								        </span>
+								      </div>
+								      <div class="figure hours hours-2">
+								        <span class="top">4</span>
+								        <span class="top-back">
+								          <span>4</span>
+								        </span>
+								        <span class="bottom">4</span>
+								        <span class="bottom-back">
+								          <span>4</span>
+								        </span>
+								      </div>
+								    </div>
+								    <div class="bloc-time min" data-init-value="4">
+								      <div class="figure min min-1">
+								        <span class="top">0</span>
+								        <span class="top-back">
+								          <span>0</span>
+								        </span>
+								        <span class="bottom">0</span>
+								        <span class="bottom-back">
+								          <span>0</span>
+								        </span>        
+								      </div>
+								      <div class="figure min min-2">
+								       <span class="top">4</span>
+								        <span class="top-back">
+								          <span>4</span>
+								        </span>
+								        <span class="bottom">4</span>
+								        <span class="bottom-back">
+								          <span>4</span>
+								        </span>
+								      </div>
+								      <span class="count-title">минут</span>
+								    </div>
+								    <div class="bloc-time sec" data-init-value="0">
+							        <div class="figure sec sec-1">
+								        <span class="top">
+								        	<span>0</span>
+								        </span>
+								        <span class="top-back">
+								          <span>0</span>
+								        </span>
+								        <span class="bottom">
+								        	<span>0</span>
+								        </span>
+								        <span class="bottom-back">
+								          <span>0</span>
+								        </span>          
+								      </div>
+								      <div class="figure sec sec-2">
+								        <span class="top">
+								        	<span>0</span>
+								        </span>
+								        <span class="top-back">
+								          <span>0</span>
+								        </span>
+								        <span class="bottom">
+								        	<span>0</span>
+								        </span>
+								        <span class="bottom-back">
+								          <span>0</span>
+								        </span>
+								      </div>
+								      <span class="count-title">секунд</span>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="bonus-img">
+								<img src="img/bonus-img.jpg" alt="">
+							</div>
+							<p class="bonus-bot">Примеры фото</p>
+						</div>
+					</div>
+					<div class="bonus-right">
+						<div class="memo-top">
+							<span class="memo-title">Заполните форму</span>
+							<p class="memo-desc">и в течение минуты получите индивидуальный <br> промокод на скидку 99%</p>
+						</div>
+						<p class="memo-txt">куда вам отправить промокод:</p>
+						<div class="memo-form">
+							<form class="form form-bonus" data-thanks="to-bonus">
+								<div class="memo-form_btns">
+									<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__sms"></i><span>в СМС</span></div>
+									<div class="memo-form_btn memo-form_btn__active"><i class="memo-form_ic memo-form_ic__wa"></i><span>WhatsApp</span></div>
+									<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__tg"></i><span>Telegram</span></div>
+									<input type='hidden' name='Куда отправить' value='WhatsApp' class="massanger_type">
+								</div>
+								<div class="memo-input">
+								 	<input type="tel" class="form-input tel _req" placeholder="Введите номер телефона" name="Телефон">
+								</div>
+								<label class="memo-form_access">
+									<input type="checkbox" checked="" class="ch-box _req">
+									<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфиденциальности</a></span>
+								</label>
+								<div class="memo_btn-wrap btn-wrap">
+									<button type="submit" class="btn to-thanks">Получить промокод на скидку 99%</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<!-- thanks - modals -->
-	<a class="open-thanks-modal" href="" data-src="#thanks-order" data-fancybox></a>
+	<div class="modal modal-coach" id="modal-coach">
+		<div class="modal-coach-in">
+			<div class="modal-coach_left">
+				<div class="modal-coach_img">
+					<img class="modal-coach-img" src="" alt="">
+					<img class="modal-coach-img-sm" src="" alt="">
+				</div>
+				<div class="modal-coach_title">
+					<span>Инструктор-сержант</span>
+					<p class="modal-coach_name"></p>
+				</div>
+			</div>
+			<div class="modal-coach_right">
+				<div class="modal-coach_item">
+					<div class="modal-coach_info">
+						<div class="modal-coach_user">
+							<div class="modal-coach_user-img">
+								<img class="modal-user-img" src="" alt="">
+							</div>
+							<div class="modal-coach_user-info">
+								<span class="modal-coach_user-name"></span>
+								<span class="modal-coach_date"></span>
+							</div>
+						</div>
+						<div class="modal-coach_links">
+							<span>Читать в </span>
+							<div class="modal-coach_link">
+								<a href="#" class="modal-coach-ic link-ok"></a>
+								<a href="#" class="modal-coach-ic link-vk"></a>
+							</div>
+						</div>
+					</div>
+					<p class="modal-coach_txt"></p>
+				</div>
+				<div class="modal-coach_item">
+					<div class="modal-coach_info">
+						<div class="modal-coach_user">
+							<div class="modal-coach_user-img">
+								<img class="modal-user-img"  src="=" alt="">
+							</div>
+							<div class="modal-coach_user-info">
+								<span class="modal-coach_user-name"></span>
+								<span class="modal-coach_date"></span>
+							</div>
+						</div>
+						<div class="modal-coach_links">
+							<span>Читать в </span>
+							<div class="modal-coach_link">
+								<a href="#" class="modal-coach-ic link-ok"></a>
+								<a href="#" class="modal-coach-ic link-vk"></a>
+							</div>
+						</div>
+					</div>
+					<p class="modal-coach_txt"></p>
+				</div>
+				<div class="modal-coach_btn">
+					<a href="#modal-review" class="btn coach-btn" data-fancybox data-coach-review="">Оставить отзыв</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-review" id="modal-review">
+		<div class="modal-in">
+			<form class="form form-review" id="form-review" data-thanks="to-review">
+				<input type='hidden' name='Отзыв для' value='' class="review-title">	
+				<span class="modal_title">Оставить <span class="red">отзыв</span></span>
+				<div class="modal_input-wrap">
+					<input type="text" class="modal_input _req" placeholder="Введите имя" name="Имя">
+				</div>
+				<div class="modal_input-wrap">
+					<textarea class="modal_textarea _req" resize="noresize" placeholder="Введите содержание отзыва" name="Текст для отзыва"></textarea>
+				</div>
+				<div class="modal_input-wrap">
+					<input type="text" class="modal_input" placeholder="Вставьте ссылку на пост в социальной сети (необязательно)" name="пост в социальной сети">
+				</div>
+				<label class="memo-form_access">
+					<input type="checkbox" checked class="ch-box _req">
+					<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфиденциальности</a></span>
+				</label>
+				<div class="form-btn">
+					<button type="submit" class="btn to-review">Оставить отзыв</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<!-- /main - modals -->
+
+
+<!-- thanks - modals -->
+	<a class="to-callback" href="#thanks-callback" data-fancybox></a>
+	<a class="to-order" href="#thanks-order" data-fancybox></a>
+	<a class="to-pdf" href="#thanks-pdf" data-fancybox></a>
+	<a class="to-bonus" href="#thanks-bonus" data-fancybox></a>
+	<a class="to-review" href="#thanks-review" data-fancybox></a>
+
 	<div class="modal thanks-modal" id="thanks-callback">
 		<div class="thanks-modal-in">
 			<span class="thanks-modal_title">ваша заявка принята</span>
@@ -2704,204 +2931,14 @@
 			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
 		</div>
 	</div>
-	<!-- /thanks - modals -->
-
-<div class="modal modal-big" id="modal-bonus">
-	<div class="modal-big-in">
-		<div class="form form-bonus" id="form-bonus">
-			<input type='hidden' name='Тема' value='Боунус'>
-			<span class="modal_title"><span class="red">Бонус</span> за оформление заявки на игру в течение 10 минут — ваше эффектное фото для соцсетей со скидкой 99% </span>
-			<div class="bonus">
-				<div class="bonus-left">
-					<div class="bonus-in">
-						<div class="bonus_title">
-							<span class="bonus_title-top">Стоимость с промокодом</span>
-							<p class="bonus_title-bot"><span>1000 рублей</span> 1 рубль</p>
-						</div>
-						<p class="bonus-desc">Предложение действительно в течение:</p>
-						<div class="timer">
-							<div class="wrap">  
-							  <div class="countdown">
-							    <div class="bloc-time hours" data-init-value="0">
-							      <span class="count-title">Hours</span>
-							      <div class="figure hours hours-1">
-							        <span class="top">2</span>
-							        <span class="top-back">
-							          <span>2</span>
-							        </span>
-							        <span class="bottom">2</span>
-							        <span class="bottom-back">
-							          <span>2</span>
-							        </span>
-							      </div>
-							      <div class="figure hours hours-2">
-							        <span class="top">4</span>
-							        <span class="top-back">
-							          <span>4</span>
-							        </span>
-							        <span class="bottom">4</span>
-							        <span class="bottom-back">
-							          <span>4</span>
-							        </span>
-							      </div>
-							    </div>
-							    <div class="bloc-time min" data-init-value="4">
-							      <div class="figure min min-1">
-							        <span class="top">0</span>
-							        <span class="top-back">
-							          <span>0</span>
-							        </span>
-							        <span class="bottom">0</span>
-							        <span class="bottom-back">
-							          <span>0</span>
-							        </span>        
-							      </div>
-							      <div class="figure min min-2">
-							       <span class="top">4</span>
-							        <span class="top-back">
-							          <span>4</span>
-							        </span>
-							        <span class="bottom">4</span>
-							        <span class="bottom-back">
-							          <span>4</span>
-							        </span>
-							      </div>
-							      <span class="count-title">минут</span>
-							    </div>
-							    <div class="bloc-time sec" data-init-value="0">
-						        <div class="figure sec sec-1">
-							        <span class="top">
-							        	<span>0</span>
-							        </span>
-							        <span class="top-back">
-							          <span>0</span>
-							        </span>
-							        <span class="bottom">
-							        	<span>0</span>
-							        </span>
-							        <span class="bottom-back">
-							          <span>0</span>
-							        </span>          
-							      </div>
-							      <div class="figure sec sec-2">
-							        <span class="top">
-							        	<span>0</span>
-							        </span>
-							        <span class="top-back">
-							          <span>0</span>
-							        </span>
-							        <span class="bottom">
-							        	<span>0</span>
-							        </span>
-							        <span class="bottom-back">
-							          <span>0</span>
-							        </span>
-							      </div>
-							      <span class="count-title">секунд</span>
-							    </div>
-							  </div>
-							</div>
-						</div>
-						<div class="bonus-img">
-							<img src="img/bonus-img.jpg" alt="">
-						</div>
-						<p class="bonus-bot">Примеры фото</p>
-					</div>
-				</div>
-				<div class="bonus-right">
-					<div class="memo-top">
-						<span class="memo-title">Заполните форму</span>
-						<p class="memo-desc">и в течение минуты получите индивидуальный <br> промокод на скидку 99%</p>
-					</div>
-					<p class="memo-txt">куда вам отправить промокод:</p>
-					<div class="memo-form">
-						<form class="form form-bonus">
-							<div class="memo-form_btns">
-								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__sms"></i><span>в СМС</span></div>
-								<div class="memo-form_btn memo-form_btn__active"><i class="memo-form_ic memo-form_ic__wa"></i><span>WhatsApp</span></div>
-								<div class="memo-form_btn"><i class="memo-form_ic memo-form_ic__tg"></i><span>Telegram</span></div>
-								<input type='hidden' name='Куда отправить' value='WhatsApp' class="massanger_type">
-							</div>
-							<div class="memo-input">
-							 	<input type="tel" class="form-input tel _req" placeholder="Введите номер телефона" name="Телефон">
-							</div>
-							<label class="memo-form_access">
-								<input type="checkbox" checked="" class="ch-box _req">
-								<span class="memo-form_desc">Я принимаю условия передачи информации  и согласен с <a href="policy.html" target="_blank">Политикой конфиденциальности</a></span>
-							</label>
-							<div class="memo_btn-wrap btn-wrap">
-								<button type="submit" class="btn to-thanks">Получить промокод на скидку 99%</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+	<div class="modal thanks-modal" id="thanks-review">
+		<div class="thanks-modal-in">
+			<span class="thanks-modal_title">ваш отзыв принят!</span>
+			<p class="thanks-modal_desc"></p>
+			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
 		</div>
 	</div>
-</div>
-
-<!-- coach review -->
-<div class="modal modal-coach" id="modal-coach">
-	<div class="modal-coach-in">
-		<div class="modal-coach_left">
-			<div class="modal-coach_img">
-				<img class="modal-coach-img" src="img/like/coach-rev-4.png" alt="">
-			</div>
-			<div class="modal-coach_title">
-				<span>Инструктор-сержант</span>
-				<p class="modal-coach_name">Александр</p>
-			</div>
-		</div>
-		<div class="modal-coach_right">
-			<div class="modal-coach_item">
-				<div class="modal-coach_info">
-					<div class="modal-coach_user">
-						<div class="modal-coach_user-img">
-							<img class="modal-user-img" src="img/like/coach-review.jpg" alt="">
-						</div>
-						<div class="modal-coach_user-info">
-							<span class="modal-coach_user-name">Сергей Иванович</span>
-							<span class="modal-coach_date">январь, 2022</span>
-						</div>
-					</div>
-					<div class="modal-coach_links">
-						<span>Читать в </span>
-						<div class="modal-coach_link">
-							<a href="#" class="modal-coach-ic link-ok"></a>
-							<a href="#" class="modal-coach-ic link-vk"></a>
-						</div>
-					</div>
-				</div>
-				<p class="modal-coach_txt">Александр Александр Александр Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Они, рыбного. Коварных, вершину, продолжил злых живет своего, языкового власти назад осталось по всей, инициал заманивший толку силуэт вопрос она. Всеми наш путь курсивных, выйти силуэт агентство ipsum маленький пор, оксмокс то его по всей имени, гор? Курсивных первую предупредила маленькая заголовок обеспечивает диких свой рекламных вопрос ты вершину домах взгляд, бросил.</p>
-			</div>
-			<div class="modal-coach_item">
-				<div class="modal-coach_info">
-					<div class="modal-coach_user">
-						<div class="modal-coach_user-img">
-							<img class="modal-user-img"  src="img/like/coach-review.jpg" alt="">
-						</div>
-						<div class="modal-coach_user-info">
-							<span class="modal-coach_user-name">Сергей Иванович</span>
-							<span class="modal-coach_date">январь, 2022</span>
-						</div>
-					</div>
-					<div class="modal-coach_links">
-						<span>Читать в </span>
-						<div class="modal-coach_link">
-							<a href="#" class="modal-coach-ic link-ok"></a>
-							<a href="#" class="modal-coach-ic link-vk"></a>
-						</div>
-					</div>
-				</div>
-				<p class="modal-coach_txt">Александр Александр Александр Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Они, рыбного. Коварных, вершину, продолжил злых живет своего, языкового власти назад осталось по всей, инициал заманивший толку силуэт вопрос она. Всеми наш путь курсивных, выйти силуэт агентство ipsum маленький пор, оксмокс то его по всей имени, гор? Курсивных первую предупредила маленькая заголовок обеспечивает диких свой рекламных вопрос ты вершину домах взгляд, бросил.</p>
-			</div>
-			<div class="modal-coach_btn">
-				<a href="#modal-review" class="btn" data-fancybox>Оставить отзыв</a>
-			</div>
-		</div>
-	</div>
-</div>
-
+<!-- /thanks - modals -->
 
 	
 

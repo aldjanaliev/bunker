@@ -517,14 +517,16 @@ let addNum = function(){
 	})
 }
 
-let openThanksModal = document.querySelector('.open-thanks-modal')
 let toThanksModal = function(form){
+	let dataToSend = '.' + form.getAttribute('data-thanks')
+	let openThanksModal = document.querySelector(dataToSend)
 	if(form.classList.contains('form-static')){
 		openThanksModal.click()
 	} else if(form.classList.contains('form-bonus')){
 		let bonusModal = document.querySelector('#modal-bonus')
 		let toThanksClose = bonusModal.querySelector('.fancybox-button')
 		toThanksClose.click()
+		let modalBonusIc = document.querySelector('.main-ic__bonus')
 		modalBonusIc.remove()
 		bonusModal.remove()
 		openThanksModal.click()
@@ -604,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					error++
 				}
 			} else{
-				if(input.value === ''){
+				if(input.value.length < 2){
 					formAddError(input)
 					error++
 				}
@@ -906,18 +908,19 @@ btnOrder.forEach(item => {
 // create review-modals for like block
 let btnReview = [...document.querySelectorAll('.btn-order')]
 let reviewImg = document.querySelector('.modal-coach-img')
+let reviewImgSm = document.querySelector('.modal-coach-img-sm')
 let reviewName = document.querySelector('.modal-coach_name')
 let reviewUserImg = [...document.querySelectorAll('.modal-user-img')]
 let reviewUserName = [...document.querySelectorAll('.modal-coach_user-name')]
 let reviewDate = [...document.querySelectorAll('.modal-coach_date')]
 let reviewText = [...document.querySelectorAll('.modal-coach_txt')]
-
+let coachBtn = document.querySelector('.coach-btn')
 btnReview.forEach(item => {
 	item.onclick = function(){
-		console.log(1515)
 		switch(this.getAttribute('data-coach')){
 			case 'albert':
 				reviewImg.setAttribute('src', 'img/like/coach-rev-1.png')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-1.png')
 				reviewName.innerText = 'Альберт “гром”'
 				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
 				reviewUserName[0].innerText = 'Александр Александрович'
@@ -927,9 +930,11 @@ btnReview.forEach(item => {
 				reviewUserName[1].innerText = 'Наташа Саева'
 				reviewDate[1].innerText = 'март 2022'
 				reviewText[1].innerText = 'Альберт “гром” Альберт “гром” Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				coachBtn.setAttribute('data-coach-review','1')
 				break;
 			case 'gora':
 				reviewImg.setAttribute('src', 'img/like/coach-rev-2.png')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-2.png')
 				reviewName.innerText = 'Григорий'
 				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-2.jpg')
 				reviewUserName[0].innerText = 'Павел Дуров'
@@ -939,9 +944,11 @@ btnReview.forEach(item => {
 				reviewUserName[1].innerText = 'Михаил Сергеев'
 				reviewDate[1].innerText = 'июль 2022'
 				reviewText[1].innerText = 'Григорий Григорий Григорий Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				coachBtn.setAttribute('data-coach-review','2')
 				break;
 			case 'poli':
 				reviewImg.setAttribute('src', 'img/like/coach-rev-3.png')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-3.png')
 				reviewName.innerText = 'Полина'
 				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-4.jpg')
 				reviewUserName[0].innerText = 'Юля Иванова'
@@ -951,9 +958,11 @@ btnReview.forEach(item => {
 				reviewUserName[1].innerText = 'Денис Крымов'
 				reviewDate[1].innerText = 'сентябрь 2021'
 				reviewText[1].innerText = 'Полина Полина Полина Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				coachBtn.setAttribute('data-coach-review','3')
 				break;
 			case 'alex':
 				reviewImg.setAttribute('src', 'img/like/coach-rev-4.png')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-4.png')
 				reviewName.innerText = 'Александр'
 				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
 				reviewUserName[0].innerText = 'Джонни Деп'
@@ -963,7 +972,30 @@ btnReview.forEach(item => {
 				reviewUserName[1].innerText = 'Иван Серебряников'
 				reviewDate[1].innerText = 'апрель 2022'
 				reviewText[1].innerText = 'Александр Александр АлександрДалеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				coachBtn.setAttribute('data-coach-review','4')
 				break;
 		}
 	}
 })
+
+let reviewToSendTitle = document.querySelector('.review-title')
+coachBtn.onclick = function(){
+	switch(this.getAttribute('data-coach-review')){
+		case '1':
+			reviewToSendTitle.value = 'Альберта'
+			break
+		case '2':
+			reviewToSendTitle.value = 'Григория'
+			break
+		case '3':
+			reviewToSendTitle.value = 'Полины'
+			break
+		case '4':
+			reviewToSendTitle.value = 'Александра'
+			break
+	}
+	let modalCoach = document.querySelector('.modal-coach')
+	modalCoachBtn = modalCoach.querySelector('.fancybox-button')
+	modalCoachBtn.click()
+	console.log(reviewToSendTitle.getAttribute('name') + ' ' + reviewToSendTitle.value)
+}

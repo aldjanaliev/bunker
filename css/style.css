@@ -3058,18 +3058,6 @@ footer{
 .game .tab-head-wrap{
 	padding-bottom: 0;
 }
-/* validate */
-input._error,
-._error .memo-form_desc::before{
-  box-shadow: 0 0 5px red;
-}
-._req{
-  transition: 0.3s;
-}
-
-.modal-coach{
-	display: block;
-}
 .modal-coach-in{
 	display: flex;
 	overflow: hidden;
@@ -3087,7 +3075,7 @@ input._error,
 	left: -30%;
 	top: -10%;
 }
-.modal-coach_img img{
+.modal-coach-img{
 	width: 100%;
 	height: auto;
 	display: block;
@@ -3118,13 +3106,19 @@ input._error,
 }
 .modal-coach_item{
 	padding-bottom: 30px;
+	position: relative;
+}
+.modal-coach_item:first-child::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	height: 1px;
+	background: #9D9D9D;
 }
 .modal-coach_txt{
-	border-bottom: 1px solid #9D9D9D;
 	padding: 30px 0;
-}
-.modal-coach_item:nth-child(2) .modal-coach_txt{
-	border: none;
 }
 .modal-coach_btn .btn{
 	margin: 0;
@@ -3151,7 +3145,7 @@ input._error,
 	padding-left: 25px;
 	align-self: center;
 }
-.modal-coach_user-date{
+.modal-coach_date{
 	opacity: 0.6;
 	display: block;
 }
@@ -3186,4 +3180,16 @@ input._error,
 }
 .link-inst{
 	background: url(../img/icons/ic-inst.png) center no-repeat;
+}
+.modal-coach-img-sm{
+	display: none;
+}
+/* validate */
+input._error,
+._error .memo-form_desc::before,
+textarea._error{
+  box-shadow: 0 0 5px red;
+}
+._req{
+  transition: 0.3s;
 }
