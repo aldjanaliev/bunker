@@ -7,6 +7,14 @@
 	.container{
 		max-width: 1300px;
 	}
+	.price .goal{
+		width: 270px;
+		height: 270px;
+		margin: 0 auto;
+	}
+	.price .goal_txt{
+		max-width: 198px;
+	}
 	.star-bg{
 		left: auto;
 		margin: 0!important;

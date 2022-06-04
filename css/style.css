@@ -1279,7 +1279,7 @@ header{
 .game-right_item:hover{
 	opacity: 1;
 }
-.game-right_item__active{
+.game-right .slick-current .game-right_item{
 	opacity: 1;
 }
 .game-mid_item{
@@ -3057,4 +3057,133 @@ footer{
 }
 .game .tab-head-wrap{
 	padding-bottom: 0;
+}
+/* validate */
+input._error,
+._error .memo-form_desc::before{
+  box-shadow: 0 0 5px red;
+}
+._req{
+  transition: 0.3s;
+}
+
+.modal-coach{
+	display: block;
+}
+.modal-coach-in{
+	display: flex;
+	overflow: hidden;
+	height: 815px;
+}
+.modal-coach_left{
+	width: 530px;
+	position: relative;
+	height: 100%;
+}
+.modal-coach_img{
+	position: absolute;
+	width: 700px;
+	height: 972px;
+	left: -30%;
+	top: -10%;
+}
+.modal-coach_img img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.modal-coach_title{
+	position: absolute;
+	left: 122px;
+	bottom: 25%;
+	font-size: 18px;
+	line-height: 24px;
+}
+.modal-coach_name{
+	font-family: 'Metro', arial;
+	font-size: 32px;
+	line-height: 44px;
+	letter-spacing: 0.05em;
+	color: #000;
+	padding-top: 15px;
+}
+.modal-coach_right{
+	width: calc(100% - 530px);
+	padding: 70px 90px 70px 0;
+	position: relative;
+	z-index: 10;
+	align-self: center;
+	font-size: 18px;
+	line-height: 24px;
+}
+.modal-coach_item{
+	padding-bottom: 30px;
+}
+.modal-coach_txt{
+	border-bottom: 1px solid #9D9D9D;
+	padding: 30px 0;
+}
+.modal-coach_item:nth-child(2) .modal-coach_txt{
+	border: none;
+}
+.modal-coach_btn .btn{
+	margin: 0;
+}
+.modal-coach_info{
+	display: flex;
+	justify-content: space-between;
+}
+.modal-coach_user{
+	display: flex;
+}
+.modal-coach_user-img{
+	border-radius: 50%;
+	overflow: hidden;
+	width: 60px;
+	height: 60px;
+}
+.modal-coach_user-img img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.modal-coach_user-info{
+	padding-left: 25px;
+	align-self: center;
+}
+.modal-coach_user-date{
+	opacity: 0.6;
+	display: block;
+}
+.modal-coach_links{
+	display: flex;
+}
+.modal-coach_link{
+	display: flex;
+	align-self: center;
+}
+.modal-coach_links span{
+	display: block;
+	align-self: center;
+}
+.modal-coach-ic{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-left: 30px;
+	background-size: 100% 100%;
+	transition: 0.3s;
+}
+.modal-coach-ic:hover{
+	opacity: 0.7;
+}
+.link-ok{
+	background: url(../img/icons/ic-ok.png) center no-repeat;
+}
+.link-vk{
+	background: url(../img/icons/ic-vk.png) center no-repeat;
+}
+.link-inst{
+	background: url(../img/icons/ic-inst.png) center no-repeat;
 }

@@ -89,19 +89,41 @@ $(document).ready(function() {
 
   $('.game-right-slider').slick({
     infinite: false,
-    slidesToShow: 1,
+    slidesToShow: 7,
     slidesToScroll: 1,
+    vertical: true,
     arrows: false,
     dots: false,
-    mobileFirst: true,
-    centerMode: true,
-    variableWidth: true,
+    focusOnSelect: true,
+    asNavFor: '.game-mid-slider',
     responsive: [
     {
     	breakpoint: 780,
-    	settings: "unslick"
+    	settings: {
+    		infinite: true,
+    		focusOnSelect: true,
+   			vertical: false,
+    		variableWidth: true,
+    		slidesToShow: 1,
+    	}
     }]
   });
+  $('.game-mid-slider').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+    infinite: false,
+	  arrows: false,
+	  fade: true,
+    draggable: false,
+	  asNavFor: '.game-right-slider',
+	  responsive: [
+    {
+    	breakpoint: 780,
+    	settings: {
+    		infinite: true,
+    	}
+    }]
+	});
 
   $('.gallery-slider').slick({
     infinite: false,
@@ -178,12 +200,10 @@ $(document).ready(function() {
 	}
 
   // перезагружает слайдер из таба
-  $('.game-tab-slider').click(function() {
-    $('.coach-slider').slick('refresh');
-  });
+  
 
 
-	$('a[href^="#"').on('click', function() {
+	$('.scroll-btn').on('click', function() {
     let href = $(this).attr('href');
     $('html, body').animate({
         scrollTop: $(href).offset().top
@@ -213,129 +233,7 @@ $(document).ready(function() {
 	let selector = document.querySelectorAll('input[type="tel"]');
 	let im = new Inputmask('+7 (999) 999-99-99');
 	im.mask(selector);
-
-	// ==========validate and send form==========
-	// document.addEventListener('DOMContentLoaded', function(){
-	// 	const form = [...document.querySelectorAll('form')]
-	// 	form.forEach(item =>{
-	// 		item.addEventListener('submit', formSend)
-	// 		async function formSend(e){
-	// 			e.preventDefault()
-	// 			let error = formValidate(this)
-	// 			let formData = new FormData(this)
-	// 			if(document.querySelector('.file-upload')){
-	// 				formData.append('file', formImage.files[0])
-	// 			}
-	// 			if(error === 0){
-	// 				this.classList.add('_sending')
-	// 				let sendBtn = document.querySelector('#btn_thanks')
-	// 				sendBtn.click()
-
-	// 				let response = await fetch('send.php',{
-	// 					method: 'POST',
-	// 					body: formData
-	// 				})
-	// 				if(response.ok){
-	// 					// let result = await response.json()
-	// 					console.log('sending message')
-	// 					// console.log(result.message)
-	// 					// fileInputText.innerHTML = ''
-	// 					// form.reset()
-	// 				} else{
-	// 					console.log('error message')
-	// 				}
-	// 			} else{
-	// 				console.log('not valid ' + error)
-	// 			}
-	// 		}
-	// 	})
-
-	// 	function formValidate(form) {
-	// 		let error = 0
-	// 		let formReq = form.querySelectorAll('._req')
-
-	// 		for(let index = 0; index < formReq.length; index++){
-	// 			const input = formReq[index]
-	// 			formRemoveError(input)
-	// 			if(input.classList.contains('_mail')){
-	// 				if(emailTest(input)){
-	// 					formAddError(input)
-	// 					error++
-	// 				}
-	// 			} else if(input.getAttribute("type") == "checkbox" && input.checked == false){
-	// 				formAddError(input)
-	// 				error++
-	// 			} else{
-	// 				if(input.value === ''){
-	// 					formAddError(input)
-	// 					error++
-	// 				}
-	// 			}
-	// 		}
-	// 		return error
-	// 	}
-
-	// 	// checked input
-	// 	let errorInputs = [...document.querySelectorAll('._req')]
-	// 	errorInputs.forEach(item =>{
-	// 		item.oninput = function(){
-	// 			if(this.classList.contains('_error')){
-	// 				if(this.classList.contains('_mail')){
-	// 					if(!emailTest(this)){
-	// 						this.classList.remove('_error')
-	// 					}
-	// 				} else if(this.classList.contains('detail_input__tel')){
-	// 					if(!this.value.includes('_')){
-	// 						this.classList.remove('_error')
-	// 					}
-						
-	// 				} else{
-	// 					if(!this.value == ''){
-	// 						this.classList.remove('_error')
-	// 					}
-	// 				}
-	// 			} else if(this.classList.contains('detail_input__tel')){
-	// 				if(this.value.includes('_')){
-	// 					this.classList.add('_error')
-	// 				}
-	// 			}
-	// 		}
-	// 	})
-
-	// 	function formAddError(input){
-	// 		if(input.classList.contains('ch-box')){
-	// 			input.parentElement.classList.add('_error')
-	// 		} else{
-	// 			input.classList.add('_error')
-	// 		}
-	// 	}
-	// 	function formRemoveError(input){
-	// 		if(input.classList.contains('ch-box')){
-	// 			input.parentElement.classList.remove('_error')
-	// 		} else{
-	// 			input.classList.remove('_error')
-	// 		}
-	// 	}
-	// 	// check mail
-	// 	function emailTest(input){
-	// 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
-	// 	}
-	// 	// upload files
-	// 	let formImage = [...document.querySelectorAll('.form_file-input')]
-	// 	formImage.forEach(item =>{
-	// 		let fileInputParent = item.parentElement
-	// 		let fileInputText = fileInputParent.querySelector('.file-txt')
-	// 		item.addEventListener('change', () =>{
-	// 			let formImageFiles = item.files[0]
-	// 			fileInputText.innerText = formImageFiles.name
-	// 			this.classList.add('file-upload')
-	// 			console.log(formImageFiles.name)
-	// 		})
-	// 	})
-		
-
-	// })
-	// ============validate and send form==========
+	
 
 	// forms-select
 	$('.form_select-btn').on('click', function() {
@@ -407,6 +305,8 @@ $(document).ready(function() {
 				thisParrentModal.find('.form_select-btn__add').addClass('form_select-col__passive')
 				var multiplyPrice = $('.form_select-tab__active[data-time]').attr('data-time')
 				thisParrentModal.find('.form-right_txt').html(multiplyPrice + ' руб./час')
+				$('.sertificate-input').val(multiplyPrice + ' руб./час')
+				console.log($('.sertificate-input').val())
 			} else if($(this).attr('data-rent')){
 				thisParrentModal.find('.form_select-btn__add').addClass('form_select-col__passive')
 			}
@@ -416,31 +316,14 @@ $(document).ready(function() {
 				var multiplyPrice = $('.form_select-tab__active[data-price]').attr('data-price')
 				multiplyPrice = multiplyPrice * +$(this).text()
 				thisParrentModal.find('.form-right_txt').html(multiplyPrice + ' руб.')
+				$('.sertificate-input').val(multiplyPrice + ' руб./час')
+				console.log($('.sertificate-input').val())
 			}
 
 			if($(this).attr('data-price')){
 				thisParrentModal.find('.form-right_txt').html('количество человек × стоимость тарифа')
 			}
 
-	})
-
-	// close thanks modal
-	let toThanksBtns = [...document.querySelectorAll('.to-thanks')]
-	toThanksBtns.forEach(item =>{
-		item.onclick = function(){
-			if(this.classList.contains('bonus-btn')){
-				let toThanksParrent = this.closest('.modal')
-				let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
-				toThanksClose.click()
-				let modalBonusIc = document.querySelector('.main-ic__bonus')
-				modalBonusIc.remove()
-				let modalBonus = document.querySelector('#modal-bonus')
-				modalBonus.remove()
-			}
-			let toThanksParrent = this.closest('.modal')
-			let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
-			toThanksClose.click()
-		}
 	})
 
 	let menuBtn = document.querySelector('.mobile-btn')
@@ -455,9 +338,12 @@ $(document).ready(function() {
 		}
 	}
 
-	// timer
+	// init timer in bonus modal after click btn
+	let modalBonusIc = document.querySelector('.main-ic__bonus')
+	modalBonusIc.onclick = function(){
+		Countdown.init();
+	}
 	// modal-bonus
-	let modalBonusBtn = document.querySelector('.modal-bonus_btn')
 	var Countdown = {
 			  
 			  // Backbone-like structure
@@ -597,8 +483,7 @@ $(document).ready(function() {
 			  }
 	};
 
-	// Let's go !
-	Countdown.init();
+
 
 	// calendare
 	var dateToday = new Date(); 
@@ -632,12 +517,157 @@ let addNum = function(){
 	})
 }
 
+let openThanksModal = document.querySelector('.open-thanks-modal')
+let toThanksModal = function(form){
+	if(form.classList.contains('form-static')){
+		openThanksModal.click()
+	} else if(form.classList.contains('form-bonus')){
+		let bonusModal = document.querySelector('#modal-bonus')
+		let toThanksClose = bonusModal.querySelector('.fancybox-button')
+		toThanksClose.click()
+		modalBonusIc.remove()
+		bonusModal.remove()
+		openThanksModal.click()
+	} else{
+		let toThanksParrent = form.closest('.modal')
+		let toThanksClose = toThanksParrent.querySelector('.fancybox-button')
+		toThanksClose.click()
+		openThanksModal.click()
+	}
+}
+
 // map plugin
 document.addEventListener('DOMContentLoaded', function () {
 	initApis();
 	addNum();
+
+	// adding files in form
+	let formImage = document.querySelector('.form_file-input')
+		let fileInputText = document.querySelector('.form_select-file-txt')
+		formImage.addEventListener('change', () =>{
+			let formImageFiles = formImage.files[0]
+			fileInputText.innerText = formImageFiles.name
+			formImage.classList.add('file-upload')
+			console.log(formImageFiles.name)
+		})
+
+	// ============== validate and sending form ==============
+	const form = [...document.querySelectorAll('form')]
+	form.forEach(item =>{
+		item.addEventListener('submit', formSend)
+		async function formSend(e){
+			e.preventDefault()
+			let error = formValidate(this)
+			let formData = new FormData(this)
+			if(document.querySelector('.file-upload')){
+				formData.append('file', formImage.files[0])
+			}
+			if(error === 0){
+				this.classList.add('_sending')
+				toThanksModal(item)
+				// let response = await fetch('send.php',{
+				// 	method: 'POST',
+				// 	body: formData
+				// })
+				// if(response.ok){
+				// 	let result = await response.json()
+				// 	// console.log(result.message)
+				// 	// fileInputText.innerHTML = ''
+				// 	form.reset()
+				// } else{
+				// 	console.log('error message')
+				// }
+			} else{
+				console.log('not valid ' + error)
+			}
+		}
+	})
+
+	function formValidate(form) {
+		let error = 0
+		let formReq = form.querySelectorAll('._req')
+		for(let index = 0; index < formReq.length; index++){
+			const input = formReq[index]
+			formRemoveError(input)
+			if(input.classList.contains('_mail')){
+				if(emailTest(input)){
+					formAddError(input)
+					error++
+				}
+			} else if(input.getAttribute("type") == "checkbox" && input.checked == false){
+				formAddError(input)
+				error++
+			} else if(input.getAttribute("type") == "tel" && input.value != ''){
+				if(telTest(input)){
+					formAddError(input)
+					console.log()
+					error++
+				}
+			} else{
+				if(input.value === ''){
+					formAddError(input)
+					error++
+				}
+			}
+		}
+		return error
+	}
+
+
+	// checked input
+	let errorInputs = [...document.querySelectorAll('._req')]
+	errorInputs.forEach(item =>{
+		item.oninput = function(){
+			if(this.classList.contains('_error')){
+				if(this.classList.contains('_mail')){
+					if(!emailTest(this)){
+						this.classList.remove('_error')
+					}
+				} else if(this.classList.contains('detail_input__tel')){
+					if(!this.value.includes('_')){
+						this.classList.remove('_error')
+					}
+					
+				} else{
+					if(!this.value == ''){
+						this.classList.remove('_error')
+					}
+				}
+			} else if(this.classList.contains('detail_input__tel')){
+				if(this.value.includes('_')){
+					this.classList.add('_error')
+				}
+			}
+		}
+	})
+
+	function formAddError(input){
+		if(input.classList.contains('ch-box')){
+			input.parentElement.classList.add('_error')
+		} else{
+			input.classList.add('_error')
+		}
+	}
+	function formRemoveError(input){
+		if(input.classList.contains('ch-box')){
+			input.parentElement.classList.remove('_error')
+		} else{
+			input.classList.remove('_error')
+		}
+	}
+	// check mail
+	function emailTest(input){
+		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+	}
+	// check tel
+	function telTest(input){
+		return /_/.test(input.value)
+	}
+		
+	// ============== /validate and sending form ==============
 })
 
+// added Yandex Map API
 var initApis = function initApis() {
   var loadApi = function loadApi() {
     if (this.id === 'map') {
@@ -692,7 +722,14 @@ tabsWrap.forEach(item =>{
 				tabBody[index].classList.add('tab-body__active')
 			}
 
-			// add slick refresh to price block
+			// add slick refresh on tab
+			if(this.classList.contains('game-tab-slider')){
+		    $('.coach-slider').slick('refresh');
+		  };
+		  if(this.classList.contains('game-tab-slick')){
+		    $('.game-mid-slider').slick('refresh');
+		    $('.game-right-slider').slick('refresh');
+		  };
 			if(this.classList.contains('like_tab')){
 	  		$('.price-slider').slick('refresh');
 			}
@@ -717,25 +754,24 @@ formBtn.forEach(item =>{
 })
 
 // game tabs
-let gameTab = [...document.querySelectorAll('.game-right_item')]
-let gameBody = [...document.querySelectorAll('.game-mid_item')]
-gameTab.forEach((item, index) =>{
-	item.onclick = function(){
-		if(!this.classList.contains('game-right_item__active')){
-			let gameTabActive = document.querySelector('.game-right_item__active')
-			gameTabActive.classList.remove('game-right_item__active')
-			this.classList.add('game-right_item__active')
-			let gameBodyActive = document.querySelector('.game-mid_item__active')
-			gameBodyActive.style.opacity = '0'
-			setTimeout(function(){ 
-			gameBodyActive.classList.remove('game-mid_item__active')
-			gameBody[index].classList.add('game-mid_item__active')
-			gameBody[index].style.opacity = '1'
-			}, 250);
-
-		}
-	}
-})
+// let gameTab = [...document.querySelectorAll('.game-right_item')]
+// let gameBody = [...document.querySelectorAll('.game-mid_item')]
+// gameTab.forEach((item, index) =>{
+// 	item.onclick = function(){
+// 		if(!this.classList.contains('game-right_item__active')){
+// 			let gameTabActive = document.querySelector('.game-right_item__active')
+// 			gameTabActive.classList.remove('game-right_item__active')
+// 			this.classList.add('game-right_item__active')
+// 			let gameBodyActive = document.querySelector('.game-mid_item__active')
+// 			gameBodyActive.style.opacity = '0'
+// 			setTimeout(function(){ 
+// 			gameBodyActive.classList.remove('game-mid_item__active')
+// 			gameBody[index].classList.add('game-mid_item__active')
+// 			gameBody[index].style.opacity = '1'
+// 			}, 250);
+// 		}
+// 	}
+// })
 
 // link to-price tabs
 let linkToPriceBall = document.querySelector('.main-item__ball')
@@ -763,16 +799,6 @@ linkToPriceRest.onclick = function(){
 	toPrice(2)
 }
 
-// maps dots
-// let mapDots = [...document.querySelectorAll('.map-dots')]
-// mapDots.forEach(item => {
-// 	item.onclick = function(){
-// 		let mapDotsDesc = this.querySelector('.map-dots_txt')
-// 		mapDotsDesc.classList.add('map-dots_txt__active')
-// 		setTimeout(function(){ mapDotsDesc.classList.remove('map-dots_txt__active')}, 2000);
-// 	}
-// })
-
 // variant tabs
 let variantHead = [...document.querySelectorAll('.variant-head')]
 variantHead.forEach(item =>{
@@ -784,3 +810,160 @@ variantHead.forEach(item =>{
 	}
 })
 
+
+// create modals for variants block
+let btnMeet = [...document.querySelectorAll('.btn-meet')]
+let inputMeetValue = document.querySelector('.input-meet')
+let titleMeetText = document.querySelector('.tilte-meet')
+btnMeet.forEach(item => {
+	item.onclick = function(){
+		if(this.getAttribute('data-meet') == 'big-birthday'){
+			inputMeetValue.value = 'взрослый день рождения'
+			titleMeetText.innerHTML = 'взрослый день рождения'
+		} else if(this.getAttribute('data-meet') == 'sm-birthday'){
+			inputMeetValue.value = 'детский день рождения'
+			titleMeetText.innerHTML = 'детский день рождения'
+		} else if(this.getAttribute('data-meet') == 'corporation'){
+			inputMeetValue.value = 'корпоратив'
+			titleMeetText.innerHTML = 'корпоратив'
+		} else if(this.getAttribute('data-meet') == 'boys'){
+			inputMeetValue.value = 'мальчишник'
+			titleMeetText.innerHTML = 'мальчишник'
+		} else if(this.getAttribute('data-meet') == 'friends'){
+			inputMeetValue.value = 'игру с друзьями'
+			titleMeetText.innerHTML = 'игру с друзьями'
+		} else if(this.getAttribute('data-meet') == 'game'){
+			inputMeetValue.value = 'своё мероприятие'
+			titleMeetText.innerHTML = 'игру'
+		}
+		console.log(inputMeetValue.value)
+	}
+})
+
+// create modals for price block
+let btnOrder = [...document.querySelectorAll('.btn-order')]
+let inputOrderValue = document.querySelector('.input-order')
+let titleText = document.querySelector('.input-order_title')
+btnOrder.forEach(item => {
+	item.onclick = function(){
+		switch(this.getAttribute('data-order')){
+			case '1':
+				inputOrderValue.value = 'игра Лазартаг, тариф Отделение'
+				titleText.innerHTML = 'игры "Лазартаг" по тарифу "Отделение"'
+				break;
+			case '2':
+				inputOrderValue.value = 'игра Лазартаг, тариф Взвод'
+				titleText.innerHTML = 'игры "Лазартаг" по тарифу "Взвод"'
+				break;
+			case '3':
+				inputOrderValue.value = 'игра Лазартаг, тариф Рота'
+				titleText.innerHTML = 'игры "Лазартаг" по тарифу "Рота"'
+				break;
+			case '4':
+				inputOrderValue.value = 'игра Лазартаг, тариф Батальон'
+				titleText.innerHTML = 'игры "Лазартаг" по тарифу "Батальон"'
+				break;
+			case '5':
+				inputOrderValue.value = 'игра Пейнтбол, тариф Боец'
+				titleText.innerHTML = 'игры "Пейнтбол" по тарифу "Боец"'
+				break;
+			case '6':
+				inputOrderValue.value = 'игра Пейнтбол, тариф Рекрут'
+				titleText.innerHTML = 'игры "Пейнтбол" по тарифу "Рекрут"'
+				break;
+			case '7':
+				inputOrderValue.value = 'игра Пейнтбол, тариф Рекрут расширенный'
+				titleText.innerHTML = 'игры "Пейнтбол" по тарифу "Рекрут расширенный"'
+				break;
+			case '8':
+				inputOrderValue.value = 'игра Пейнтбол, тариф Ветеран'
+				titleText.innerHTML = 'игры "Пейнтбол" по тарифу "Ветеран"'
+				break;
+			case '9':
+				inputOrderValue.value = 'зона отдыха, тариф "Банкетный зал мини"'
+				titleText.innerHTML = 'зоны отдыха по тарифу "Банкетный зал мини"'
+				break;
+			case '10':
+				inputOrderValue.value = 'зона отдыха, тариф "Банкетный зал макси"'
+				titleText.innerHTML = 'зоны отдыха по тарифу "Банкетный зал макси"'
+				break;
+			case '11':
+				inputOrderValue.value = 'обучение , тариф "Боец+"'
+				titleText.innerHTML = '"Обучение" по тарифу "Боец+"'
+				break;
+			case '12':
+				inputOrderValue.value = 'обучение , тариф "Команда+"'
+				titleText.innerHTML = '"Обучение" по тарифу "Команда+"'
+				break;
+			case '13':
+				inputOrderValue.value = 'обучение , тариф "Рекрут+"'
+				titleText.innerHTML = '"Обучение" по тарифу "Рекрут+"'
+				break;
+		}
+	}
+})
+
+// create review-modals for like block
+let btnReview = [...document.querySelectorAll('.btn-order')]
+let reviewImg = document.querySelector('.modal-coach-img')
+let reviewName = document.querySelector('.modal-coach_name')
+let reviewUserImg = [...document.querySelectorAll('.modal-user-img')]
+let reviewUserName = [...document.querySelectorAll('.modal-coach_user-name')]
+let reviewDate = [...document.querySelectorAll('.modal-coach_date')]
+let reviewText = [...document.querySelectorAll('.modal-coach_txt')]
+
+btnReview.forEach(item => {
+	item.onclick = function(){
+		console.log(1515)
+		switch(this.getAttribute('data-coach')){
+			case 'albert':
+				reviewImg.setAttribute('src', 'img/like/coach-rev-1.png')
+				reviewName.innerText = 'Альберт “гром”'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
+				reviewUserName[0].innerText = 'Александр Александрович'
+				reviewDate[0].innerText = 'февраль 2022'
+				reviewText[0].innerText = 'Альберт “гром” Альберт “гром” Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-4.jpg')
+				reviewUserName[1].innerText = 'Наташа Саева'
+				reviewDate[1].innerText = 'март 2022'
+				reviewText[1].innerText = 'Альберт “гром” Альберт “гром” Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				break;
+			case 'gora':
+				reviewImg.setAttribute('src', 'img/like/coach-rev-2.png')
+				reviewName.innerText = 'Григорий'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-2.jpg')
+				reviewUserName[0].innerText = 'Павел Дуров'
+				reviewDate[0].innerText = 'май 2021'
+				reviewText[0].innerText = 'Григорий Григорий Григорий Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Языкового но там раз прямо реторический текст от всех вопрос жаренные подпоясал одна маленькая то правилами он дорогу агентство проектах путь, ее языком первую пунктуация! Силуэт единственное имени даже, знаках подпоясал рекламных ручеек своего рыбного, предупредила мир сих толку, моей себя.'
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.jpg')
+				reviewUserName[1].innerText = 'Михаил Сергеев'
+				reviewDate[1].innerText = 'июль 2022'
+				reviewText[1].innerText = 'Григорий Григорий Григорий Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				break;
+			case 'poli':
+				reviewImg.setAttribute('src', 'img/like/coach-rev-3.png')
+				reviewName.innerText = 'Полина'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-4.jpg')
+				reviewUserName[0].innerText = 'Юля Иванова'
+				reviewDate[0].innerText = 'август 2022'
+				reviewText[0].innerText = 'Полина Полина Полина Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.jpg')
+				reviewUserName[1].innerText = 'Денис Крымов'
+				reviewDate[1].innerText = 'сентябрь 2021'
+				reviewText[1].innerText = 'Полина Полина Полина Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				break;
+			case 'alex':
+				reviewImg.setAttribute('src', 'img/like/coach-rev-4.png')
+				reviewName.innerText = 'Александр'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
+				reviewUserName[0].innerText = 'Джонни Деп'
+				reviewDate[0].innerText = 'февраль 2022'
+				reviewText[0].innerText = 'Александр Александр Александр Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-2.jpg')
+				reviewUserName[1].innerText = 'Иван Серебряников'
+				reviewDate[1].innerText = 'апрель 2022'
+				reviewText[1].innerText = 'Александр Александр АлександрДалеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
+				break;
+		}
+	}
+})
