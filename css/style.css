@@ -3193,3 +3193,114 @@ textarea._error{
 ._req{
   transition: 0.3s;
 }
+/* card anim */
+.card{
+	width: 150px;
+	height: 80px;
+	font-size: 18px;
+	color: #fff;
+	font-family: 'Metro', arial;
+	font-size: 16px;
+	line-height: 24px;
+}
+.card-wrap{
+	border-radius: 10px;
+	position: absolute;
+	top: 320px;
+	left: 50%;
+	margin-left: 242px;
+	background: #555;
+}
+.card span{
+	display: block;
+	align-self: center;
+	padding: 0 10px;
+	text-align: center;
+}
+.front, .back{
+	width: 100%;
+	border-radius: 10px;
+  background: linear-gradient(180deg, #000 0%, #555 100%);
+	justify-content: center;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	display: flex;
+
+}
+.front{
+	transform: perspective(1000px) rotateY(0deg);
+	animation: card-front 10s ease-in-out infinite reverse ;
+}
+.back{
+	transform: perspective(1000px) rotateY(180deg);
+	animation: card-back 10s ease-in-out infinite reverse ;
+}
+
+/*.card:hover .front{
+	transform: perspective(1000px) rotateY(-180deg);
+}
+.card:hover .back{
+	transform: perspective(1000px) rotateY(0deg);
+}*/
+
+@keyframes card-front {
+	0%{
+		transform: perspective(1000px) scale(1) rotateY(0deg);
+	}
+	45%{
+		transform: perspective(1000px) scale(1) rotateY(0deg);
+		box-shadow: none;
+	}
+	47.5%{
+		transform: perspective(1000px) scale(1.2) rotateY(-90deg);
+		box-shadow: 5px 15px 10px 10px rgba(0,0,0,.6);
+	}
+	50%{
+		transform: perspective(1000px) scale(1) rotateY(-180deg);
+		box-shadow: none;
+	}
+	95%{
+		transform: perspective(1000px) scale(1) rotateY(-180deg);
+		box-shadow: none;
+	}
+	97.5%{
+		transform: perspective(1000px) scale(1.2) rotateY(-90deg);
+		box-shadow: 5px 15px 10px 10px rgba(0,0,0,.6);
+	}
+	100%{
+		transform: perspective(1000px) scale(1) rotateY(0deg);
+		box-shadow: none;
+	}
+}
+@keyframes card-back {
+	0%{
+		transform: perspective(1000px) scale(1) rotateY(180deg);
+		box-shadow: none;
+	}
+	45%{
+		transform: perspective(1000px) scale(1) rotateY(180deg);
+		box-shadow: none;
+	}
+	47.5%{
+		transform: perspective(1000px) scale(1.2) rotateY(90deg);
+		box-shadow: 5px 15px 10px 10px rgba(0,0,0,.6);
+	}
+	50%{
+		transform: perspective(1000px) scale(1) rotateY(0deg);
+		box-shadow: none;
+	}
+	95%{
+		transform: perspective(1000px) scale(1) rotateY(0deg);
+		box-shadow: none;
+	}
+	97.5%{
+		transform: perspective(1000px) scale(1.2) rotateY(90deg);
+		box-shadow: 5px 15px 10px 10px rgba(0,0,0,.6);
+	}
+	100%{
+		transform: perspective(1000px) scale(1) rotateY(180deg);
+		box-shadow: none;
+	}
+}
