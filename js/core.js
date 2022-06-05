@@ -1,29 +1,25 @@
 $(document).ready(function() {
 	$('.slider').slick({
   	dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true, 
+    centerMode: true,
+    centerPadding: '10px',
     responsive: [
     {
       breakpoint: 781,
       settings: {
     		slidesToShow: 1,
-        arrows: true,
-        dots: false,
       }
     }]
   });
 
 	$('.letter-slider').slick({
   	dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
+    centerPadding: '10px',
     responsive: [
     {
       breakpoint: 781,
@@ -183,6 +179,7 @@ $(document).ready(function() {
 
   // modal_choose-time
 	let modalChooseNow = document.querySelector('.modal_choose-now')
+	let modalChooseParrent = modalChooseNow.closest('.form')
 	let modalChooseLeter = document.querySelector('.modal_choose-leter')
 	let modalChooseInput = document.querySelector('.modal_choose-input')
 	modalChooseNow.onclick = function(){
@@ -190,17 +187,16 @@ $(document).ready(function() {
 		this.classList.add('modal_choose-time__active')
 		modalChooseInput.disabled = true
 		modalChooseInput.style.display = 'none'
+		modalChooseParrent.setAttribute('data-thanks','to-callback-now')
 	}
 	modalChooseLeter.onclick = function(){
+		modalChooseParrent.setAttribute('data-thanks','to-callback')
 		modalChooseNow.classList.remove('modal_choose-time__active')
 		this.classList.add('modal_choose-time__active')
 		modalChooseInput.style.display = 'block'
 		modalChooseInput.disabled = false
 		modalChooseInput.focus()
 	}
-
-  // перезагружает слайдер из таба
-  
 
 
 	$('.scroll-btn').on('click', function() {
@@ -215,7 +211,7 @@ $(document).ready(function() {
 	if(galleryParrent = document.querySelector('.gallery')){
 		let galleryParrent = document.querySelector('.gallery')
 		let galleryPagination = document.querySelector('.pagination-current')
-		let galleryArrow = [...document.querySelectorAll('.slick-arrow')]
+		let galleryArrow = [...galleryParrent.querySelectorAll('.slick-arrow')]
 		galleryArrow.forEach(item => {
 			item.onclick = function(){
 				if(this.classList.contains('slick-next')){
@@ -229,11 +225,15 @@ $(document).ready(function() {
 		})
 	}
 
-	// validation
+	// number validation 
 	let selector = document.querySelectorAll('input[type="tel"]');
 	let im = new Inputmask('+7 (999) 999-99-99');
 	im.mask(selector);
-	
+
+	$('.main-ic__open').on('click', function(){
+		$(this).toggleClass('main-ic__active')
+		$('.main-ic').slideToggle(150)
+	})
 
 	// forms-select
 	$('.form_select-btn').on('click', function() {
@@ -567,18 +567,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			if(error === 0){
 				this.classList.add('_sending')
 				toThanksModal(item)
-				// let response = await fetch('send.php',{
-				// 	method: 'POST',
-				// 	body: formData
-				// })
-				// if(response.ok){
-				// 	let result = await response.json()
-				// 	// console.log(result.message)
-				// 	// fileInputText.innerHTML = ''
-				// 	form.reset()
-				// } else{
-				// 	console.log('error message')
-				// }
+				let response = await fetch('send.php',{
+					method: 'POSt',
+					body: formData
+				})
+				if(response.ok){
+					let result = await response.json()
+					console.log(result.message)
+					fileInputText.innerHTML = ''
+					form.reset()
+				} else{
+					console.log('error message')
+				}
 			} else{
 				console.log('not valid ' + error)
 			}

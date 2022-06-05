@@ -349,10 +349,19 @@ header{
 /*main*/
 .main{
 	height: 754px;
-	background: url(../img/main/main-bg.png) center top -50px no-repeat;
+	background: url(../img/main/main-bg.jpg) center top -50px no-repeat;
 	background-size: 100%;
 	padding: 120px 0 50px;
 	z-index: 1;
+}
+.door{
+	position: absolute;
+	width: 820px;
+	height: 540px;
+	top: -100px;
+	right: 0;
+	background: url(../img/main/door.png) center top no-repeat;
+	background-size: 100% 100%;
 }
 .main-in{
 	position: relative;
@@ -400,10 +409,9 @@ header{
 	display: block;
 	padding: 12px;
 	position: relative;
-	border-bottom: 1px solid #555;
 }
-.main-ic:last-child a{
-	border-bottom: none;
+.main-ic:first-child{
+	border: none;
 }
 .main-ic_desc{
 	position: absolute;
@@ -424,6 +432,9 @@ header{
 	transition: 0.3s;
 	pointer-events: none;
 	cursor: default;
+}
+.main-ic{
+	border-top: 1px solid #555;
 }
 .main-ic a:hover .main-ic_desc{
 	opacity: 1;
@@ -1005,16 +1016,6 @@ header{
 	justify-content: space-between;
 	position: relative;
 }
-.like-head-wrap__plus::before{
-	content: '';
-	position: absolute;
-	width: 307px;
-	height: 288px;
-	background: url(../img/like/plus.png) center no-repeat;
-	left: -150px;
-	top: -150px;
-	background-size: contain;
-}
 .like-tab{
 	font-family: 'Metro';
 	font-size: 16px;
@@ -1309,28 +1310,16 @@ header{
 	position: relative;
 	z-index: 2;
 }
-.like-list:last-child::before{
-	content: '';
-  position: absolute;
-  width: 307px;
-  height: 288px;
-  background: url(../img/like/plus.png) center no-repeat;
-  right: -100px;
-  bottom: -100px;
-  background-size: contain;
-  z-index: 1;
-  transform: rotate(135deg);
-}
 .like-item{
 	font-size: 18px;
 	line-height: 24px;
-	padding: 0 0 23px 45px;
+	padding: 0 0 23px 70px;
 }
 .like-item__left{
-	background: url(../img/icons/ic-star-white.png) left 3px no-repeat;
+	background: url(../img/icons/ic-star-white.png) 15px 3px no-repeat;
 }
 .like-item__right{
-	background: url(../img/icons/ic-shoot.png) left 3px no-repeat;
+	background: url(../img/icons/ic-shoot.png) 15px 3px no-repeat;
 	z-index: 2;
 	position: relative;
 }
@@ -1338,8 +1327,17 @@ header{
 	font-family: 'Metro', arial;
 	font-size: 16px;
 	line-height: 24px;
-	padding: 0 0 25px;
+	padding: 25px 0 25px 70px;
 	background: none;
+	background: url(../img/like/like-plus.png) left center no-repeat;
+	background-size: auto 90%;
+}
+.like-list:first-child .like-item__title{
+	background-size: auto 100%;
+	background-position: -3px 0;
+}
+.like-list:last-child .like-item__title{
+	background-image: url(../img/like/like-minus.png);
 }
 
 /* price */
@@ -2195,20 +2193,24 @@ footer{
 /* slider 3d */
 
 .reveiw .slick-slide{
-	transition: 0.5s;
-	transform: scale(0.8);
-}
-.reveiw .slick-slide{
 	padding: 0 20px;
-}
-.reveiw .slick-center{
-	transform: scale(1.1);
 }
 .slick-slide img{
 	margin: 0 auto;
 }
-.review .slick-list{
-	padding: 0!important;
+.slider,
+.letter-slider{
+	max-width: 990px;
+	margin: 0 auto;
+}
+.reveiw .slide a{
+	display: block;
+	padding: 40px 30px;
+	transition: 0.3s;
+}
+.reveiw .slick-center a,
+.reveiw .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] a {
+  transform: scale(1.2);
 }
 /* policy */
 .policy{
@@ -3205,7 +3207,6 @@ textarea._error{
 .card{
 	width: 150px;
 	height: 80px;
-	font-size: 18px;
 	color: #fff;
 	font-family: 'Metro', arial;
 	font-size: 16px;
@@ -3214,10 +3215,9 @@ textarea._error{
 .card-wrap{
 	border-radius: 10px;
 	position: absolute;
-	top: 320px;
-	left: 50%;
+	bottom: 52px;
+	left: 173px;
 	margin-left: 242px;
-	background: #555;
 }
 .card span{
 	display: block;
@@ -3228,14 +3228,14 @@ textarea._error{
 .front, .back{
 	width: 100%;
 	border-radius: 10px;
-  background: linear-gradient(180deg, #000 0%, #555 100%);
+  background: linear-gradient(180deg, #464646 0%, #5a5a5a 100%);
 	justify-content: center;
 	height: 100%;
 	overflow: hidden;
 	backface-visibility: hidden;
 	position: absolute;
 	display: flex;
-
+	border: 1px solid #505050;
 }
 .front{
 	transform: perspective(1000px) rotateY(0deg);
@@ -3245,14 +3245,6 @@ textarea._error{
 	transform: perspective(1000px) rotateY(180deg);
 	animation: card-back 10s ease-in-out infinite reverse ;
 }
-
-/*.card:hover .front{
-	transform: perspective(1000px) rotateY(-180deg);
-}
-.card:hover .back{
-	transform: perspective(1000px) rotateY(0deg);
-}*/
-
 @keyframes card-front {
 	0%{
 		transform: perspective(1000px) scale(1) rotateY(0deg);
@@ -3341,5 +3333,14 @@ textarea._error{
 .footer-in{
 	margin-bottom: 50px;
 	padding: 30px;
-	background: url(../img/game/game-gallery-bg.jpg)
+	background: url(../img/game/game-gallery-bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.main-ic__open{
+	width: 42px;
+	height: 48px;
+	background: url(../img/icons/ic-chat.svg) center no-repeat;
+	background-size: 80% 80%;
+	cursor: pointer;
+	display: none;
 }

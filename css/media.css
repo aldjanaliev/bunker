@@ -2,6 +2,20 @@
 	.head-right{
 		padding-left: 20px;
 	}
+	.door{
+    width: 650px;
+    height: 403px;
+    top: -34px;
+	}
+	.card-wrap{
+    margin: 0;
+    left: 327px;
+    bottom: 37px;
+	}
+	.card{
+		height: 62px;
+		width: 125px;
+	}
 	.main-menu-wrap{
 		left: auto;
 		margin-left: 0;
@@ -228,6 +242,18 @@
 @media screen and (max-width: 1400px) {
 	.head-right{
 		padding-left: 0;
+	}
+	.main{
+		height: 610px;
+		padding-top: 45px;
+	}
+	.title{
+		font-size: 36px;
+		line-height: 50px;
+		padding-bottom: 30px;
+	}
+	.modal-big-in{
+		padding: 30px;
 	}
 	.like .slick-arrow{
 		right: 61px
@@ -559,6 +585,7 @@
 	}
 }
 @media screen and (max-width: 1200px) {
+
 	.like .slick-arrow{
 		right: 0
 	}
@@ -757,6 +784,16 @@
 	}
 	.like-item {
 	  padding: 0 0 15px 45px;
+	  background-position: 2px 3px;
+	}
+	.like-item__title{
+		padding-top: 5px;
+		background-position: 0 -5px;
+		background-size: auto 100%;
+	}
+	.like-list:first-child .like-item__title{
+		background-size: auto 110%;
+		background-position: -3px -8px;
 	}
 	.like-list-wrap{
 		padding: 10px 0;
@@ -766,20 +803,6 @@
 	}
 	.like-list:last-child{
 		padding: 0 25px;
-	}
-	.like-head-wrap__plus::before{
-		width: 140px;
-		height: 140px;
-		background-image: url(../img/mobile/plus.png);
-    left: -5px;
-    top: -90px;
-	}
-	.like-list:last-child::before{
-		width: 140px;
-		height: 140px;
-		background-image: url(../img/mobile/plus.png);
-		right: 14px;
-		bottom: 0;
 	}
 	.like::after{
     background-image: url(../img/mobile/guns-2.png);
@@ -976,6 +999,23 @@
 	}
 }
 @media screen and (max-width: 990px) {
+	.reveiw .slide a{
+		padding: 25px 0;
+	}
+	.door {
+    width: 434px;
+    height: 285px;
+	}
+	.card {
+    height: 44px;
+    width: 85px;
+    font-size: 11px;
+    line-height: 16px;
+	}
+	.card-wrap{
+		left: 216px;
+		bottom: 27px
+	}
 	.like .slick-arrow{
 		top: 42%;
 	}
@@ -1461,12 +1501,30 @@
 	}
 }
 @media screen and (max-width: 780px) {
+	.slider, .letter-slider{
+		max-width: 420px;
+	}
+	.reveiw .slick-center a{
+		transform: none;
+	}
+	.main-ic{
+		display: none;
+	}
+	.main-ic__open{
+		display: block;
+		border: none;
+		transition: 0.3s;
+	}
+	.main-ic__active{
+		border-top: 1px solid #555;
+		background-image: url(../img/icons/ic-chat-close.svg);
+		background-size: 60% 60%;
+	}
+	.door{
+		top: -185px;
+	}
 	.footer-in{
 		padding: 15px;
-	}
-	.main-menu-wrap{
-    width: 40px;
-    padding: 5px 0px;
 	}
 	.modal_title{
 		font-size: 22px;
@@ -1621,9 +1679,6 @@
 	.sertificate{
 		background-image: url(../img/mobile/sertificate-bg.png)
 	}
-	.like-head-wrap__plus::before{
-		display: none;
-	}
 	.like-list-wrap{
 		flex-wrap: wrap;
 	}
@@ -1657,6 +1712,13 @@
 	}
 	.like-item {
     padding: 0 0 10px 45px;
+	}
+	.like-item__title{
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+	.like-list:first-child .like-item__title{
+		background-position: -3px -3px;
 	}
 	.like-list li{
 		background-position: left top;
@@ -1849,12 +1911,14 @@
 	}
 	.main{
 		height: auto;
-		padding: 150px 0 0;
+		padding: 200px 0 0;
 		background-position: 60%  -80px; 
 	}
 	.title{
 		font-size: 22px;
 		line-height: 32px;
+		position: relative;
+		z-index: 10;
 	}
 	.main-item{
 		width: 120px;
@@ -1923,10 +1987,24 @@
 		left: 33px;
 	}
 	.main{
-		padding: 63% 0 100px;
-		background-image: url(../img/mobile/main-bg.png);
-		background-size: 100% auto;
-		background-position: center -120px;
+		padding-top: 260px;
+	}
+	.door{
+		top: -250px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 240px;
+	}
+	.card-wrap {
+    left: 187px;
+    bottom: 21px;
+	}
+	.card{
+		width: 69px;
+		height: 38px;
+		font-size: 9px;
+		border-radius: 5px;
 	}
 	.main .red br{
 		display: none;
@@ -2175,6 +2253,12 @@
 	}
 }
 @media screen and (max-width: 420px) {
+	.card-wrap {
+    left: 158px;
+	}
+	.title-desc{
+		width: 300px;
+	}
 	.coach-slider .slick-next::before{
 		left: 170%;
 		font-size: 14px;
@@ -2199,7 +2283,11 @@
 		padding: 0!important;
 	}
 	.main{
-		padding-top: 57%;
+		padding-top: 240px;
+	}
+	.door{
+		top: -225px;
+		height: 210px;
 	}
 	.map-dots__1{
 		left: 150px;
