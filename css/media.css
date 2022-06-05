@@ -1,4 +1,7 @@
 @media screen and (max-width: 1880px) {
+	.head-right{
+		padding-left: 20px;
+	}
 	.main-menu-wrap{
 		left: auto;
 		margin-left: 0;
@@ -223,6 +226,12 @@
 	}
 }
 @media screen and (max-width: 1400px) {
+	.head-right{
+		padding-left: 0;
+	}
+	.like .slick-arrow{
+		right: 61px
+	}
 	.price-mid li{
 		height: 75px;
 	}
@@ -510,13 +519,6 @@
 	.memo-right {
     width: calc(100% - 650px);
 	}
-	.footer-txt{
-		font-size: 18px;
-		line-height: 24px;
-	}
-	.footer-map h3 br{
-		display: none;
-	}
 	.like .slick-arrow{
 		top: 40%;
 	}
@@ -551,12 +553,15 @@
 		position: relative;
 		z-index: 2;
 	}
-	.btn-order{
+	.btn-review{
 		position: relative;
 		z-index: 10;
 	}
 }
 @media screen and (max-width: 1200px) {
+	.like .slick-arrow{
+		right: 0
+	}
 	.bonus-right{
 		padding-left: 50px;
 	}
@@ -908,9 +913,6 @@
 	.footer-map .red{
 		display: block;
 	}
-	.map{
-		padding-bottom: 50px;
-	}
 	.footer-info-wrap{
 		justify-content: start;
 	}
@@ -923,7 +925,8 @@
 		line-height: 20px;
 	}
 	.footer-address_title,
-	.footer-links_desc{
+	.footer-links_desc,
+	.footer-tel span{
 		font-size: 14px;
 		line-height: 22px;
 		padding-bottom: 10px;
@@ -973,6 +976,20 @@
 	}
 }
 @media screen and (max-width: 990px) {
+	.like .slick-arrow{
+		top: 42%;
+	}
+	.coach-slider .slick-next::before{
+		width: 60px;
+		line-height: 1.1;
+		height: auto;
+		left: 200%;
+		top: 6%;
+		margin-top: 0;
+	}
+	.main-menu-wrap{
+		bottom: 10%;
+	}
 	.modal_title{
 		margin-bottom: 25px;
 	}
@@ -1297,7 +1314,7 @@
 	.like-tab::after{
 		right: -59px!important;
 		border-width: 60px 0 0 60px!important;
-    border-color: transparent transparent transparent #536953;
+    border-color: transparent transparent transparent #EBD354;
     width: 0;
     height: 0;
     border-style: solid;
@@ -1439,8 +1456,18 @@
 	.modal-coach_btn .btn{
 		margin: 0 auto;
 	}
+	.footer-address{
+		padding-bottom: 5px;
+	}
 }
 @media screen and (max-width: 780px) {
+	.footer-in{
+		padding: 15px;
+	}
+	.main-menu-wrap{
+    width: 40px;
+    padding: 5px 0px;
+	}
 	.modal_title{
 		font-size: 22px;
 		line-height: 32px;
@@ -1845,12 +1872,6 @@
 	.footer-address_title{
 		padding-bottom: 0;
 	}
-	.footer-address{
-		padding-bottom: 20px;
-	}
-	.footer-tel{
-		padding-bottom: 20px;
-	}
 	.variants-body-wrap{
 		margin-top: -90px;
 	}
@@ -1865,8 +1886,17 @@
 	.modal-coach-ic{
 		margin-left: 20px;
 	}
+	.footer-bot{
+		display: block;
+	}
+	.footer-bot a{
+		padding-top: 15px;
+	}
 }
 @media screen and (max-width: 560px) {
+	.reveiw .red{
+		display: block;
+	}
 	.modal-big-in{
 		padding: 30px 25px;
 	}
@@ -2145,6 +2175,13 @@
 	}
 }
 @media screen and (max-width: 420px) {
+	.coach-slider .slick-next::before{
+		left: 170%;
+		font-size: 14px;
+	}
+	.like .red{
+		display: block;
+	}
 	.modal-in{
 		padding: 30px;
 	}

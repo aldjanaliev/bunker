@@ -3,7 +3,7 @@ $(document).ready(function() {
   	dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     centerMode: true, 
     responsive: [
@@ -21,7 +21,7 @@ $(document).ready(function() {
   	dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     centerMode: true,
     responsive: [
@@ -906,7 +906,7 @@ btnOrder.forEach(item => {
 })
 
 // create review-modals for like block
-let btnReview = [...document.querySelectorAll('.btn-order')]
+let btnReview = [...document.querySelectorAll('.btn-review')]
 let reviewImg = document.querySelector('.modal-coach-img')
 let reviewImgSm = document.querySelector('.modal-coach-img-sm')
 let reviewName = document.querySelector('.modal-coach_name')
