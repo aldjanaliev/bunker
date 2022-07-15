@@ -4,9 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Бункер</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+	<link rel="stylesheet" href="css/map.bundle.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
@@ -15,28 +22,28 @@
 		<div class="container">
 			<div class="head">
 				<div class="head-left">
-					<div class="logo">
-						<img src="img/logo.png" alt="">
-					</div>
+					<a href="index.html" class="logo">
+						<img src="img/logo.webp" alt="">
+					</a>
 					<p class="logo-txt">Действующий подземный бункер в Москве</p>
 				</div>
 				<nav class="menu">
 					<ul class="list">
-						<li class="list-item"><a href="#game" class="scroll-btn">Игры</a></li>
-						<li class="list-item"><a href="#toprice" class="scroll-btn">Цены</a></li>
-						<li class="list-item"><a href="#like" class="scroll-btn">Что вам понравится</a></li>
-						<li class="list-item"><a href="#contacts" class="scroll-btn">Где находимся</a></li>
+						<li class="list-item"><a href="index.html#game" class="scroll-btn">Игры</a></li>
+						<li class="list-item"><a href="index.html#toprice" class="scroll-btn">Цены</a></li>
+						<li class="list-item"><a href="index.html#like" class="scroll-btn">Что вам понравится</a></li>
+						<li class="list-item"><a href="index.html#contacts" class="scroll-btn">Где находимся</a></li>
 					</ul>
 				</nav>
 				<div class="head-right">
 					<div class="head_soc">
 						<p class="head_soc-desc">сейчас на связи</p>
 						<div class="soc-icons">
-							<a href="#" class="soc-ic">
+							<a href="https://tlgg.ru/@bunkerSSSR" class="soc-ic" target="_blank">
 								<img src="img/icons/ic-tg.svg" alt="">
 								<p class="soc-desc"><i class="soc-desc_ic"></i>Написать в телеграм</p>
 							</a>
-							<a href="#" class="soc-ic">
+							<a href="https://wa.me/79629383313" class="soc-ic" target="_blank">
 								<img src="img/icons/ic-wa.svg" alt="">
 								<p class="soc-desc"><i class="soc-desc_ic"></i>Написать в ватсап</p>
 							</a>
@@ -46,7 +53,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="head_phone">
+					<div class="head_phone head_phone__policy">
 						<a href="tel:+79629383313" class="phone-call">+7 962 938-33-13</a>
 						<!-- <a href="#" data-src="#modal-callback" class="phone-modal" data-fancybox>заказать звонок</a> -->
 					</div>
@@ -69,11 +76,11 @@
 								<p>сейчас на связи:</p>
 								<div class="mobile-links">
 									<div class="soc-icons">
-										<a href="#" class="soc-ic">
+										<a href="https://tlgg.ru/@bunkerSSSR" class="soc-ic" target="_blank">
 											<img src="img/icons/ic-tg.svg" alt="">
 											<p>Написать <br> в Telegram</p>
 										</a>
-										<a href="#" class="soc-ic">
+										<a href="https://wa.me/79629383313" class="soc-ic" target="_blank">
 											<img src="img/icons/ic-wa.svg" alt="">
 											<p>Написать <br> в Whatsapp</p>
 										</a>
@@ -99,20 +106,21 @@
 					<img src="img/icons/ic-min-phone.svg" alt=""></a>
 			</li> -->
 			<li class="main-ic">
-				<a href="#">
+				<a href="https://wa.me/79629383313" target="_blank">
 					<span class="main-ic_desc">Написать в ватсап</span>
 					<img src="img/icons/ic-min-wa.svg" alt=""></a>
 			</li>
 			<li class="main-ic">
-				<a href="#">
-					<span class="main-ic_desc">Написать в телеграм</span>
+				<a href="https://tlgg.ru/@bunkerSSSR" target="_blank">
+					<span class="main-ic_desc">Написать в телеграм</span target="_blank">
 					<img src="img/icons/ic-min-tg.svg" alt=""></a>
 			</li>
-			<li class="main-ic main-ic__bonus">
+			<!-- <li class="main-ic main-ic__bonus">
 				<a href="#" data-src="#modal-bonus" data-fancybox>
 					<span class="main-ic_desc">Получить мой подарок</span>
 					<img src="img/icons/ic-min-present.svg" alt=""></a>
-			</li>
+			</li> -->
+			<li class="main-ic__open"></li>
 		</ul>
 	</div>
 

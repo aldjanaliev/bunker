@@ -882,12 +882,12 @@ btnOrder.forEach(item => {
 				titleText.innerHTML = 'игры "Пейнтбол" по тарифу "Ветеран"'
 				break;
 			case '9':
-				inputOrderValue.value = 'зона отдыха, тариф "Банкетный зал мини"'
-				titleText.innerHTML = 'зоны отдыха по тарифу "Банкетный зал мини"'
+				inputOrderValue.value = 'зона отдыха, тариф "Банкетный зал"'
+				titleText.innerHTML = 'зоны отдыха по тарифу "Банкетный зал"'
 				break;
 			case '10':
-				inputOrderValue.value = 'зона отдыха, тариф "Банкетный зал макси"'
-				titleText.innerHTML = 'зоны отдыха по тарифу "Банкетный зал макси"'
+				inputOrderValue.value = 'зона отдыха, тариф "Зона отдыха"'
+				titleText.innerHTML = 'зоны отдыха по тарифу "Зона отдыха"'
 				break;
 			case '11':
 				inputOrderValue.value = 'обучение , тариф "Боец+"'
@@ -910,6 +910,7 @@ let btnReview = [...document.querySelectorAll('.btn-review')]
 let reviewImg = document.querySelector('.modal-coach-img')
 let reviewImgSm = document.querySelector('.modal-coach-img-sm')
 let reviewName = document.querySelector('.modal-coach_name')
+let reviewRang = document.querySelector('.modal-coach_rang')
 let reviewUserImg = [...document.querySelectorAll('.modal-user-img')]
 let reviewUserName = [...document.querySelectorAll('.modal-coach_user-name')]
 let reviewDate = [...document.querySelectorAll('.modal-coach_date')]
@@ -919,56 +920,60 @@ btnReview.forEach(item => {
 	item.onclick = function(){
 		switch(this.getAttribute('data-coach')){
 			case 'albert':
-				reviewImg.setAttribute('src', 'img/like/coach-rev-1.png')
-				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-1.png')
-				reviewName.innerText = 'Альберт “гром”'
-				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
+				reviewImg.setAttribute('src', 'img/like/coach-rev-1.webp')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-1.webp')
+				reviewName.innerText = 'Альберт'
+				reviewRang.innerText = 'Администратор'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.webp')
 				reviewUserName[0].innerText = 'Александр Александрович'
 				reviewDate[0].innerText = 'февраль 2022'
 				reviewText[0].innerText = 'Альберт “гром” Альберт “гром” Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
-				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-4.jpg')
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-4.webp')
 				reviewUserName[1].innerText = 'Наташа Саева'
 				reviewDate[1].innerText = 'март 2022'
 				reviewText[1].innerText = 'Альберт “гром” Альберт “гром” Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
 				coachBtn.setAttribute('data-coach-review','1')
 				break;
 			case 'gora':
-				reviewImg.setAttribute('src', 'img/like/coach-rev-2.png')
-				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-2.png')
+				reviewImg.setAttribute('src', 'img/like/coach-rev-2.webp')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-2.webp')
 				reviewName.innerText = 'Григорий'
-				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-2.jpg')
+				reviewRang.innerText = 'Старший инструктор'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-2.webp')
 				reviewUserName[0].innerText = 'Павел Дуров'
 				reviewDate[0].innerText = 'май 2021'
 				reviewText[0].innerText = 'Григорий Григорий Григорий Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Языкового но там раз прямо реторический текст от всех вопрос жаренные подпоясал одна маленькая то правилами он дорогу агентство проектах путь, ее языком первую пунктуация! Силуэт единственное имени даже, знаках подпоясал рекламных ручеек своего рыбного, предупредила мир сих толку, моей себя.'
-				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.jpg')
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.webp')
 				reviewUserName[1].innerText = 'Михаил Сергеев'
 				reviewDate[1].innerText = 'июль 2022'
 				reviewText[1].innerText = 'Григорий Григорий Григорий Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
 				coachBtn.setAttribute('data-coach-review','2')
 				break;
 			case 'poli':
-				reviewImg.setAttribute('src', 'img/like/coach-rev-3.png')
-				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-3.png')
+				reviewImg.setAttribute('src', 'img/like/coach-rev-3.webp')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-3.webp')
 				reviewName.innerText = 'Полина'
-				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-4.jpg')
+				reviewRang.innerText = 'Инструктор сержант'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review-4.webp')
 				reviewUserName[0].innerText = 'Юля Иванова'
 				reviewDate[0].innerText = 'август 2022'
 				reviewText[0].innerText = 'Полина Полина Полина Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
-				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.jpg')
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-3.webp')
 				reviewUserName[1].innerText = 'Денис Крымов'
 				reviewDate[1].innerText = 'сентябрь 2021'
 				reviewText[1].innerText = 'Полина Полина Полина Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
 				coachBtn.setAttribute('data-coach-review','3')
 				break;
 			case 'alex':
-				reviewImg.setAttribute('src', 'img/like/coach-rev-4.png')
-				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-4.png')
+				reviewImg.setAttribute('src', 'img/like/coach-rev-4.webp')
+				reviewImgSm.setAttribute('src', 'img/mobile/coach-rev-4.webp')
 				reviewName.innerText = 'Александр'
-				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.jpg')
+				reviewRang.innerText = 'Инструктор сержант'
+				reviewUserImg[0].setAttribute('src', 'img/like/coach-review.webp')
 				reviewUserName[0].innerText = 'Джонни Деп'
 				reviewDate[0].innerText = 'февраль 2022'
 				reviewText[0].innerText = 'Александр Александр Александр Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'
-				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-2.jpg')
+				reviewUserImg[1].setAttribute('src', 'img/like/coach-review-2.webp')
 				reviewUserName[1].innerText = 'Иван Серебряников'
 				reviewDate[1].innerText = 'апрель 2022'
 				reviewText[1].innerText = 'Александр Александр АлександрДалеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum рот большого, рыбными рукопись даже вскоре своих взобравшись толку, что журчит буквоград подзаголовок рекламных раз одна переписали живет себя использовало курсивных подпоясал единственное рыбного, дорогу, маленький языкового запятой. Большой пояс своего переписывается, продолжил грамматики они, своих не его встретил решила которое если свой образ ее заманивший грустный ведущими осталось!'

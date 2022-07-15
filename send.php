@@ -13,7 +13,7 @@
 	// от кого письмо
 	$mail->setFrom('info@' . $_SERVER['HTTP_HOST'], 'Бункер ');
 	// кому отправить
-	$admin_email  = ['almazdjanaliev@gmail.com'];
+	$admin_email  = ['bunkersssr@yandex.ru'];
 	// $admin_email  = ['quiz24-job@yandex.ru', 'info@terminator.ru'];
 	foreach ( $admin_email as $key => $value ) {
 		$mail->addAddress($value);

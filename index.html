@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Бункер</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fancybox.min.css">
@@ -19,7 +23,7 @@
 			<div class="head">
 				<div class="head-left">
 					<div class="logo">
-						<img src="img/logo.png" alt="">
+						<img src="img/logo.webp" width="105px" height="99px" alt="">
 					</div>
 					<p class="logo-txt">Действующий подземный бункер в Москве</p>
 				</div>
@@ -72,7 +76,7 @@
 								<p>сейчас на связи:</p>
 								<div class="mobile-links">
 									<div class="soc-icons">
-										<a href="#" class="soc-ic">
+										<a href="https://tlgg.ru/@bunkerSSSR" class="soc-ic" target="_blank">
 											<img src="img/icons/ic-tg.svg" alt="" target="_blank">
 											<p>Написать <br> в Telegram</p>
 										</a>
@@ -102,12 +106,12 @@
 					<img src="img/icons/ic-min-phone.svg" alt=""></a>
 			</li>
 			<li class="main-ic">
-				<a href="https://wa.me/79629383313" target="_blank">
+				<a href="https://wa.me/79629383313" target="_blank" target="_blank">
 					<span class="main-ic_desc">Написать в ватсап</span>
 					<img src="img/icons/ic-min-wa.svg" alt=""></a>
 			</li>
 			<li class="main-ic">
-				<a href="#">
+				<a href="https://tlgg.ru/@bunkerSSSR" target="_blank">
 					<span class="main-ic_desc">Написать в телеграм</span target="_blank">
 					<img src="img/icons/ic-min-tg.svg" alt=""></a>
 			</li>
@@ -128,19 +132,21 @@
 					<div class="card-wrap">
 						<div class="card">
 							<div class="front">
-								<span>адреналин Х2</span>
+								<span class="card-txt-big"><i>X</i><b>2</b></span>
+								<span>адреналин</span>
 							</div>
 							<div class="back">
-								<span>Второй текст а5</span>
+								<span class="card-txt-big">24/7</span>
+								<span>круглосуточно</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<h1 class="title">ПОЧУВСТВУЙТЕ <span class="title-desc red">атмосферу <br> плотного боя </span>в динамичной игре</h1>
 				<div class="main-items">
-					<a href="#toprice" class="scroll-btn main-item main-item__lazer"><span class="main-item_desc">лазертаг <br>в краске</span><img src="img/main/1.png" alt=""></a>
-					<a href="#toprice" class="scroll-btn main-item main-item__rest"><span class="main-item_desc">Зона <br> отдыха</span><img src="img/main/2.png" alt=""></a>
-					<a href="#toprice" class="scroll-btn main-item main-item__ball"><span class="main-item_desc">ПЕЙНТБОЛ</span><img src="img/main/3.png" alt=""></a>
+					<a href="#toprice" class="scroll-btn main-item main-item__lazer"><span class="main-item_desc">лазертаг <br>в краске</span><img src="img/main/1.webp" alt=""></a>
+					<a href="#toprice" class="scroll-btn main-item main-item__rest"><span class="main-item_desc">Зона <br> отдыха</span><img src="img/main/2.webp" alt=""></a>
+					<a href="#toprice" class="scroll-btn main-item main-item__ball"><span class="main-item_desc">ПЕЙНТБОЛ</span><img src="img/main/3.webp" alt=""></a>
 				</div>
 				<div class="btn-wrap">
 					<a href="" class="btn" data-fancybox data-src="#modal-physical">Забронировать игру и отдых</a>
@@ -152,35 +158,37 @@
 	<section class="section map">
 		<div class="container">
 			<h3 class="section-title"><span class="red">1000 м2 </span> для игр, отдыха и развлечений</h3>
-			<div class="map-in">
-				<div class="map-left">
-					<div class="goal">
-						<span class="goal_num">+ 16 C</span>
-						<p class="goal_txt">В бункере <br> в любое время года <br> комфортная <br> температура</p>
+			<div class="map-container">
+				<div class="map-in">
+					<div class="map-left">
+						<div class="goal">
+							<span class="goal_num">+ 16 C</span>
+							<p class="goal_txt">В бункере <br> в любое время года <br> комфортная <br> температура</p>
+						</div>
 					</div>
+					<div class="map-right">
+						<img src="img/map/map-1.webp" alt="">
+						<i class="map-dots map-dots__1"><span class="map-dots_txt">Парковка для гостей</span></i>
+						<i class="map-dots map-dots__2"><span class="map-dots_txt">Банкетный зал <br> микроволновка,<br> чайник,<br> bluetoth-колонки</span></i>
+						<i class="map-dots map-dots__3"><span class="map-dots_txt">Рецепция администратора</span></i>
+						<i class="map-dots map-dots__4"><span class="map-dots_txt">Зона ожидания</span></i>
+						<i class="map-dots map-dots__5"><span class="map-dots_txt">Шкафчик для личных вещей с ключом</span></i>
+						<i class="map-dots map-dots__6"><span class="map-dots_txt">Раздевалка</span></i>
+						<i class="map-dots map-dots__7"><span class="map-dots_txt">Башня</span></i>
+						<i class="map-dots map-dots__8"><span class="map-dots_txt">Игровая зона "Позиционная"</span></i>
+						<i class="map-dots map-dots__9"><span class="map-dots_txt">Игровая зона "Тактическая"</span></i>
+						<i class="map-dots map-dots__10"><span class="map-dots_txt">Холодильник с напитками</span></i>
+						<i class="map-dots map-dots__11"><span class="map-dots_txt">Зона отдыха</span></i>
+						<i class="map-dots map-dots__12"><span class="map-dots_txt">Оружейная</span></i>
+						<i class="map-dots map-dots__13"><span class="map-dots_txt">Пристрелочная</span></i>
+						<i class="map-dots map-dots__14"><span class="map-dots_txt">Башня</span></i>
+					</div>
+				</div> 
+				<div class="btn-wrap map-btn">
+					<a href="img/map/map-big.webp" class="btn btn-map btn-map__big" data-fancybox>Увеличить карту</a>
+					<a href="img/map/map-mid.webp" class="btn btn-map btn-map__mid" data-fancybox>Увеличить карту</a>
+					<a href="img/map/map-sm.webp" class="btn btn-map btn-map__sm" data-fancybox>Увеличить карту</a>
 				</div>
-				<div class="map-right">
-					<img src="img/map/map-1.png" alt="">
-					<i class="map-dots map-dots__1"><span class="map-dots_txt">Парковка для гостей</span></i>
-					<i class="map-dots map-dots__2"><span class="map-dots_txt">Банкетный зал <br> микроволновка,<br> чайник,<br> bluetoth-колонки</span></i>
-					<i class="map-dots map-dots__3"><span class="map-dots_txt">Рецепция администратора</span></i>
-					<i class="map-dots map-dots__4"><span class="map-dots_txt">Зона ожидания</span></i>
-					<i class="map-dots map-dots__5"><span class="map-dots_txt">Шкафчик для личных вещей с ключом</span></i>
-					<i class="map-dots map-dots__6"><span class="map-dots_txt">Раздевалка</span></i>
-					<i class="map-dots map-dots__7"><span class="map-dots_txt">Башня</span></i>
-					<i class="map-dots map-dots__8"><span class="map-dots_txt">Игровая зона "Позиционная"</span></i>
-					<i class="map-dots map-dots__9"><span class="map-dots_txt">Игровая зона "Тактическая"</span></i>
-					<i class="map-dots map-dots__10"><span class="map-dots_txt">Холодильник с напитками</span></i>
-					<i class="map-dots map-dots__11"><span class="map-dots_txt">Зона отдыха</span></i>
-					<i class="map-dots map-dots__12"><span class="map-dots_txt">Оружейная</span></i>
-					<i class="map-dots map-dots__13"><span class="map-dots_txt">Пристрелочная</span></i>
-					<i class="map-dots map-dots__14"><span class="map-dots_txt">Башня</span></i>
-				</div>
-			</div> 
-			<div class="btn-wrap">
-				<a href="img/map/map-big.png" class="btn btn-map btn-map__big" data-fancybox>Увеличить карту</a>
-				<a href="img/map/map-mid.png" class="btn btn-map btn-map__mid" data-fancybox>Увеличить карту</a>
-				<a href="img/map/map-sm.png" class="btn btn-map btn-map__sm" data-fancybox>Увеличить карту</a>
 			</div>
 		</div>
 	</section>
@@ -199,7 +207,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">ВЗРОСЛЫЙ <br>День <br>рождения</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-1.png" alt="">
+										<img src="img/variants/ic-1.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -208,7 +216,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">Детский <br>День <br>рождения</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-2.png" alt="">
+										<img src="img/variants/ic-2.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -217,7 +225,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">корпоратив</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-3.png" alt="">
+										<img src="img/variants/ic-3.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -226,7 +234,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">мальчишник</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-4.png" alt="">
+										<img src="img/variants/ic-4.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -235,7 +243,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">игра <br>с друзьями</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-5.png" alt="">
+										<img src="img/variants/ic-5.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -244,7 +252,7 @@
 									<div class="variant-head_star"></div>
 									<h3 class="variant-head_title">ваше <br>мероприятие</h3>
 									<div class="variant-head_ic">
-										<img src="img/variants/ic-6.png" alt="">
+										<img src="img/variants/ic-6.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -256,8 +264,8 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/1.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/1.png" alt="">
+											<img class="variants-img__big" src="img/variants/1.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/1.webp" alt="">
 										</div>
 										<div class="variants-info">       
 											<div class="variants-info_title">
@@ -274,12 +282,12 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/2.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/2.png" alt="">
+											<img class="variants-img__big" src="img/variants/2.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/2.webp" alt="">
 										</div>
 										<div class="variants-info">
 											<div class="variants-info_title">
-												<img src="img/variants/info-1.jpg" alt="">
+												<img src="img/variants/info-1.webp" alt="">
 												<span class="variants-info_name">Татьяна <span class="variants-info_desc">Мама именинника Никиты,  9 лет</span></span>
 											</div>
 											<p class="variants-info_txt">Мы впервые оказались в настоящем бомбоубежище. Именинник открыл 500-килограммовую дверь, крутя колесо замка, сама бы покрутила! )</p>
@@ -294,8 +302,8 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/3.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/3.png" alt="">
+											<img class="variants-img__big" src="img/variants/3.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/3.webp" alt="">
 										</div>
 										<div class="variants-info">
 											<div class="variants-info_title">
@@ -315,8 +323,8 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/4.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/4.png" alt="">
+											<img class="variants-img__big" src="img/variants/4.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/4.webp" alt="">
 										</div>
 										<div class="variants-info">
 											<div class="variants-info_title">
@@ -335,8 +343,8 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/5.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/5.png" alt="">
+											<img class="variants-img__big" src="img/variants/5.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/5.webp" alt="">
 										</div>
 										<div class="variants-info">
 											<div class="variants-info_title">
@@ -353,8 +361,8 @@
 								<div class="variants-body-in">
 									<div class="variants-body">
 										<div class="variants-img">
-											<img class="variants-img__big" src="img/variants/6.png" alt="">
-											<img class="variants-img__sm" src="img/mobile/6.png" alt="">
+											<img class="variants-img__big" src="img/variants/6.webp" alt="">
+											<img class="variants-img__sm" src="img/mobile/6.webp" alt="">
 										</div>
 										<div class="variants-info">
 											<div class="variants-info_title">
@@ -373,7 +381,7 @@
 				</div>
 			</div>
 			<div class="variants-bg">
-				<i class="star-bg star-bg__sm start-bg-1"></i><i class="star-bg star-bg__mid start-bg-2"></i><i class="star-bg star-bg__big start-bg-3"></i><i class="star-bg star-bg__sm start-bg-4"></i><i class="star-bg star-bg__mid start-bg-5"></i><i class="star-bg star-bg__big start-bg-6"></i><i class="star-bg star-bg__sm start-bg-7"></i><i class="star-bg star-bg__mid start-bg-8"></i><i class="star-bg star-bg__big start-bg-9"></i><i class="star-bg star-bg__mid start-bg-10"></i><i class="star-bg star-bg__mid start-bg-11"></i><i class="star-bg star-bg__big start-bg-12"></i>
+				<i class="star-bg star-bg__sm start-bg-1"></i><i class="star-bg star-bg__mid start-bg-2"></i><i class="star-bg star-bg__sm start-bg-4"></i><i class="star-bg star-bg__mid start-bg-5"></i><i class="star-bg star-bg__sm start-bg-7"></i><i class="star-bg star-bg__mid start-bg-8"></i><i class="star-bg star-bg__big start-bg-9"></i><i class="star-bg star-bg__mid start-bg-10"></i><i class="star-bg star-bg__mid start-bg-11"></i><i class="star-bg star-bg__big start-bg-12"></i>
 			</div>
 		</div>
 	</section>
@@ -392,10 +400,10 @@
 					<div class="sertificate-bg">
 						<div class="sertificate-slider">
 							<div class="sertificate-slide">
-								<a href="img/sertificate/1.jpg" data-fancybox="sertificate"><img src="img/sertificate/1.jpg" alt=""></a>
+								<a href="img/sertificate/1.webp" data-fancybox="sertificate"><img src="img/sertificate/1.webp" alt=""></a>
 							</div>
 							<div class="sertificate-slide">
-								<a href="img/sertificate/1.jpg" data-fancybox="sertificate"><img src="img/sertificate/1.jpg" alt=""></a>
+								<a href="img/sertificate/1.webp" data-fancybox="sertificate"><img src="img/sertificate/1.webp" alt=""></a>
 							</div>
 						</div>
 					</div>
@@ -512,7 +520,7 @@
 											<div class="coach-review_info">
 												<a href="#modal-coach" class="btn-review coach-review__sm" data-coach="albert" data-fancybox>Читать отзывы</a>
 												<div class="coach-review_img">
-													<img src="img/like/coach-review.jpg" alt="">
+													<img src="img/like/coach-review.webp" alt="">
 												</div>
 												<span class="coach-review_name">Владимир Тихомиров</span>
 											</div>
@@ -520,13 +528,13 @@
 											<div class="coach-review_link"><a href="#modal-coach" class="btn-review" data-coach="albert" data-fancybox>Читать все отзывы</a></div>
 										</div>
 										<div class="coach-name">
-											<div class="coach-name_desc">Инструктор-сержант</div>
-											<div class="coach-name_title"><span>Альберт “гром”</span></div>
+											<div class="coach-name_desc">Администратор</div>
+											<div class="coach-name_title"><span>Альберт</span></div>
 										</div>
 									</div>
 									<div class="coach-slide_img">
-										<img class="variants-img__big" src="img/like/coach-1.png" alt="">
-										<img class="variants-img__sm" src="img/mobile/coach-1.png" alt="">
+										<img class="variants-img__big" src="img/like/coach-1.webp" alt="">
+										<img class="variants-img__sm" src="img/mobile/coach-1.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -541,7 +549,7 @@
 											<div class="coach-review_info">
 												<a href="#modal-coach" class="btn-review coach-review__sm" data-coach="gora" data-fancybox>Читать отзывы</a>
 												<div class="coach-review_img">
-													<img src="img/like/coach-review-2.jpg" alt="">
+													<img src="img/like/coach-review-2.webp" alt="">
 												</div>
 												<span class="coach-review_name">Николай Первозданный</span>
 											</div>
@@ -549,13 +557,13 @@
 											<div class="coach-review_link"><a href="#modal-coach" class="btn-review" data-coach="gora" data-fancybox>Читать отзывы</a></div>
 										</div>
 										<div class="coach-name">
-											<div class="coach-name_desc">Инструктор-сержант</div>
+											<div class="coach-name_desc">Старший инструктор</div>
 											<div class="coach-name_title"><span>Григорий </span></div>
 										</div>
 									</div>
 									<div class="coach-slide_img">
-										<img class="variants-img__big" src="img/like/coach-2.png" alt="">
-										<img class="variants-img__sm" src="img/mobile/coach-2.png" alt="">
+										<img class="variants-img__big" src="img/like/coach-2.webp" alt="">
+										<img class="variants-img__sm" src="img/mobile/coach-2.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -570,7 +578,7 @@
 											<div class="coach-review_info">
 												<a href="#modal-coach" class="btn-review coach-review__sm" data-coach="poli" data-fancybox>Читать отзывы</a>
 												<div class="coach-review_img">
-													<img src="img/like/coach-review-3.jpg" alt="">
+													<img src="img/like/coach-review-3.webp" alt="">
 												</div>
 												<span class="coach-review_name">Андрей Борзов</span>
 											</div>
@@ -583,8 +591,8 @@
 										</div>
 									</div>
 									<div class="coach-slide_img">
-										<img class="variants-img__big" src="img/like/coach-3.png" alt="">
-										<img class="variants-img__sm" src="img/mobile/coach-3.png" alt="">
+										<img class="variants-img__big" src="img/like/coach-3.webp" alt="">
+										<img class="variants-img__sm" src="img/mobile/coach-3.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -599,7 +607,7 @@
 											<div class="coach-review_info">
 												<a href="#modal-coach" class="btn-review coach-review__sm" data-coach="alex" data-fancybox>Читать отзывы</a>
 												<div class="coach-review_img">
-													<img src="img/like/coach-review-4.jpg" alt="">
+													<img src="img/like/coach-review-4.webp" alt="">
 												</div>
 												<span class="coach-review_name">Алена Семенова</span>
 											</div>
@@ -612,8 +620,8 @@
 										</div>
 									</div>
 									<div class="coach-slide_img">
-										<img class="variants-img__big" src="img/like/coach-4.png" alt="">
-										<img class="variants-img__sm" src="img/mobile/coach-4.png" alt="">
+										<img class="variants-img__big" src="img/like/coach-4.webp" alt="">
+										<img class="variants-img__sm" src="img/mobile/coach-4.webp" alt="">
 									</div>
 								</div>
 							</div>
@@ -645,7 +653,7 @@
 							<div class="game-gallery">
 								<a href="img/game/1.webp" data-fancybox>
 									<img class="img__big" src="img/game/1.webp" alt="">
-									<img class="img__sm" src="img/mobile/game-1.jpg" alt="">
+									<img class="img__sm" src="img/mobile/game-1.webp" alt="">
 								</a>
 							</div>
 						</div>
@@ -653,7 +661,7 @@
 							<div class="game-gallery">
 								<a href="img/game/2.webp" data-fancybox>
 									<img class="img__big" src="img/game/2.webp" alt="">
-									<img class="img__sm" src="img/mobile/game-2.jpg" alt="">
+									<img class="img__sm" src="img/mobile/game-2.webp" alt="">
 								</a>
 							</div>
 						</div>
@@ -663,31 +671,31 @@
 									<a href="img/game/311.webp" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Ресепшн с опытным администратором">
 										<img src="img/game/31.webp" alt="">
 									</a>
-									<a href="img/game/321.jpg" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Шкафчик с ключом для личных вещей">
+									<a href="img/game/321.webp" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Шкафчик с ключом для личных вещей">
 										<img src="img/game/32.webp" alt="">
 									</a>
-									<a href="img/game/331.jpg" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Зона ожидания">
+									<a href="img/game/331.webp" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Зона ожидания">
 										<img src="img/game/33.webp" alt="">
 									</a>
-									<a href="img/game/341.jpg" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Пристрелочная">
+									<a href="img/game/341.webp" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Пристрелочная">
 										<img src="img/game/34.webp" alt="">
 									</a>
-									<a href="img/game/351.jpg" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Раздевалки">
-										<img src="img/game/35.jpg" alt="">
+									<a href="img/game/351.webp" class="game-gallery_top-item" data-fancybox="gallery" data-caption="Раздевалки">
+										<img src="img/game/35.webp" alt="">
 									</a>
 								</div>
 								<div class="game-gallery_bot">
-									<a href="img/game/361.jpg" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Игровая зона - Позиционная">
+									<a href="img/game/361.webp" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Игровая зона - Позиционная">
 										<img src="img/game/36.webp" alt="">
 									</a>
-									<a href="img/game/371.jpg" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Игровая зона - Тактическая">
+									<a href="img/game/371.webp" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Игровая зона - Тактическая">
 										<img src="img/game/37.webp" alt="">
 									</a>
-									<a href="img/game/381.jpg" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Зона отдыха на 75 чел.">
+									<a href="img/game/381.webp" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Зона отдыха на 75 чел.">
 										<img src="img/game/38.webp" alt="">
 									</a>
-									<a href="img/game/391.jpg" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Зона отдыха на 25 чел.">
-										<img src="img/game/39.jpg" alt="">
+									<a href="img/game/391.webp" class="game-gallery_bot-item" data-fancybox="gallery" data-caption="Зона отдыха на 25 чел.">
+										<img src="img/game/39.webp" alt="">
 									</a>
 								</div>
 							</div>
@@ -723,11 +731,11 @@
 								<div class="price-item_mid">
 									<ul class="price-mid">
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
-										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
-										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
-										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды: штаны, куртка</span></li>
+										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: повязка поражения, тагер</span></li>
+										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="1">Забронировать</a>
@@ -747,12 +755,12 @@
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
-										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
-										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
-										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
-										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 6-ти человек</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды: штаны, куртка</span></li>
+										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: повязка поражения, тагер</span></li>
+										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="2">Забронировать</a>
@@ -773,12 +781,12 @@
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
-										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
-										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
-										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
-										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 8-ми человек</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды: штаны, куртка</span></li>
+										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: повязка поражения, тагер</span></li>
+										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="3">Забронировать</a>
@@ -800,12 +808,12 @@
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
-										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 4-х человек</span></li>
-										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды (штаны, куртка)</span></li>
-										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (повязка поражения, тагер)</span></li>
-										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 10-ти человек</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes"><i class="price-ic"></i><span class="price-mid-txt">Комплект верхней одежды: штаны, куртка</span></li>
+										<li class="price-complect"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: повязка поражения, тагер</span></li>
+										<li class="price-optional"><i class="price-ic"></i><span class="price-mid-txt">Две умные аптечки <br>Две контрольные точки <br>Граната (опционально)</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="4">Забронировать</a>
@@ -827,17 +835,17 @@
 							<div class="price-item">
 								<div class="price-item_top">
 									<span class="price-top_title">боец</span>
-									<span class="price-top_desc">1300 рублей с человека</span>
+									<span class="price-top_desc">1700 рублей с человека</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 10 человек</span></li>
-										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
-										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
-										<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">400 шаров</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы: верхняя одежда, перчатки</span></li>
+										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Набор для игры: маска, маркер</span></li>
+										<li class="price-optional-3"><i class="price-ic"></i><span class="price-mid-txt">400 шаров</span></li>									
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="5">Забронировать</a>
@@ -852,18 +860,18 @@
 							<div class="price-item">
 								<div class="price-item_top">
 									<span class="price-top_title">рекрут</span>
-									<span class="price-top_desc">1600 рублей с человека</span>
+									<span class="price-top_desc">2000 рублей с человека</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 8  человек</span></li>
-										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
-										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
-										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
-										<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">500 шаров</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы: верхняя одежда, перчатки</span></li>
+										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Набор для игры: маска, маркер</span></li>
+										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты: бронежилет, балаклава, защита паха</span></li>
+										<li class="price-optional-3"><i class="price-ic"></i><span class="price-mid-txt">500 шаров</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="6">Забронировать</a>
@@ -879,19 +887,19 @@
 							<div class="price-item">
 								<div class="price-item_top">
 									<span class="price-top_title">рекрут расширенный</span>
-									<span class="price-top_desc">2000 рублей с человека</span>
+									<span class="price-top_desc">2500 рублей с человека</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">от 6  человек</span></li>
-										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
-										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
-										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
+										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы: верхняя одежда, перчатки</span></li>
+										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: термальный шлем, маркер</span></li>
+										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты: бронежилет, балаклава, защита паха</span></li>
 										<li class="price-svg"><i class="price-ic"></i><span class="price-mid-txt">4 удлиненных ствола «Снайпер» на игру</span></li>
 										<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">500 шаров + 200 шаров или граната на выбор</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
-										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="7">Забронировать</a>
@@ -908,19 +916,19 @@
 							<div class="price-item">
 								<div class="price-item_top">
 									<span class="price-top_title">ветеран</span>
-									<span class="price-top_desc">2700 рублей с человека</span>
+									<span class="price-top_desc">3500 рублей с человека</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>2 часа игры</span>
 								</div>
 								<div class="price-item_mid">
 									<ul class="price-mid">
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">От 4-х человек</span></li>
-										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы (компплект верхней одежды, перчатки)</span></li>
-										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры (термальная маска, маркер)</span></li>
-										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты (бронежилет, защитная балаклава, защита паха для мужчин)</span></li>
-										<li class="price-svg"><i class="price-ic"></i><span class="price-mid-txt">4 удлиненных ствола «Снайпер» на игру</span></li>
-										<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">Безлимит по шарам и гранатам</span></li>
-										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
 										<li class="price-help"><i class="price-ic"></i><span class="price-mid-txt">Сопровождение инструктором</span></li>
+										<li class="price-rest"><i class="price-ic"></i><span class="price-mid-txt">Пользование зоной отдыха</span></li>
+										<li class="price-clothes-2"><i class="price-ic"></i><span class="price-mid-txt">Комплект формы: компплект верхней одежды, перчатки</span></li>
+										<li class="price-complect-2"><i class="price-ic"></i><span class="price-mid-txt">Профи набор для игры: термальный шлем, маркер</span></li>
+										<li class="price-def"><i class="price-ic"></i><span class="price-mid-txt">Комплект защиты: бронежилет, балаклава, защита паха</span></li>
+										<li class="price-svg"><i class="price-ic"></i><span class="price-mid-txt">4 удлиненных ствола «Снайпер» на игру</span></li>
+										<li class="price-optional-2"><i class="price-ic"></i><span class="price-mid-txt">Безлимит по шарам, граната</span></li>										
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="8">Забронировать</a>
@@ -942,13 +950,13 @@
 							<div class="price-item">
 								<div class="goal">
 									<span class="goal_num">- 15 %</span>
-									<p class="goal_txt">Скидка при аренде <br> зала в будние дни <br>с 10.00 до 14.00 </p>
+									<p class="goal_txt goal_txt-1">Скидка при аренде <br> зала в будние дни <br>с 10.00 до 14.00 </p>
 								</div>
 							</div>
 							<div class="price-item">
 								<div class="price-item_top">
-									<span class="price-top_title">банкетный зал мини</span>
-									<span class="price-top_desc">2500 рублей с человека</span>
+									<span class="price-top_title">банкетный зал</span>
+									<span class="price-top_desc">3000 рублей</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>1 час аренды</span>
 								</div>
 								<div class="price-item_mid">
@@ -956,7 +964,7 @@
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">Вместимость 25 человек</span></li>
 										<li class="price-square"><i class="price-ic"></i><span class="price-mid-txt">Площадь помещения   50 м.2</span></li>
 										<li class="price-table"><i class="price-ic"></i><span class="price-mid-txt">Мебель: один стол, скамейки</span></li>
-										<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, колонка (работает по bluetooth), микроволновая печь</span></li>
+										<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, bluetooth-колонка, микроволновая печь</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="9">Забронировать</a>
@@ -970,8 +978,8 @@
 							</div>
 							<div class="price-item">
 								<div class="price-item_top">
-									<span class="price-top_title">банкетный зал макси</span>
-									<span class="price-top_desc">30 00 рублей с человека</span>
+									<span class="price-top_title">Зона отдыха</span>
+									<span class="price-top_desc">10 000 рублей</span>
 									<span class="price-top_desc"><i class="ic-clock"></i>1 час аренды</span>
 								</div>
 								<div class="price-item_mid">
@@ -979,7 +987,7 @@
 										<li class="price-num"><i class="price-ic"></i><span class="price-mid-txt">Вместимость 75 человек</span></li>
 										<li class="price-square"><i class="price-ic"></i><span class="price-mid-txt">Площадь помещения   100 м.2</span></li>
 										<li class="price-table"><i class="price-ic"></i><span class="price-mid-txt">Мебель: один стол, скамейки</span></li>
-										<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, колонка (работает по bluetooth), микроволновая печь</span></li>
+										<li class="price-tech"><i class="price-ic"></i><span class="price-mid-txt">Оборудование  (чайник, колонка bluetooth-колонка, микроволновая печь</span></li>
 									</ul>
 									<div class="btn-wrap price-item_btn">
 										<a href="" class="btn btn-order" data-src="#modal-order" data-fancybox data-order="10">Забронировать</a>
@@ -994,10 +1002,9 @@
 							</div>
 							<div class="price-item">
 								<ul class="price-list">
-									<li>Для не играющих вход  в зону отдыха 300 руб.</li>
 									<li>Если играют дети, двое не играющих взрослых сопровождают их бесплатно</li>
 									<li>Продление зоны отдыха осуществляется при наличии свободных сеансов</li>
-									<li>Закрытие клуба на 2 часа стоимость 20000 руб</li>
+									<li>Закрытие клуба на 2 часа стоимость 25000 руб</li>
 								</ul>
 							</div>
 						</div>
@@ -1098,33 +1105,33 @@
 						<div class="tab-body tab-body__active reveiw-body">
 							<div class="slider">
 								<div class="slide">
-									<a href="img/review/mobile-1.png" data-fancybox="screen">
-										<img src="img/review/mobile-1.png" alt="">
+									<a href="img/review/mobile-1.webp" data-fancybox="screen">
+										<img src="img/review/mobile-1.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/mobile-2.png" data-fancybox="screen">
-										<img src="img/review/mobile-2.png" alt="">
+									<a href="img/review/mobile-2.webp" data-fancybox="screen">
+										<img src="img/review/mobile-2.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/mobile-2.png" data-fancybox="screen">
-										<img src="img/review/mobile-2.png" alt="">
+									<a href="img/review/mobile-2.webp" data-fancybox="screen">
+										<img src="img/review/mobile-2.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/mobile-3.png" data-fancybox="screen">
-										<img src="img/review/mobile-3.png" alt="">
+									<a href="img/review/mobile-3.webp" data-fancybox="screen">
+										<img src="img/review/mobile-3.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/mobile-4.png" data-fancybox="screen">
-										<img src="img/review/mobile-4.png" alt="">
+									<a href="img/review/mobile-4.webp" data-fancybox="screen">
+										<img src="img/review/mobile-4.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/mobile-5.png" data-fancybox="screen">
-										<img src="img/review/mobile-5.png" alt="">
+									<a href="img/review/mobile-5.webp" data-fancybox="screen">
+										<img src="img/review/mobile-5.webp" alt="">
 									</a>
 								</div>
 							</div>
@@ -1132,33 +1139,23 @@
 						<div class="tab-body reveiw-body">
 							<div class="letter-slider">
 								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
+									<a href="img/review/letter-1.webp" data-fancybox="letter">
+										<img src="img/review/letter-1.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
+									<a href="img/review/letter-1.webp" data-fancybox="letter">
+										<img src="img/review/letter-1.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
+									<a href="img/review/letter-1.webp" data-fancybox="letter">
+										<img src="img/review/letter-1.webp" alt="">
 									</a>
 								</div>
 								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
-									</a>
-								</div>
-								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
-									</a>
-								</div>
-								<div class="slide">
-									<a href="img/review/letter-1.jpg" data-fancybox="letter">
-										<img src="img/review/letter-1.jpg" alt="">
+									<a href="img/review/letter-1.webp" data-fancybox="letter">
+										<img src="img/review/letter-1.webp" alt="">
 									</a>
 								</div>
 							</div>
@@ -1166,11 +1163,10 @@
 					</div>
 				</div>
 				<div class="btn-wrap">
-					<!-- <a href="img/review/letter-1.png" class="btn btn-map" data-fancybox>Увеличить </a> -->
+					<!-- <a href="img/review/letter-1.webp" class="btn btn-map" data-fancybox>Увеличить </a> -->
 				</div>
 			</div>
 		</section>
-
 		<section class="gallery">
 			<div class="container">
 				<div class="gallery-container">
@@ -1179,26 +1175,26 @@
 						<div class="gallery-wrap">
 							<div class="gallery-in">
 								<div class="gallery-left">
-									<a href="img/gallery/1.png" class="gallery-block" data-fancybox="gallery-1">
-										<img src="img/gallery/1.png" alt="">
+									<a href="img/gallery/1.webp" class="gallery-block" data-fancybox="gallery-1">
+										<img src="img/gallery/1.webp" alt="" width="460px" height="680px">
 									</a>
 								</div>
 								<div class="galler-right">
 									<div class="gallery-db">
 										<div class="gallery-half">
-											<a href="img/gallery/2.png" class="gallery-block" data-fancybox="gallery-1">
-												<img src="img/gallery/2.png" alt="">
+											<a href="img/gallery/2.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/2.webp" alt="" width="420px" height="320">
 											</a>
 										</div>
 										<div class="gallery-half">
-											<a href="img/gallery/3.png" class="gallery-block" data-fancybox="gallery-1">
-												<img src="img/gallery/3.png" alt="">
+											<a href="img/gallery/3.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/3.webp" alt="" width="420px" height="320px">
 											</a>
 										</div>
 									</div>
 									<div class="gallery-bot">
-										<a href="img/gallery/4.png" class="gallery-block" data-fancybox="gallery-1">
-											<img src="img/gallery/4.png" alt="">
+										<a href="img/gallery/4.webp" class="gallery-block" data-fancybox="gallery-1">
+											<img src="img/gallery/4.webp" alt="" width="890px" height="316px">
 										</a>
 									</div>
 								</div>
@@ -1207,26 +1203,26 @@
 						<div class="gallery-wrap">
 							<div class="gallery-in">
 								<div class="gallery-left">
-									<a href="img/gallery/1.png" class="gallery-block" data-fancybox="gallery-2">
-										<img src="img/gallery/1.png" alt="">
+									<a href="img/gallery/1.webp" class="gallery-block" data-fancybox="gallery-1">
+										<img src="img/gallery/1.webp" alt="" width="460px" height="680px">
 									</a>
 								</div>
 								<div class="galler-right">
 									<div class="gallery-db">
 										<div class="gallery-half">
-											<a href="img/gallery/2.png" class="gallery-block" data-fancybox="gallery-2">
-												<img src="img/gallery/3.png" alt="">
+											<a href="img/gallery/2.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/2.webp" alt="" width="420px" height="320">
 											</a>
 										</div>
 										<div class="gallery-half">
-											<a href="img/gallery/3.png" class="gallery-block" data-fancybox="gallery-2">
-												<img src="img/gallery/2.png" alt="">
+											<a href="img/gallery/3.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/3.webp" alt="" width="420px" height="320px">
 											</a>
 										</div>
 									</div>
 									<div class="gallery-bot">
-										<a href="img/gallery/4.png" class="gallery-block" data-fancybox="gallery-2">
-											<img src="img/gallery/4.png" alt="">
+										<a href="img/gallery/4.webp" class="gallery-block" data-fancybox="gallery-1">
+											<img src="img/gallery/4.webp" alt="" width="890px" height="316px">
 										</a>
 									</div>
 								</div>
@@ -1235,26 +1231,26 @@
 						<div class="gallery-wrap">
 							<div class="gallery-in">
 								<div class="gallery-left">
-									<a href="img/gallery/1.png" class="gallery-block" data-fancybox="gallery-3">
-										<img src="img/gallery/1.png" alt="">
+									<a href="img/gallery/1.webp" class="gallery-block" data-fancybox="gallery-1">
+										<img src="img/gallery/1.webp" alt="" width="460px" height="680px">
 									</a>
 								</div>
 								<div class="galler-right">
 									<div class="gallery-db">
 										<div class="gallery-half">
-											<a href="img/gallery/2.png" class="gallery-block" data-fancybox="gallery-3">
-												<img src="img/gallery/2.png" alt="">
+											<a href="img/gallery/2.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/2.webp" alt="" width="420px" height="320">
 											</a>
 										</div>
 										<div class="gallery-half">
-											<a href="img/gallery/3.png" class="gallery-block" data-fancybox="gallery-3">
-												<img src="img/gallery/3.png" alt="">
+											<a href="img/gallery/3.webp" class="gallery-block" data-fancybox="gallery-1">
+												<img src="img/gallery/3.webp" alt="" width="420px" height="320px">
 											</a>
 										</div>
 									</div>
 									<div class="gallery-bot">
-										<a href="img/gallery/4.png" class="gallery-block" data-fancybox="gallery-3">
-											<img src="img/gallery/4.png" alt="">
+										<a href="img/gallery/4.webp" class="gallery-block" data-fancybox="gallery-1">
+											<img src="img/gallery/4.webp" alt="" width="890px" height="316px">
 										</a>
 									</div>
 								</div>
@@ -1290,20 +1286,20 @@
 											<img class="order-sm" src="img/mobile/order-1.png" alt="">
 										</div>
 										<p class="order-txt">
-											<a href="#" class="tu">Оставьте заявку здесь</a> или <br> позвоните / напишите в <br><a href="#" class="tu">WhatsApp (+7 960 148 88 88)</a>
+											<a data-src="#modal-physical" href="" data-fancybox class="tu">Оставьте заявку здесь</a> или <br> позвоните / напишите в <br><a href="https://wa.me/79629383313" class="tu" target="_blank">WhatsApp (+7 962 938-33-13)</a>
 										</p>
 									</div>
 									<div class="order-item">
 										<div class="order-img">
 											<img class="order-big" src="img/order/2.png" alt="">
-											<img class="order-sm" src="img/mobile/order-2.png" alt="">
+											<img class="order-sm" src="img/mobile/order-2.webp" alt="">
 										</div>
 										<p class="order-txt">Вносите предоплату за бронь <br> 3000 рублей удобным для Вас <br> способом</p>
 									</div>
 									<div class="order-item">
 										<div class="order-img">
 											<img class="order-big" src="img/order/3.png" alt="">
-											<img class="order-sm" src="img/mobile/order-3.png" alt="">
+											<img class="order-sm" src="img/mobile/order-3.webp" alt="">
 										</div>
 										<p class="order-txt">Приезжаете за 15 минут: <br>играете, развлекаетесь, <br>классно проводите время</p>
 									</div>
@@ -1314,30 +1310,32 @@
 							</div>
 							<div class="tab-body order-body">
 								<div class="order-items">
-									<div class="order-item">
+									<div class="order-item in-btn">
 										<div class="order-img">
 											<img class="order-big" src="img/order/1.png" alt="">
 											<img class="order-sm" src="img/mobile/order-1.png" alt="">
 										</div>
-										<p class="order-txt">Оформляете заявку:</p>
+										<div class="order-txt-wrap">
+											<p class="order-txt">Оформляете заявку:</p>
+											<div class="btn-in-wrap">
+												<a data-src="#modal-legal" href="#" class="btn" data-fancybox>Заявка на игру <br> для юридических лиц</a>
+											</div>
+										</div>
 									</div>
 									<div class="order-item">
 										<div class="order-img">
 											<img class="order-big" src="img/order/2.png" alt="">
-											<img class="order-sm" src="img/mobile/order-2.png" alt="">
+											<img class="order-sm" src="img/mobile/order-2.webp" alt="">
 										</div>
 										<p class="order-txt">Мы согласовываем с Вами <br>заявку по телефону,<br> подготовим счет <br>и необходимые документы</p>
 									</div>
 									<div class="order-item">
 										<div class="order-img">
 											<img class="order-big" src="img/order/3.png" alt="">
-											<img class="order-sm" src="img/mobile/order-3.png" alt="">
+											<img class="order-sm" src="img/mobile/order-3.webp" alt="">
 										</div>
 										<p class="order-txt"> Приезжаете за 15 минут<br> до начала игры. <br> Мы проводим игру. <br> Получаете закрывающие <br>документы</p>
 									</div>
-								</div>
-								<div class="btn-wrap">
-									<a data-src="#modal-legal" href="#" class="btn" data-fancybox>Заявка на игру для юридических лиц</a>
 								</div>
 							</div>
 						</div>
@@ -1352,13 +1350,13 @@
 			<h3 class="section-title">Не забудьте <span class="red">скачать памятку</span><br>по подготовке к игре в лазертаг и пейнтбол</h3>
 			<div class="memo-in">
 				<div class="memo-left">
-					<img src="img/memo/card-img.png" alt="">
-					<img src="img/mobile/memo-bg.png" alt="">
+					<img src="img/memo/card-img.webp" alt="">
+					<img src="img/mobile/memo-bg.webp" alt="">
 				</div>
 				<div class="memo-right">
 					<div class="memo-top">
 						<span class="memo-title">Заполните короткую форму</span>
-						<p class="memo-desc">и в течение минуты получите <br> PDF-файл</p>
+						<p class="memo-desc">и в течение 1 минуты получите <span style="display: inline-block;" >PDF-файл</span> с подробными инструкциями, как подготовиться к игре, и ответами на часто задаваемые вопросы</p>
 					</div>
 					<p class="memo-txt">куда вам отправить ссылку на файл:</p>
 					<div class="memo-form">
@@ -1381,7 +1379,6 @@
 								<button type="submit" class="btn">Получить памятку</button>
 							</div>
 						</form>
-						<p class="memo-desc">+ подробное описание... бла-бла-бла</p>
 					</div>
 				</div>
 			</div>
@@ -1391,14 +1388,13 @@
 	<footer>
 		<div class="footer-map">
 			<div class="container" id="contacts">
-				<h3 class="section-title"><span class="red">Шаговая доступность</span> от станции МЦК “Фрезер” и “Нижегородская”, <br> 500 м. от станции метро “Электрозаводская”</h3>
+				<h3 class="section-title"><span class="red">Шаговая доступность</span> от станции МЦК “Фрезер” <br> 500 м. от станции метро “Авиамоторная”</h3>
 				<div class="footer-in">
 					<p class="footer-txt"><b>Узнайте, как долго вам до нас добираться</b> - укажите точку отправления или разрешите доступ сайта к вашей геолокации</p>
 					<div class="map-ym" id="map">
 				     <div class="map__container" id="mapContainer"></div>
 				  </div>
 			  </div>
-
 				<div class="footer-info-wrap">
 					<div class="footer-info">
 						<div class="footer-adress-tel">
@@ -1413,9 +1409,9 @@
 							</div>
 						</div>
 						<div class="footer-links">
-							<span class="footer-links_desc">Пишите, мы сейчас онлайн:</span>
-							<a href="#" class="footer-link footer-link__wa"></a>
-							<a href="#" class="footer-link footer-link__tg"></a>
+							<span class="footer-links_desc">Пишите, мы онлайн:</span>
+							<a href="https://wa.me/79629383313" class="footer-link footer-link__wa" target="_blank"></a>
+							<a href="https://tlgg.ru/@bunkerSSSR" class="footer-link footer-link__tg" target="_blank"></a>
 							<a href="mailto:bunkersssr@yandex.ru" class="footer-link footer-link__mail"></a>
 						</div>
 					</div>
@@ -1444,8 +1440,8 @@
 					<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
 				</div>
 				<div class="modal_choose-time">
-					<div class="modal_choose-btn modal_choose-now">Сейчас</div>
-					<div class="modal_choose-btn modal_choose-leter modal_choose-time__active">По времени</div>
+					<div class="modal_choose-btn modal_choose-now modal_choose-time__active">Сейчас</div>
+					<div class="modal_choose-btn modal_choose-leter">По времени</div>
 				</div>
 				<div class="modal_input-wrap">
 					<input type="text" class="modal_input modal_choose-input" placeholder="Например, завтра до 12.00" name="Время для звонка">
@@ -1486,18 +1482,20 @@
 										<input type='hidden' name='Время'>
 									</div>
 									<div class="form_select-body">
-										<span class="form_select-tab">Пока неизвестно</span>
-										<span class="form_select-tab">04.00</span>
-										<span class="form_select-tab">06.00</span>
-										<span class="form_select-tab">08.00</span>
-										<span class="form_select-tab">10.00</span>
-										<span class="form_select-tab">12.00</span>
-										<span class="form_select-tab">14.00</span>
-										<span class="form_select-tab">16.00</span>
-										<span class="form_select-tab">18.00</span>
-										<span class="form_select-tab">20.00</span>
-										<span class="form_select-tab">22.00</span>
-										<span class="form_select-tab">24.00</span>
+										<div class="select-time">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">04.00</span>
+											<span class="form_select-tab">06.00</span>
+											<span class="form_select-tab">08.00</span>
+											<span class="form_select-tab">10.00</span>
+											<span class="form_select-tab">12.00</span>
+											<span class="form_select-tab">14.00</span>
+											<span class="form_select-tab">16.00</span>
+											<span class="form_select-tab">18.00</span>
+											<span class="form_select-tab">20.00</span>
+											<span class="form_select-tab">22.00</span>
+											<span class="form_select-tab">24.00</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1583,7 +1581,7 @@
 														<span class="select-flex_bot">(от 10 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1300 руб./чел.</span>
+														<span>1700 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1594,18 +1592,18 @@
 														<span class="select-flex_bot">(от 8 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1600 руб./чел.</span>
+														<span>2000 руб./чел.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-col="4">
+											<span class="form_select-tab" data-col="6">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Рекрут расширенный</span>
-														<span class="select-flex_bot">(от 4х человек)</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2000 руб./чел.</span>
+														<span>2500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1616,7 +1614,7 @@
 														<span class="select-flex_bot">(от 4х человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2700 руб./чел.</span>
+														<span>3500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1625,22 +1623,22 @@
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_top">Зона отдыха</span>
 														<span class="select-flex_bot">(от 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>3000 руб./ч.</span>
+														<span>10000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_top">Банкетный зал</span>
 														<span class="select-flex_bot">(до 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2500 руб./ч.</span>
+														<span>3000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
@@ -1749,9 +1747,6 @@
 							<div class="modal_input-wrap">
 								<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
 							</div>
-							<div class="modal_input-wrap">
-								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты" name="Почта">
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1793,18 +1788,20 @@
 										<input type='hidden' name='Время'>
 									</div>
 									<div class="form_select-body">
-										<span class="form_select-tab">Пока неизвестно</span>
-										<span class="form_select-tab">04.00</span>
-										<span class="form_select-tab">06.00</span>
-										<span class="form_select-tab">08.00</span>
-										<span class="form_select-tab">10.00</span>
-										<span class="form_select-tab">12.00</span>
-										<span class="form_select-tab">14.00</span>
-										<span class="form_select-tab">16.00</span>
-										<span class="form_select-tab">18.00</span>
-										<span class="form_select-tab">20.00</span>
-										<span class="form_select-tab">22.00</span>
-										<span class="form_select-tab">24.00</span>
+										<div class="select-time">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">04.00</span>
+											<span class="form_select-tab">06.00</span>
+											<span class="form_select-tab">08.00</span>
+											<span class="form_select-tab">10.00</span>
+											<span class="form_select-tab">12.00</span>
+											<span class="form_select-tab">14.00</span>
+											<span class="form_select-tab">16.00</span>
+											<span class="form_select-tab">18.00</span>
+											<span class="form_select-tab">20.00</span>
+											<span class="form_select-tab">22.00</span>
+											<span class="form_select-tab">24.00</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1890,7 +1887,7 @@
 														<span class="select-flex_bot">(от 10 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1300 руб./чел.</span>
+														<span>1700 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1901,18 +1898,18 @@
 														<span class="select-flex_bot">(от 8 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1600 руб./чел.</span>
+														<span>2000 руб./чел.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-col="4">
+											<span class="form_select-tab" data-col="6">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Рекрут расширенный</span>
-														<span class="select-flex_bot">(от 4х человек)</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2000 руб./чел.</span>
+														<span>2500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1923,7 +1920,7 @@
 														<span class="select-flex_bot">(от 4х человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2700 руб./чел.</span>
+														<span>3500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -1932,22 +1929,22 @@
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_top">Зона отдыха</span>
 														<span class="select-flex_bot">(от 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>3000 руб./ч.</span>
+														<span>10000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_top">Банкетный зал</span>
 														<span class="select-flex_bot">(до 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2500 руб./ч.</span>
+														<span>3000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
@@ -2032,9 +2029,6 @@
 							</div>
 							<div class="modal_input-wrap">
 								<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
-							</div>
-							<div class="modal_input-wrap">
-								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты" name="Почта">
 							</div>
 						</div>
 					</div>
@@ -2131,71 +2125,71 @@
 											</span>
 										</div>
 										<div class="select-item select-tarif" data-item="paint">
-											<span class="form_select-tab" data-col="10" data-price="1300">
+											<span class="form_select-tab" data-col="10" data-price="1700">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Боец</span>
 														<span class="select-flex_bot">(от 10 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1300 руб./чел.</span>
+														<span>1700 руб./чел.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-col="8" data-price="1600">
+											<span class="form_select-tab" data-col="8" data-price="2000">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Рекрут</span>
 														<span class="select-flex_bot">(от 8 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1600 руб./чел.</span>
-													</span>
-												</span>
-											</span>
-											<span class="form_select-tab" data-col="4" data-price="2000">
-												<span class="select-flex">
-													<span class="select-flex_left">
-														<span class="select-flex_top">Рекрут расширенный</span>
-														<span class="select-flex_bot">(от 4х человек)</span>
-													</span>
-													<span class="select-flex_right">
 														<span>2000 руб./чел.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-col="4" data-price="2700">
+											<span class="form_select-tab" data-col="6" data-price="2500">
+												<span class="select-flex">
+													<span class="select-flex_left">
+														<span class="select-flex_top">Рекрут расширенный</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
+													</span>
+													<span class="select-flex_right">
+														<span>2500 руб./чел.</span>
+													</span>
+												</span>
+											</span>
+											<span class="form_select-tab" data-col="4" data-price="3500">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Ветеран</span>
 														<span class="select-flex_bot">(от 4х человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2700 руб./чел.</span>
+														<span>3500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
 										</div>
 										<div class="select-item select-tarif" data-item="rest">
-											<span class="form_select-tab" data-time="3000">
+											<span class="form_select-tab" data-time="10000">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_top">Зона отдыха</span>
 														<span class="select-flex_bot">(от 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>3000 руб./ч.</span>
+														<span>10000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-time="2500">
+											<span class="form_select-tab" data-time="3000">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_top">Банкетный зал</span>
 														<span class="select-flex_bot">(до 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2500 руб./ч.</span>
+														<span>3000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
@@ -2300,9 +2294,6 @@
 							<div class="modal_input-wrap">
 								<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
 							</div>
-							<div class="modal_input-wrap">
-								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты" name="Почта">
-							</div>
 						</div>
 					</div>
 				</div>
@@ -2344,18 +2335,20 @@
 										<input type='hidden' name='Время'>
 									</div>
 									<div class="form_select-body">
-										<span class="form_select-tab">Пока неизвестно</span>
-										<span class="form_select-tab">04.00</span>
-										<span class="form_select-tab">06.00</span>
-										<span class="form_select-tab">08.00</span>
-										<span class="form_select-tab">10.00</span>
-										<span class="form_select-tab">12.00</span>
-										<span class="form_select-tab">14.00</span>
-										<span class="form_select-tab">16.00</span>
-										<span class="form_select-tab">18.00</span>
-										<span class="form_select-tab">20.00</span>
-										<span class="form_select-tab">22.00</span>
-										<span class="form_select-tab">24.00</span>
+										<div class="select-time">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">04.00</span>
+											<span class="form_select-tab">06.00</span>
+											<span class="form_select-tab">08.00</span>
+											<span class="form_select-tab">10.00</span>
+											<span class="form_select-tab">12.00</span>
+											<span class="form_select-tab">14.00</span>
+											<span class="form_select-tab">16.00</span>
+											<span class="form_select-tab">18.00</span>
+											<span class="form_select-tab">20.00</span>
+											<span class="form_select-tab">22.00</span>
+											<span class="form_select-tab">24.00</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -2441,7 +2434,7 @@
 														<span class="select-flex_bot">(от 10 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1300 руб./чел.</span>
+														<span>1700 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -2452,18 +2445,18 @@
 														<span class="select-flex_bot">(от 8 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>1600 руб./чел.</span>
+														<span>2000 руб./чел.</span>
 													</span>
 												</span>
 											</span>
-											<span class="form_select-tab" data-col="4">
+											<span class="form_select-tab" data-col="6">
 												<span class="select-flex">
 													<span class="select-flex_left">
 														<span class="select-flex_top">Рекрут расширенный</span>
-														<span class="select-flex_bot">(от 4х человек)</span>
+														<span class="select-flex_bot">(от 6 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2000 руб./чел.</span>
+														<span>2500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -2474,7 +2467,7 @@
 														<span class="select-flex_bot">(от 4х человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2700 руб./чел.</span>
+														<span>3500 руб./чел.</span>
 													</span>
 												</span>
 											</span>
@@ -2483,22 +2476,22 @@
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал макси</span>
+														<span class="select-flex_top">Зона отдыха</span>
 														<span class="select-flex_bot">(от 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>3000 руб./ч.</span>
+														<span>10000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
 											<span class="form_select-tab" data-rent="1">
 												<span class="select-flex">
 													<span class="select-flex_left">
-														<span class="select-flex_top">Банкетный зал мини</span>
+														<span class="select-flex_top">Банкетный зал</span>
 														<span class="select-flex_bot">(до 25 человек)</span>
 													</span>
 													<span class="select-flex_right">
-														<span>2500 руб./ч.</span>
+														<span>3000 руб./ч.</span>
 													</span>
 												</span>
 											</span>
@@ -2584,9 +2577,6 @@
 							<div class="modal_input-wrap">
 								<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
 							</div>
-							<div class="modal_input-wrap">
-								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты" name="Почта">
-							</div>
 						</div>
 					</div>
 				</div>
@@ -2628,18 +2618,20 @@
 										<input type='hidden' name='Время'>
 									</div>
 									<div class="form_select-body">
-										<span class="form_select-tab">Пока неизвестно</span>
-										<span class="form_select-tab">04.00</span>
-										<span class="form_select-tab">06.00</span>
-										<span class="form_select-tab">08.00</span>
-										<span class="form_select-tab">10.00</span>
-										<span class="form_select-tab">12.00</span>
-										<span class="form_select-tab">14.00</span>
-										<span class="form_select-tab">16.00</span>
-										<span class="form_select-tab">18.00</span>
-										<span class="form_select-tab">20.00</span>
-										<span class="form_select-tab">22.00</span>
-										<span class="form_select-tab">24.00</span>
+										<div class="select-time">
+											<span class="form_select-tab">Пока неизвестно</span>
+											<span class="form_select-tab">04.00</span>
+											<span class="form_select-tab">06.00</span>
+											<span class="form_select-tab">08.00</span>
+											<span class="form_select-tab">10.00</span>
+											<span class="form_select-tab">12.00</span>
+											<span class="form_select-tab">14.00</span>
+											<span class="form_select-tab">16.00</span>
+											<span class="form_select-tab">18.00</span>
+											<span class="form_select-tab">20.00</span>
+											<span class="form_select-tab">22.00</span>
+											<span class="form_select-tab">24.00</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -2689,9 +2681,9 @@
 							<div class="modal_input-wrap">
 								<input type="tel" class="modal_input _req" placeholder="Введите номер телефона" name="Телефон">
 							</div>
-							<div class="modal_input-wrap">
+							<!-- <div class="modal_input-wrap">
 								<input type="text" class="modal_input" placeholder="Введите адрес эл.почты" name="Почта">
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -2805,7 +2797,7 @@
 								</div>
 							</div>
 							<div class="bonus-img">
-								<img src="img/bonus-img.jpg" alt="">
+								<img src="img/bonus-img.webp" alt="">
 							</div>
 							<p class="bonus-bot">Примеры фото</p>
 						</div>
@@ -2850,7 +2842,7 @@
 					<img class="modal-coach-img-sm" src="" alt="">
 				</div>
 				<div class="modal-coach_title">
-					<span>Инструктор-сержант</span>
+					<span class="modal-coach_rang">Инструктор-сержант</span>
 					<p class="modal-coach_name"></p>
 				</div>
 			</div>
@@ -2880,7 +2872,7 @@
 					<div class="modal-coach_info">
 						<div class="modal-coach_user">
 							<div class="modal-coach_user-img">
-								<img class="modal-user-img"  src="=" alt="">
+								<img class="modal-user-img"  src="" alt="">
 							</div>
 							<div class="modal-coach_user-info">
 								<span class="modal-coach_user-name"></span>
@@ -2964,7 +2956,7 @@
 	<div class="modal thanks-modal" id="thanks-pdf">
 		<div class="thanks-modal-in">
 			<span class="thanks-modal_title">ваша заявка принята</span>
-			<p class="thanks-modal_desc">На указанный вами телефон будет отправлена ссылка на скачивание памятки</p>
+			<p class="thanks-modal_desc">На указанный вами телефон отправлена ссылка на скачивание памятки</p>
 			<span class="thanks-modal_foot">Спасибо, что выбрали нас</span>
 		</div>
 	</div>
@@ -2987,13 +2979,13 @@
 	
 
 	<script src="libs/jquery-3.4.1.min.js"></script>
-	<script src="libs/slick.min.js"></script>
-	<script type="text/javascript" src="libs/fancybox.min.js"></script>
-	<script type="text/javascript" src="libs/inputmask.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="libs/datepicker.min.js"></script>
-	<script src="libs/i18n/datepicker.en.js"></script>
-	<script src="js/core.js"></script>
+	<script defer src="libs/slick.min.js"></script>
+	<script defer src="libs/fancybox.min.js"></script>
+	<script defer src="libs/inputmask.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script defer src="libs/datepicker.min.js"></script>
+	<script defer src="libs/i18n/datepicker.en.js"></script>
+	<script defer src="js/core.js"></script>
 
 </body>
 </html>
